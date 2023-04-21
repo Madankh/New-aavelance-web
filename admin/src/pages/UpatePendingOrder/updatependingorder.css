@@ -1,0 +1,15 @@
+.UpdatePendingOrder{
+          flex: 4;
+}
+
+.pendingorderImage{
+          width: 34pc;
+          height: 50vh;
+          border-radius: 10px;
+          margin-left: 10px;
+}
+
+.allorder{
+          margin-left: 12px;
+}
+

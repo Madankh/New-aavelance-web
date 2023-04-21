@@ -1,0 +1,153 @@
+.product{
+    flex: 4;
+    padding: 20px;
+}
+.productTitleContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.productAddButton{
+    width: 80px;
+    border: none;
+    padding: 5px;
+    background-color: teal;
+    color: whitesmoke;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.productTop{
+    display: flex;
+}
+
+.productTopLeft ,.productTopRight{
+    flex: 1;
+}
+
+.productTopRight{
+    padding: 20px;
+    margin: 20px;
+
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.24); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.24);
+}
+
+.productInfoTop{
+    display: flex;
+    align-items: center;
+}
+
+.productName{
+    font-weight: 600;
+}
+.productInfoBottom{
+    margin-top: 10px;
+}
+.productInfoImage{
+    margin-right: 20px;
+}
+.productInfoItem{
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.productInfoValue{
+    font-weight: 300;
+}
+
+.productButtom{
+    padding: 20px;
+    margin: 20px;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.24); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.24);
+    
+}
+
+/* .productButtom:disabled{
+} */
+
+button:disabled,
+button[disabled]{
+    cursor: not-allowed;
+
+}
+.productForm{
+    display: flex;
+    justify-content: space-between;
+}
+.productFormLeft{
+    display: flex;
+    flex-direction: column;
+}
+
+.productFormLeft>label{
+    margin-bottom: 7px;
+    margin-top: 20px;
+    color: gray;
+}
+.productFormLeft > input{
+    margin-bottom: 10px;
+    border: none;
+    padding: 5px;
+    border-bottom: 1px solid gray;
+}
+
+.productFormLeft > select{
+    margin-bottom: 10px;
+
+}
+
+.productUploadImgg{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: contain;
+    margin-right: 20px;
+    margin-top: 190px;
+}
+
+.productFormRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.productFormRight{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.productUpload{
+    display: flex;
+    align-items: center;
+}
+
+.productButton{
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: darkblue;
+    color: wheat;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 100px;
+    
+}
+.productInfooImage{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+@media screen and (max-width:772px) {
+    .productForm{
+        display: block;
+    }
+    .inputnames{
+        width: 70%;
+    }
+}

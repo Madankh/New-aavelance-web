@@ -1,0 +1,111 @@
+.pendingorderImage{
+    border-radius: 0px;
+    width: 30%;
+    height: 60vh;
+    object-fit: contain;
+}
+.OrderContainer{
+    width: 60%;
+    align-items: center;
+    flex: 5;
+    
+}
+
+.MainContainer{
+    display: flex;
+}
+
+.sidebarr{
+    flex: 1;
+}
+.mainDiv2{
+    background-color: #212121;
+    color: white;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(233, 195, 195, 0.24); 
+    box-shadow: 5px 5px 15px 5px rgba(70, 69, 69, 0.24);
+    padding: 10px;
+    display: flex;
+    margin-top: 13px;
+    border-radius: 20px;
+}
+
+.sellerOrderText{
+    color: rgb(237, 233, 233);
+}
+
+/* .mainDiv2:hover{
+
+} */
+
+.sellerOrderContainer{
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+.updateOrderstatus{
+    margin-top: -5px;
+    font-family: 'Roboto Condensed'
+}
+
+.underallorder{
+    display: flex;
+}
+
+.orderStatusContainer{
+    display:flex;
+    margin-left:10px
+}
+
+.updateButtonContainerInpendingUser{
+    margin-left:50px
+}
+.DoneBtninPendinguserorderpage{
+    background-color:green; 
+    padding-left:30px; 
+    padding-right:30px; 
+    padding-top:6px;
+    padding-bottom:6px; 
+    border:none; 
+    border-radius:5px; 
+    color:white; 
+    font-weight:700; 
+    font-family: 'Roboto Condensed'
+}
+@media screen and (max-width:678px) {
+    .underallorder{
+        display: block
+    }
+    .pendingorderImage{
+        align-items: center;
+        justify-content: center;
+        margin-left: 15%;
+        margin-top: -5px;
+        border-radius: 10px;
+        width: 70%;
+        height: 70vh;
+        object-fit: cover; 
+    }
+    .orderStatusContainer{
+        display:block;
+        margin-left:0px
+    }
+    .updateButtonContainerInpendingUser{
+        margin-left:0px;
+        margin-bottom: 10px;
+        
+    }
+    
+}
+
+@media screen and (max-width:419px) {
+    .pendingorderImage{
+        align-items: center;
+        justify-content: center;
+        margin-left: 0%;
+        margin: 5px;
+        border-radius: 10px;
+        width: 100%;
+        height: 70vh;
+        object-fit: cover; 
+    }
+}

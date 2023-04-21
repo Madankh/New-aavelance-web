@@ -1,0 +1,40 @@
+.updateuserProfile{
+          width: 80%;
+          margin: auto;
+          margin-top: 70px;
+}
+
+.itemContainerprofile{
+          display: flex; 
+          align-items:center; 
+          cursor: pointer; 
+}
+
+.updateProfileContainer{
+          margin-top: -13px; 
+          padding: 8px; 
+          width: 100%; 
+}
+
+.btnprofileUpdate{
+          cursor: pointer; 
+          padding-left: 20px; 
+          padding-right: 20px;
+          border: none; 
+          padding-top: 7px; 
+          padding-bottom: 7px; 
+          border-radius: 10px; 
+          background-color: green; 
+          color: white;
+          margin-top: 20px;
+}
+
+.forgotpassword{
+          margin-left: -10px;
+}
+
+@media screen and (max-width:324px) {
+          .yourprofiltext{
+                    font-size: 12px;
+          }
+}

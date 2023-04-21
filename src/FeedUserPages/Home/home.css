@@ -1,0 +1,26 @@
+.home{
+          background-color: rgb(235, 238, 242);
+}
+
+
+.HomeConainerForFeed{
+          display: flex;
+          margin: auto;
+          justify-content: center;
+          width: 90%;
+          margin-left: 17%;
+}
+
+@media screen and (max-width:1055px) {
+    .HomeConainerForFeed{
+        margin-left: 7%;
+              
+    }
+}
+
+@media screen and (max-width:822px) {
+          .HomeConainerForFeed{
+                    display: block;
+                    
+          }
+}

@@ -1,0 +1,69 @@
+.rightbar{
+          flex: 1;
+}
+
+.rightcontainer{
+          /* width: 20pc; */
+          height: 30vh;
+          background-color: white;
+          margin-top: 20px;
+          border-radius: 15px;
+          position: relative;
+}
+
+.rightcontainer2{
+          /* width: 20pc; */
+          height: 60vh;
+          background-color: white;
+          margin-top: 20px;
+          border-radius: 15px;
+          margin-left: -17px;
+          overflow: hidden;
+          overflow-y: scroll;
+          position: relative;
+}
+
+.adsimg{
+          width: 130px;
+          height: 80px;
+          object-fit: cover;
+          border-radius: 0px;
+          position: relative;
+}
+
+.adsContainer{
+          display: flex;
+          align-items: center;
+          margin-left: 10px;
+          padding: 10px;
+          position: relative;
+}
+
+.Profileimage{
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin-left: 10px;
+}
+
+.addfriend{
+          width: 17px;
+          height: 17px;
+          border-radius: 0px;
+          
+}
+
+@media screen and (max-width:822px) {
+          .rightcontainer{
+                    display: none;
+          } 
+          .rightcontainer2{
+                    height: 20vh;
+                    overflow: hidden;
+                    overflow-x: scroll;
+          }
+          .subUser{
+                    display: flex;
+                    
+          }
+}

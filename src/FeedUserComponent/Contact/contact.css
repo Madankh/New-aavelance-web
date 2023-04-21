@@ -1,0 +1,58 @@
+.mainContactContainer{
+          flex: 0.9;
+          background-image: url('https://c4.wallpaperflare.com/wallpaper/792/639/808/pattern-monochrome-telegram-logo-cats-hd-wallpaper-preview.jpg');
+          display: flex;
+          
+          
+}
+
+
+.Chatuserimage{
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          margin-top: 5px;
+          object-fit: cover;
+}
+
+.userContainer{
+          display: flex;
+          margin-left: 18px;
+          background-color: rgb(255, 255, 255);
+          padding: 6px;
+          border-radius: 10px;
+          padding-left: 10px;
+          padding-right: 10px;
+          margin-top:4px;
+          color: rgb(0, 0, 0);
+          
+}
+
+.usersDetailContainer{
+          height: 84vh;
+          overflow: hidden;
+          overflow-y: scroll;
+}
+
+.usersDetailContainer::-webkit-scrollbar {
+    width: 0.5em;
+    background-color: transparent;
+}
+
+.defaultimage{
+    width: 50%;
+    justify-content: center;
+    border-radius: 10px;
+    height: 93vh;
+    margin-top: -10px;
+    object-fit: cover;
+}
+
+.leftsidebar{
+    flex: 0.78;
+    background-color: rgba(201, 191, 191, 0.637);
+}
+
+.rightsidebar{
+    flex: 3;
+}

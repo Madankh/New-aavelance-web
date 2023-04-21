@@ -1,0 +1,64 @@
+.ProfileContainer{
+      background-color: black;
+  }
+  
+  .FirstContainer{
+      display: flex;
+      flex: 1.5;
+      padding-left: 10px;
+      cursor: pointer;
+  }
+  
+  .MiddleContainer{
+      display: flex;
+      flex: 2;
+      cursor: pointer;
+  }
+  
+  .followContainer{
+      flex: 0.4;
+      background-color: aqua;
+      text-align: center;
+      border-radius: 20px;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-right: 10px;
+      cursor: pointer;
+  }
+  
+  .textforShopComponent{
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+  }
+
+  .subscriptionThumnailimg{
+      width: 240px;
+      height: 16.9vh;
+      border-radius: 0px;
+  }
+  
+  .titlename{
+      text-align: start;
+      margin-left: 0px;
+      color: white;
+  }
+  
+  .ViewsSubscription{
+      font-size: 11px;
+      color: #8e8e8e;
+      margin-left: 2px;
+  }
+  
+  .UploadDate{
+      font-size: 11px;
+      color: #8e8e8e;
+  }
+  .channelSubscription{
+      text-align: start;
+      color: #8e8e8e;
+      font-size: 11px;
+      margin-top: -10px;
+  }
+  
+  

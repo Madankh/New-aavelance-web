@@ -1,0 +1,218 @@
+.HomePostContainer{
+          display: grid;
+          grid-template-rows: min-content;
+          width: 100%;
+          margin: 10px;
+          border-top-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+}
+
+
+.HomeSubPostContainer{
+          width: 100%;
+          background-color: rgb(246, 246, 246);
+          margin-left: 10px;
+          border-radius: 10px;
+
+}
+.HomefollowitemContainer{
+          margin-left: 0px;
+          margin-bottom: 5px;
+}
+.HomeprofileImage{
+          width: 25px;
+          height: 25px;
+          border-radius: 10%;
+          margin-left: 10px;
+}
+.userprofileImage{
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          margin-left: 10px;
+          object-fit: cover;
+}
+
+.HomeuserprofileImage{
+          width: 20px;
+          height: 20px;
+}
+.HomePosttImage{
+          width: 97%;
+          height: 28vh;
+          display: flex;
+          justify-content: center;
+          margin: auto;
+          object-fit: contain;
+          flex-wrap: wrap;
+          border-radius: 0px;
+          border-top-right-radius: 10px;
+          inline-size: 100%;
+}
+
+.HomeiconsforPost{
+          width: 15px;
+          height: 15px;
+          background-color: white;
+          border-radius: 0px;
+          padding: 4px;
+          border-radius: 6px;
+
+          
+}
+
+.moreicons{
+          width: 20px;
+          /* margin-left: 380px; */
+}
+
+.commentinput{
+          width: 24pc;
+          margin-left: 10px;
+          border: none;
+
+}
+.addCommentbtn{
+          padding: 9px;
+          border: none;
+          background-color: black;
+          color: white;
+          border-radius: 6px;
+          margin-left: 39px;
+          cursor: pointer;
+          padding-left: 40px;
+          padding-right: 40px;
+}
+
+.HomeproductContainer{
+          display: flex; 
+          align-items: center; 
+          border-top-left-radius: 10px;
+          padding: 10px; 
+          background-color: #2f2e2e; 
+          margin-top: 3px;
+}
+
+.HomePostImage{
+          width: 300px;
+          height: 300px;
+          border-radius: 1px;
+}
+
+.HomeProductImageForPost{
+          width: 60px; 
+          height: 63px; 
+          object-fit: cover; 
+          border-radius: 10px
+}
+.HomeproductTextforpost{
+          text-align: start; 
+          margin: 0px; 
+          color: white; 
+          font-weight: 700;
+          font-size:10px 
+}
+.HomeproductTextdescforpost{
+          text-align: start; 
+          margin-top: 0px; 
+          color: white; 
+          font-size:10px
+}
+
+.Homebtnforpost{
+          border: none; 
+          padding-top: 4px; 
+          padding-bottom: 4px; 
+          background-color: white; 
+          color: rgb(11, 11, 11); 
+          /* margin-top: -10px; */
+          border-radius: 1px; 
+          align-items: center;
+          width: 100%;
+          cursor: pointer; 
+          font-weight: 600;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+}
+
+@media screen and (max-width:1060px) {
+          .PostContainer{
+                    width: 90%;
+                    margin-left: 10px;
+          }
+}
+
+@media screen and (max-width:883px) {
+          .PostContainer{
+                    width: 100%;
+                    margin-left: 0px;
+          }
+          .SubPostContainer{
+                    margin-left: 0px;
+                    border-radius: 10px;
+                    margin-top: 14px;
+          
+          }
+          .PosttImage{
+                    width: 98%;
+                    height: 33vh;
+                    
+          }
+
+}
+@media screen and (max-width:558px) {
+          .PostContainer{
+                    width: 100%;
+                    margin-left: 0px;
+          }
+          .PosttImage{
+                    width: 100%;
+                    height: 30vh;
+                    object-fit: contain;
+                    
+          }
+          
+
+}
+
+@media screen and (max-width:433px) {
+          .ProductImageForPost{
+                    width: 100px; 
+                    height: 103px; 
+                    object-fit: cover; 
+                    border-radius: 0px
+          }
+          .productTextforpost{
+                    text-align: start; 
+                    margin-top: 0px; 
+                    color: white; 
+                    font-weight: 700;
+                    font-size:11px 
+          }
+          .productTextdescforpost{
+                    text-align: start; 
+                    margin-top: -12px; 
+                    color: white; 
+                    font-size:11px
+          }
+          
+
+}
+
+@media screen and (max-width:387px) {
+          .productTextforpost{
+                    font-size:9px 
+          }
+          .productTextdescforpost{
+                    font-size:9px
+          }
+          .btnforpost{
+                    padding-left: 20px; 
+                    padding-right: 20px;  
+                    background-color: white; 
+                    font-size: 11px;
+          }
+          
+          
+
+}

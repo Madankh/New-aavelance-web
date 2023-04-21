@@ -1,0 +1,90 @@
+.widgetLgg{
+    flex: 4;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.24); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.24);
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.widgetLgTitle{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.widgetLgButton{
+    padding: 5px 7px;
+    border: none;
+    border-radius: 10px;
+}
+
+.widgetLgButton.Pending{
+    background-color: #e5faf2;
+}
+.widgetLgButton.Processing{
+    background-color: #e22a114b;
+}
+.widgetLgButton.Complete{
+    background-color: #dadd188e;
+}
+
+.widgetLgTable{
+    width: 100%;
+    border-spacing: 20px;
+}
+.widgetLgth{
+    text-align: left;
+}
+.widgetLgUser{
+    display: flex;
+    align-items: center;
+}
+.widgetLgName{
+    margin: 10px;
+    font-weight: 700;
+}
+.widgetLgthDate{
+    text-align: left;
+}
+
+@media screen and (max-width:657px) {
+    .widgetLgthDate{
+        display: none;
+    }
+    .widgetLgthDatee{
+        display: none;
+    }
+    .widgetLgth{
+        font-size: 13px;
+    }
+    .widgetLgAmount{
+        font-size: 12px;
+    }
+    .widgetLgName{
+        font-size: 12px;
+    }
+    .widgetLgTitle{
+        font-size: 13px;
+    }
+    
+}
+
+
+@media screen and (max-width:346px) {
+    .widgetLgg{
+        flex: 1;
+        -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.24); 
+        box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.24);
+        padding: 20px;
+        margin-right: 20px;
+    }
+    .widgetLgTitle{
+        font-size: 13px;
+    }
+    .widgetLgth{
+        font-size: 10px;
+    }
+    
+    
+}
+
+

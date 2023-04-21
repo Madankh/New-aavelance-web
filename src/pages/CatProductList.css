@@ -1,0 +1,82 @@
+.flexContainer{
+    display: flex;
+}
+
+.left{
+    flex: 0.7;
+}
+
+.rightSide{
+    flex: 4;
+}
+
+.inputItem{
+    margin-left: 10px;
+    margin-top: 4px;
+    
+}
+
+.catTitle2{
+    margin-left: 10px;
+}
+
+.subcatmobileimage{
+    border: 1px solid #d62d6b;
+    transition: 0.6s;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+.submobilecat{
+    display:flex; 
+    margin:auto; 
+    text-align:start; 
+    overflow-y:scroll;
+    display: none;
+}
+.inputname{
+    font-size: 12px;
+}
+@media screen and (max-width:950px) {
+    .catTitle2{
+        font-size: 12px;
+    }
+    .inputname{
+        font-size: 13px;
+    }
+    .select{
+        padding:4px;
+        margin-right:10px;
+   }
+}
+
+@media screen and (max-width:848px) {
+    .inputItem{
+        display: none;
+    }
+    .filterItem{
+        display: none;
+    }
+    .left{
+        flex: 0;
+    }
+    .submobilecat{
+        display: flex;
+    }
+}
+
+@media screen and (max-width:784px) {
+    .catTitle2{
+        font-size: 11px;
+    }
+    
+    .inputname{
+        font-size: 11px;
+    }
+    .select{
+        padding:4px;
+        margin-right:10px;
+   }
+}

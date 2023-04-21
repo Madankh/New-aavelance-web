@@ -1,0 +1,192 @@
+.allorder{
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.mainorderContainer{
+    display: flex;
+    background-color: rgb(8, 8, 8);
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.itemname{
+    flex: 4;
+    
+}
+.address{
+    flex: 2;
+}
+.time{
+    flex: 2;
+}
+
+.subOrderItems{
+    display: flex;
+    margin-top: 13px;
+}
+h2{
+    margin-left: 10px;
+    margin-top: 6px;
+    
+}
+
+span{
+    font-weight: 800;
+}
+.itemnamefororder{
+  font-size: 12px;
+  color: white;
+  margin-top: 10px;
+}
+.orderaddress{
+    color: white;
+    margin-left:60px;
+    margin-bottom: -6px;
+    font-size: 13px;
+}
+.createdAt{
+    color: white;
+    margin-left:60px;
+    margin-bottom: -10px;
+    font-size: 13px;
+}
+.orderaddressname{
+    color: white;
+    font-size: 13px;
+    margin-left: 60px;
+    margin-top: 13px;
+}
+
+.OrderStatusDetails{
+    margin-top: 10px; 
+    color:red
+}
+
+.btnreturn{
+    margin-left:60px;
+    padding-top:4px; 
+    padding-bottom:4px; 
+    margin-top: 15px;
+    border:none; 
+    border-radius:2px; 
+    cursor:pointer; 
+    background-color:crimson; 
+    color:white
+}
+
+.imagefororder{
+    width: 23%;
+    height: 17vh;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 10px;
+    border-radius: 1px;
+}
+@media screen and (max-width:751px) {
+    .mainorderContainer{
+        display: block;
+    }
+    .address{
+        margin-left: 100px;
+    }
+    .createdAt{
+        color: white;
+        margin-left:190px;
+        margin-bottom: -10px;
+        font-size: 13px;
+    }
+    .imagefororder{
+        width: 130px;
+        margin-top: 10px;
+    }
+    .orderaddressname{
+        margin-left: 130px;
+
+    }
+    .orderaddress{
+        margin-left: 130px;
+        
+    }
+    .time{
+        margin-left: 10px;
+
+    }
+    .btnreturn{
+        margin-left: 135px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        
+    }
+}
+
+@media screen and (max-width:581px) {
+    .mainorderContainer{
+        display: block;
+    }
+    .address{
+        margin-left: 100px;
+    }
+    .createdAt{
+        color: white;
+        margin-left:190px;
+        margin-bottom: -10px;
+        font-size: 13px;
+    }
+    .imagefororder{
+        width: 130px;
+        margin-top: 10px;
+    }
+    .orderaddressname{
+        margin-left: 130px;
+
+    }
+    .orderaddress{
+        margin-left: 130px;
+        
+    }
+    .time{
+        margin-left: 10px;
+
+    }
+    .btnreturn{
+        margin-left: 135px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        
+    }
+}
+@media screen and (max-width:522px) {
+    .orderaddress{
+        color: white;
+        margin-left:0px;
+    }
+    .OrderStatusDetails{
+        margin-top: 10px; 
+        color:red;
+        margin-left: 10px;
+    }
+    .orderaddressname{
+        margin-left: 0px;
+    }
+    
+    .btnreturn{
+        margin-left: 0px;
+        padding: 10px;
+    }
+    .orderaddress{
+        margin-left: 0px;
+        font-size: 12px;
+    }
+    .subOrderItems{
+        display: block;
+    }
+    .itemnamefororder{
+        margin-left: 10px;
+    }
+    .imagefororder{
+        margin-left: 10px;
+        object-fit: cover;
+    }
+}

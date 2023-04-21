@@ -1,0 +1,94 @@
+.ContentUploadContainer{
+          width: 60%;
+          background-color: white;
+          margin-top: 20px;
+          border-radius: 10px;
+          margin-left: 30px;
+          position: relative;
+}
+
+.contentWritingpart{
+          width: 100%;
+          margin-left: 10px;
+          margin-top: 5px;
+          height: 4vh;
+          border: none;
+}
+.inputcontainer{
+          border-radius: 10px;
+}
+
+.inputcontainerr{
+          border-radius: 10px;
+}
+
+.cattitle{
+          font-size: 12px;
+}
+
+select{
+          padding: 7px;
+} 
+
+.profileimage{
+          width:40px;
+          height: 40px;
+          border-radius: 50%;
+          margin-left: 10px;
+          
+}
+
+.icons{
+          width: 24px;
+          height: 24px;
+          margin-left: 20px;
+          margin-top: 49px;
+          border-radius: 0px;
+}
+.PostIcons{
+          width: 24px;
+          height: 24px;
+}
+
+.ProductAddBtn{
+          height: 32px; 
+          margin-right: 12px; 
+          /* margin-top: 40px;  */
+          padding-left: 18px; 
+          padding-right: 20px; 
+          padding-top: 6px;
+          padding-bottom: 6px; 
+          border: none; 
+          background-color: black; 
+          color: white;  
+          cursor: pointer;
+}
+
+.productLink{
+          width: 100%; 
+          height:26px;
+          border-top-left-radius: 10px; 
+          border-bottom-left-radius: 10px; 
+          border: 1px solid rgb(181, 177, 177);
+}
+
+@media screen and (max-width:1591px) {
+    .ContentUploadContainer{
+              width: 67%;
+              margin-left: 20px;
+    }
+}
+
+@media screen and (max-width:1060px) {
+          .ContentUploadContainer{
+                    width: 85%;
+                    margin-left: 20px;
+          }
+}
+
+@media screen and (max-width:883px) {
+          .ContentUploadContainer{
+                    width: 95%;
+                    margin-left: 10px;
+          }
+}

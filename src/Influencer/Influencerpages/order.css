@@ -1,0 +1,44 @@
+.allorder{
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.mainDiv1{
+    display: flex;
+    background-color: rgb(8, 8, 8);
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+.mainDiv1:hover{
+    background-color: rgb(76, 74, 68);
+}
+.itemname{
+    flex: 4;
+    
+}
+.address{
+    flex: 2;
+}
+.time{
+    flex: 2;
+}
+
+.imageforitem{
+    width: 200px;
+    height: 100px;
+    object-fit: contain;
+    margin-left: 10px;
+}
+
+.subOrderItme{
+    display: flex;
+}
+h2{
+    margin-left: 10px;
+    margin-top: 6px;
+}
+
+span{
+    font-weight: 800;
+}

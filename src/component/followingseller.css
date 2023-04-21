@@ -1,0 +1,45 @@
+.followingheadname{
+          color: black;
+          margin: auto; 
+          margin-left: 40%;
+          padding: 10px;
+}
+
+.FollowingitemContainer{
+          padding-top:10px; 
+          background-color:black; 
+          height:88vh ;
+          overflow:hidden; 
+          overflow-y:scroll
+}
+
+.followingsellerDetailContainer{
+          display:flex; 
+          padding:4px
+}
+.followingsellerimage{
+          width: 34px;
+          height: 34px;
+          border-radius: 50%;
+}
+.subfollowingsellerDetailContainer{
+          background-color:white; 
+          display:flex; 
+          padding:4px; 
+          border-radius:10px;
+          width: 60%;
+          margin: auto;
+}
+
+@media screen and (max-width:606px) {
+          .followingheadname{
+                    font-size: 18px;
+                    margin-left: 30%;
+          }
+}
+@media screen and (max-width:373px) {
+          .followingheadname{
+                    font-size: 14px;
+                    margin-left: 30%;
+          }
+}

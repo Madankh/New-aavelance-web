@@ -1,0 +1,43 @@
+.main{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.firstTextline{
+    font-size: 30px;
+    font-weight:600;
+}
+.secoundTextline{
+    font-size: 20px;
+    font-weight:400;
+}
+
+.status_line{
+    margin-top: 25px;
+    margin-bottom: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    color: inherit;
+}
+span{
+    margin-left: 6px;
+    font-size: 14;
+}
+
+
+li.step-completed{
+    color: gray;
+}
+li.current{
+    color: rgb(224, 79, 147);
+}
+
+span{
+
+}

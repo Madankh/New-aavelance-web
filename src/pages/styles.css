@@ -1,0 +1,366 @@
+ .seperator {
+    width: 100%;
+  }
+
+  .itemContainer{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .followitemContainer{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%; 
+    margin: auto; 
+    justify-content: center;
+    margin-top: 20px;
+    border-radius: 10px; 
+  }
+
+  .HomefollowitemContainer{
+    display: grid;
+    gap: 0.5rem;
+    grid-auto-flow: column;
+    grid-auto-columns: 16%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    /* justify-content: center; */
+    
+  }
+
+  .headertitleee{
+    color: white;
+    text-align: start;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  .slidercatimage{
+    width: 16vmax;
+    border-radius: 0px;
+    height: 14vmax;
+    object-fit: contain;
+  }
+  .slidercatimagee{
+    width: 10vmax;
+    border-radius: 0px;
+    height: 10vmax;
+    object-fit: contain;
+  }
+.mainSlideCatContainer{
+  width: 18.3vmax;
+  margin: 3px;
+  background-color: rgb(246, 246, 246);
+  padding: 2px;
+  border-radius: 10px;
+  /* margin-left: 10px; */
+}
+.mainSlideCatContainerr{
+  width: 14vmax;
+  margin: 3px;
+  background-color: rgb(246, 246, 246);
+  padding: 2px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+.headertitle{
+  color: black;
+}
+.sliderpostcatTiltee{
+  color: black;
+  text-align: start;
+  font-size: 13.8px;
+  width: 17.6vmax;
+}
+.sliderPostcatlike{
+  margin-top: -10px;
+  text-align: start;
+  color: black;
+}
+.headertitlee{
+  background-color: black;
+  color: white;
+}
+.ratingcontainer{
+  margin-left: 0px;
+  margin-top: -16px;
+}
+.Followingtitle{
+  color: black;
+}
+
+
+.slidercatTilte{
+  color: black;
+  text-align: start;
+  font-size: 11.8px;
+  width: 17.6vmax;
+}
+
+.slidercatTiltee{
+  color: black;
+  text-align: start;
+  font-size: 12.8px;
+  width: 12.6vmax;
+}
+  .star{
+    font-weight: 600;
+    width: 200px;
+    margin-top: 0px;
+    
+
+  }
+
+  .slidercatprice{
+    margin-top: -10px;
+    text-align: start;
+    font-weight: 600;
+    color: black;
+  }
+  
+  @media screen and (max-width:1465px) {
+    .HomefollowitemContainer{
+      grid-auto-columns: 19%;
+      
+    }
+  }
+
+  @media screen and (max-width:1316px) {
+    .HomefollowitemContainer{
+      grid-auto-columns: 23%;
+      
+    }
+  }
+
+
+  @media screen and (max-width:1245px) {
+    .mainSlideCatContainerr{
+      width: 17vmax; 
+    }
+    .slidercatimagee{
+      width: 13vmax;
+      height: 12vmax;
+    }
+    .slidercatTiltee{
+      width: 15.6vmax;
+    }
+  }
+
+  @media screen and (max-width:1093px) {
+    .HomefollowitemContainer{
+      grid-auto-columns: 25%;
+      
+    }
+  }
+
+  @media screen and (max-width:997px) {
+    .HomefollowitemContainer{
+      grid-auto-columns: 27%;
+      
+    }
+  }
+
+  @media screen and (max-width:935px) {
+    .HomefollowitemContainer{
+      grid-auto-columns: 29%;
+      
+    }
+  }
+
+
+  @media screen and (max-width:859px) {
+    .HomefollowitemContainer{
+      grid-auto-columns: 32%;
+      
+    }
+  }
+
+  @media screen and (max-width:789px) {
+    .HomefollowitemContainer{
+      grid-auto-columns: 34%;
+      
+    }
+  }
+
+  @media screen and (max-width:639px) {
+    .HomefollowitemContainer{
+      grid-auto-columns: 44%;
+      
+    }
+  }
+
+
+  @media screen and (max-width:546px) {
+    .HomefollowitemContainer{
+      grid-auto-columns: 48%;
+      
+    }
+  }
+
+
+
+  @media screen and (max-width:1020px) {
+    .mainSlideCatContainerr{
+      width: 18.3vmax; 
+    }
+    .slidercatimagee{
+      width: 15vmax;
+      height: 15vmax;
+    }
+    .slidercatTiltee{
+      font-size: 11.8px;
+      width: 17.6vmax;
+    }
+  }
+
+  @media screen and (max-width:895px) {
+    .mainSlideCatContainerr{
+      width: 20.3vmax; 
+    }
+    .slidercatimagee{
+      width: 14vmax;
+      height: 14vmax;
+    }
+    .slidercatTiltee{
+      font-size: 10.8px;
+      width: 19.6vmax;
+    }
+    .followitemContainer{
+      width: 93%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 14px;
+    }
+  }
+
+  @media screen and (max-width:686px) {
+    .mainSlideCatContainerr{
+      width: 20.3vmax; 
+    }
+    .slidercatimagee{
+      width: 14vmax;
+      height: 14vmax;
+    }
+    .slidercatTiltee{
+      font-size: 10px;
+      width: 19.8vmax;
+    }
+    .slidercatTilte{
+      font-size: 10px;
+      width: 19.8vmax;
+    }
+    .followitemContainer{
+      width: 93%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 5px;
+    }
+  }
+
+  @media screen and (max-width:546px) {
+    .HomefollowitemContainer{
+      grid-auto-columns: 50%;
+      
+    }
+  }
+
+
+  @media screen and (max-width:469px) {
+    .HomefollowitemContainer{
+      grid-auto-columns: 62%;
+      
+    }
+  }
+
+  @media screen and (max-width:416px) {
+    .mainSlideCatContainerr{
+      width: 19vmax; 
+    }
+    .slidercatimagee{
+      width: 15vmax;
+      height: 15vmax;
+    }
+    .slidercatTiltee{
+      width: 19vmax;
+    }
+  }
+
+  @media screen and (max-width:396px) {
+    .HomefollowitemContainer{
+      grid-auto-columns: 70%;
+      
+    }
+  }
+
+  @media screen and (max-width:329px) {
+    .HomefollowitemContainer{
+      grid-auto-columns: 82%;
+      
+    }
+  }
+  
+  @media screen and (max-width : 376px) {
+    .mainSlideCatContainerr{
+      width: 19.3vmax; 
+    }
+    .slidercatTiltee{
+      color: black;
+      text-align: start;
+      font-size: 11px;
+      width: 18vmax;
+    }
+    .slidercatprice{
+      font-size: 12px;
+    }
+    .slidercatimagee{
+      width: 15vmax;
+      height: 15vmax;
+    }
+  
+  }
+
+
+  @media screen and (max-width : 360px) {
+    .mainSlideCatContainerr{
+      width: 20.3vmax; 
+    }
+    .slidercatTiltee{
+      color: black;
+      /* text-align: start; */
+      font-size: 10.4px;
+      width: 18vmax;
+    }
+    .slidercatprice{
+      font-size: 12px;
+    }
+    .slidercatimagee{
+      width: 15vmax;
+      height: 15vmax;
+    }
+  
+  }
+
+
+
+
+  @media screen and (max-width:319px) {
+    .slidercatimage{
+        width: 28vmax;
+        border-radius: 0px;
+        height: 28vmax;
+        object-fit: contain;
+      }
+    .mainSlideCatContainer{
+      width: 30vmax;
+      margin: 3px;
+      background-color: rgb(246, 246, 246);
+      padding: 2px;
+      border-radius: 10px;
+      margin-left: 7px;
+    }
+    .slidercatTilte{
+      width: 28vmax;
+      text-decoration: none;
+      font-size: 11px;
+    }
+}

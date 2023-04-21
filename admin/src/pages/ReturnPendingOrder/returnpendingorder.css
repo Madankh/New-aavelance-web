@@ -1,0 +1,10 @@
+.returnContainer{
+          flex: 4;
+}
+
+.productimage{
+          width: 20%;
+          border-radius: 0px;
+          height: 20vh;
+          object-fit: cover;
+}

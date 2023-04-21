@@ -1,0 +1,111 @@
+.slider3Container{
+          width: 96%;
+          height: 46vh;
+          background-color: white;
+          color:white;
+          border-radius:20px;
+          margin:auto;
+          position:relative;
+          background-size: 100%;  
+          overflow:hidden;
+          background-image: url("../Assest/beautyproduct1.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+}
+
+.slider3Wrapper{
+          margin:120px 90px 0px; 
+          height:100vh;
+          transition: all 1.5s ease;
+          display:flex;
+}
+
+.slider3InfoContainer{
+          margin-bottom:10px
+}
+
+.slider3Title{
+          font-size:30px;
+          margin-top: -10px;
+}
+.slider3Desc{
+          font-size:14px;
+          font-weight:300;
+          margin-top: 10px;
+}
+.slider3Buttom{
+          font-size:15px;
+          background-color: black;
+          border-radius:10px;
+          color:white;
+          padding:5px 20px;
+          border:none;
+          cursor: pointer;
+          margin-top: 10px;
+}
+
+
+  @media screen and (max-width:700px) {
+   
+         .slider3Title{
+            font-size:20px;
+            margin:6px 0px;
+            margin-left: -64PX;
+            width: 100%;
+            margin-top: -30px;
+         }
+         .slider3Desc{
+            font-size:14px;
+            font-weight:300;
+            margin:6px 0px;
+            margin-left: -64PX;
+            width: 100%;
+         
+         }
+         
+         .slider3Buttom{
+            margin-left: -64PX;
+         }
+         .InfoContainer{
+            margin-top: 80px;
+         }
+         }
+
+@media screen and (max-width:459px) {
+          .slider3Container{
+             background-position: -150px;
+             background-image: url("../Assest/beautyproduct1.jpg");
+       }
+       }
+
+@media screen and (max-width:413px) {
+   .slider3Container{
+       height: 40vh;
+       background-position: -90px;
+       background-image: url("../Assest/beautyproduct1.jpg");
+   }
+   
+.slider3Title{
+   font-size:13px;
+   margin:6px 0px;
+   margin-left: -64PX;
+   width: 100%;
+   margin-top: -30px;
+}
+.slider3Desc{
+   font-size:12px;
+   font-weight:300;
+   margin:6px 0px;
+   margin-left: -64PX;
+   width: 100%;
+
+}
+
+.slider3Buttom{
+   margin-left: -64PX;
+}
+.InfoContainer{
+   margin-top: 80px;
+}
+}

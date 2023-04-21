@@ -1,0 +1,79 @@
+.MainsalesMainContainer{
+    display: flex;
+    flex: 5;
+}
+.mainDiv11{
+    display: flex;
+}
+
+span{
+    color: black;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.submainOrderItme{
+    display: flex;
+    margin: 10px;
+}
+.mainimageforitem{
+    border-radius: 0px;
+    width: 25%;
+    height: 25vh;
+    object-fit: contain;
+}
+.mainOrderContainer{
+    width: 100%;
+    align-items: center;
+    background-color: rgb(228, 230, 234);
+    border-radius: 10px;
+    margin-left: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+.salesMainContainer{
+    overflow: hidden;
+    background-color: rgb(225, 227, 229);
+}
+.mainunkonw{
+    flex: 5;
+    margin-left: -10px;
+}
+
+
+.mainDiv11{
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.24); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.24);
+    padding: 10px;
+}
+.mainaddress{
+    margin-left: -30%;
+    overflow: hidden;
+}
+.mainallorder{
+    color: rgb(59, 59, 59);
+    margin-left: 10px;
+
+}
+.MainRevanue{
+    margin-left: 20px;
+}
+
+
+@media screen and (max-width:712px) {
+    .subOrderItme{
+        display: block;
+    }
+    .mainDiv11{
+        display: block;
+    }
+    .address{
+        margin-left: 0px;
+    }
+    .imageforitem{
+        width: 100%;
+        object-fit: cover;
+        height: 40vh;
+        margin-left: -0px;
+    }
+}

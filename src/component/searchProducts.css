@@ -1,0 +1,12 @@
+.searchProductContainer{
+          display: flex;
+          flex-wrap: wrap;
+          margin-left: 40px;
+}
+
+@media screen and (max-width:370px) {
+          .searchProductContainer{
+                    margin-left: 45px;
+          }
+      }
+      

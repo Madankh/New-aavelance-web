@@ -1,0 +1,56 @@
+.searchTitle{
+          margin:0px 10px;
+          font-size:20px;
+}
+
+.FilterContainer{
+          display:flex;
+          justify-content:space-between;
+}
+
+.Filter{
+          margin:20px;
+}
+
+.FilterText{
+          font-size:20px;
+          font-weight:600;
+          margin-right:20px;
+}
+.select{
+          padding:10px;
+          margin-right:10px;
+}
+
+@media screen and (max-width:370px) {
+          .select{
+                    padding:6px;
+                    margin-right:10px;
+          }
+          .FilterText{
+                    font-size: 14px;
+                    padding: 10px 0px;
+                    /* padding-right: 4px; */
+          }
+          .searchTitle{
+                    font-size:16px;
+                    margin:0px 0px;
+          }
+      }
+      
+@media screen and (max-width:348px) {
+          .select{
+                    padding:3px;
+                    /* margin-right:10px; */
+          }
+          
+      }
+      
+@media screen and (max-width:328px) {
+          .select{
+                    padding:0px;
+                    margin-right:10px;
+          }
+          
+      }
+     

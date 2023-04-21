@@ -1,0 +1,24 @@
+.home{
+    flex: 4;
+}
+
+.homeWidge{
+    display: flex;
+}
+
+.submain{
+    display: flex;
+}
+
+.part1{
+    flex: 1;
+}
+.part2{
+    flex: 5;
+}
+
+@media screen and (max-width:462px) {
+    .part1{
+        display: none;
+    }
+}

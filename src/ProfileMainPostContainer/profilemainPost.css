@@ -1,0 +1,18 @@
+.ProfilemainPostContainer{
+          flex: 3;
+          
+}
+
+.profileCoverimage{
+          width: 72%;
+          border-radius: 10px;
+          height: 20vh;
+          object-fit: cover;
+          margin-top: 20px;
+}
+
+@media screen and (max-width:1068px){
+          .profileCoverimage{
+                    width: 92%;
+          }
+}

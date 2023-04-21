@@ -1,0 +1,10 @@
+.mainPostContainer{
+          flex: 4;
+          /* margin-left: -30px; */
+}
+
+@media screen and (max-width:822px) {
+    .mainPostContainer{
+        margin-left: -30px;
+    }
+}

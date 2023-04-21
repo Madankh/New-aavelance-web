@@ -1,0 +1,61 @@
+.ProfileLeftbar{
+          flex: 0.9;
+
+}
+
+.ProfiledetailUserContainer{
+          width: 18pc;
+          height: 40vh;
+          background-color: white;
+          margin-top: 20px;
+          border-radius: 20px;
+          overflow: hidden;
+          overflow-y: scroll;
+}
+.ProfiledetailUserContainer1{
+          width: 18pc;
+          height: 60vh;
+          background-color: white;
+          margin-top: 20px;
+          border-radius: 20px;
+          overflow: hidden;
+          overflow-y: scroll;
+}
+
+.Profilepageimage{
+          width: 60px;
+          border-radius: 50%;
+          height: 60px;
+          object-fit: cover;
+          margin-left: 10px;
+
+}
+.ProfilepageCover{
+          width: 270px;
+          height: 77px;
+          object-fit: cover;
+}
+
+.friendimage{
+          width: 80px;
+          height: 80px;
+          object-fit: cover;
+          border-radius: 10px;
+}
+@media screen and (max-width:900px) {
+          .ProfiledetailUserContainer1{
+              display: none;
+          }
+          .ProfiledetailUserContainer{
+            width: 100%;
+            height: 40vh;     
+        }
+        .ProfilepageCover{
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+  }
+  
+         
+      }
+      

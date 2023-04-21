@@ -1,0 +1,35 @@
+.imageforitem{
+    border-radius: 0px;
+}
+.OrderContainer{
+    width: 100%;
+    align-items: center;
+    background-color: rgb(190, 211, 211);
+    border-radius: 10px;
+    margin-left: 10px;
+    
+}
+.unkonw{
+    flex: 5;
+}
+
+.MainContainer{
+    display: flex;
+}
+
+.sidebarr{
+    flex: 1;
+}
+.mainDiv1{
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.24); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.24);
+    padding: 10px;
+}
+
+.allorder{
+    color: rgb(59, 59, 59);
+   font-family: 'Source Sans Pro'
+}
+.Revanue{
+    margin-left: 20px;
+}

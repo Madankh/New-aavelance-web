@@ -1,0 +1,11 @@
+
+.catsearchTitle{
+    font-size: 14px;
+    margin-left: -200px;
+}
+
+@media screen and (max-width:450px) {
+    .catsearchTitle{
+        font-size: 19px;
+    }
+}

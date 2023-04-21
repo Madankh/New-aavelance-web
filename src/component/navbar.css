@@ -1,0 +1,133 @@
+.navContainer{
+          background-color : rgb(0, 0, 0);
+          height:60px;
+          position: relative;
+}
+
+.navWrapper{
+    padding:10px 20px;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.navLeft{
+   flex:1;
+  display:flex;
+}
+
+.navCenter{
+   display:flex;
+  background-color:white;
+  flex:1.2;
+  padding:3px 3px;
+  border-radius:10px;
+  justify-content: center;
+  align-items: center;
+  text-align:center;
+  margin-top: -4px;
+}
+
+.navInput{
+          margin:0px 8px;
+          border: 0.2px solid lightgray;
+          width:100%;
+          border:none;
+          outline: none;
+}
+
+.Discuss{
+  color: white;
+  font-size: 14px;
+}
+
+.navRight{
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+}
+
+.navMenuItem{
+ color:white;
+ font-size:14px;
+ cursor: pointer;
+ margin-left:25px;
+ margin-top: -0px;
+}
+
+.CompanyLogo{
+          color:white;
+          font-weight:600;
+          font-size:20px;
+          margin-top: 4px;
+          cursor:pointer;
+}
+
+.searchBtn{
+          padding-top:10px;
+          padding-bottom:10px;
+          padding-left:25px;
+          padding-right:30px; 
+          border:none; 
+          background-color:black;
+          color:white;
+          cursor:pointer;
+          border-radius: 10px;
+}
+
+.searchItems{
+          color:black
+}
+
+.discussAbout{
+  display: flex;
+  align-items: center
+}
+
+@media screen and (max-width:1004px) {
+          .navInput{
+                    display: none;
+          } 
+          .navCenter{
+               display:none;
+                  
+          }
+          .searchBtn{
+                    display: none;
+          }
+}
+
+@media screen and (max-width:567px) {
+  .CompanyLogo{
+    color:white;
+    font-weight:600;
+    font-size:14px;
+    cursor:pointer;
+    margin-top: -10px;
+}
+.navMenuItem{
+  color:white;
+  font-size:12px;
+  cursor: pointer;
+  margin-left:25px;
+  /* margin-top: 0px; */
+ }
+ .navContainer{
+  background-color : rgb(49, 45, 45);
+  height: 35px;
+}
+.navMenuItem{
+  margin-top: -5px;
+}
+.navRight{
+  margin-top: -14px;
+}
+.Discuss{
+  color: white;
+  font-size: 12px;
+}
+.discussAbout{
+  margin-top: -4px;
+}
+}

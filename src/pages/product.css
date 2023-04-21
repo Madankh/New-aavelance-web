@@ -1,0 +1,242 @@
+
+
+.submitDialog{
+    display: flex;
+    flex-direction: column;
+};
+
+.submitDialogTextArea{
+    border: 1px solid reba(0,0,0,0.082);
+    margin:1vmax;
+    outline: none;
+    padding: 1rem;
+    font: 300 1rem "Roboto";
+}
+
+.reviewuserimg{
+    width: 30px;
+    height: 30px; 
+    border-radius: 50%; 
+    padding-top: 0px;
+    margin: 2px;
+}
+.productsubimage{
+    width: 7%;
+    height: 7vh;
+    border-radius: 5px;
+    object-fit: cover;
+    padding-left: 2px;
+    background-color: black;
+    padding: 1px;
+    margin: 1px;
+    
+}
+
+.Imagee{
+    width:70%;
+    height:38vh;
+    object-fit:contain;
+    border-radius: 10px;
+    margin-left: 40px;
+}
+
+.subproductimageContainer{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.ProductWrapper{
+    padding:0px;
+    display:flex;
+}
+.ProductInfoContainer{
+    flex:2;
+    padding:0px 0px;
+}
+
+.productTitle{
+    font-weight:600;
+    font-size: 20px;
+    margin-top: 30px;
+    width: 50%;
+}
+.productTitle1{
+    display: none;
+}
+
+.ImgContainer{
+    flex:1;
+    margin-top: 40px;
+}
+.filtersize{
+    margin-left:10px;
+   padding:5px
+}
+
+.Submain{
+    display:flex;
+    padding: 10px
+}
+
+.customerRating{
+    font-size: 30px; 
+    font-weight: 800 
+}
+
+.RatingContainer{
+    padding-left: 10px; 
+    display: flex;
+    align-items: center;
+}
+
+.ratingCounter{
+    font-size:20px; 
+    font-weight: 700
+}
+
+.copyproduct{
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    background-color: rgb(232, 69, 172);
+    color: white;
+    margin-top: -10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 10px;
+
+}
+
+.SendCustomer{
+    color: white; 
+    background-color: black; 
+    height: 30px; 
+    border-radius: 10px; 
+    border: none; 
+    cursor: pointer
+}
+
+.reviewContainer{
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.productReview{
+    width: 100%
+}
+
+.customerid{
+    margin-top: 15px; 
+    font-weight: 600; 
+    font-size: 16px
+}
+.Desc{
+    margin:5px 10px;
+    width: 75%;
+}
+
+@media screen and (max-width:752px) {
+    .ProductWrapper{
+        display:block;
+    }
+    .Desc{
+       font-size: 13px;
+    }
+    .productTitle{
+        display: none;
+    }
+    .productTitle1{
+        display: block;
+        width: 80%;
+        margin: auto;
+        font-weight: 600;
+        margin-top: -26px;
+    }
+    .specificationsInfo{
+        margin-left: 10px;
+    }
+    .reviewuserimg{
+        width: 8%;
+        height: 8%; 
+        
+    }
+
+}
+
+@media screen and (max-width:582px) {
+    .productTitle1{
+        font-size: 13px;
+        margin-top: -26px;
+    }
+    .customerRating{
+        font-size: 17px; 
+        font-weight: 800 
+    } 
+    .Submain{
+        display:block;
+    }
+    .ratingCounter{
+        font-size:14px; 
+        font-weight: 700
+    }
+    .SendCustomer{
+        margin-left: 10px;
+    }
+    .mainReviewcontainer{
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width:484px) {
+    .productTitle1{
+        font-size: 13px;
+    }
+    .reviewuserimg{
+        width: 10%;
+        height: 10%; 
+        
+    }
+    
+    
+}
+@media screen and (max-width:378px) {
+    .productTitle{
+        font-size: 13px;
+    }
+    
+    
+}
+@media screen and (max-width:310px) {
+    .productTitle{
+        font-size: 11px;
+    } 
+    .customerRating{
+        font-size: 15px; 
+        font-weight: 800 
+    } 
+    .Submain{
+        display:block;
+    }
+    .ratingCounter{
+        font-size:12px; 
+        font-weight: 700
+    }
+    .SendCustomer{
+        margin-left: 10px;
+    }  
+}
+
+@media screen and (max-width:289px) {
+    .productTitle{
+        font-size: 10px;
+    }  
+    
+}
+    

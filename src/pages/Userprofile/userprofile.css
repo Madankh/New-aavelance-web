@@ -1,0 +1,153 @@
+.mainUserProfile{
+          width: 98.7%; 
+          background-color: black;
+          padding-left: 20px;
+          overflow: hidden;
+
+}
+.yourbagContainer{
+          background-color:white; 
+          overflow: hidden;
+          height: 29vh; 
+          width: 90%;
+          border-radius: 20px;
+          margin-top: -6px;
+          overflow: hidden;
+          scroll-behavior: smooth;
+          overflow-y: scroll;
+}
+
+.yourOrder{
+          display: flex; 
+          align-items: center; 
+          cursor: pointer;
+          margin-left: 30px;
+}
+.iconsforuser1{
+          margin-left: 10px;
+}
+.iconsforuser{
+          margin-left: 0px;
+          margin-top: -5px;
+}
+
+.iconsforuser3{
+    margin-left: 0px;
+    margin-top: -13px;
+}
+.iconsforuser4{
+    margin-left: 0px;
+    margin-top: -13px;
+}
+.text{
+          margin-top: -0px 
+}
+.text1{
+          margin-top: -13px; 
+          margin-left: 26px
+}
+
+.SubContainer{
+          background-color: white; 
+          /* flex: 3;  */
+          /* margin-left: 50px; */
+          /* margin-right: 150px;  */
+          /* height: 70vh;  */
+          width: 90%;
+          border-radius: 20px 
+}
+
+.submainpartContainer{
+          background-color: white; 
+          margin-left: 18px;
+          height: 66vh; 
+          border-radius: 20px
+}
+.editbtn{
+          margin-left: 0.9%; 
+          cursor: pointer; 
+          padding-left: 150px; 
+          padding-right: 150px; 
+          border: none; 
+          padding-top: 7px; 
+          padding-bottom: 7px;
+          border-radius: 10px; 
+          background-color: green; 
+          color: white; 
+          position:relative
+}
+
+.yourdetail{
+          display: flex; 
+          align-items: center; 
+          cursor: pointer;
+}
+
+.yourpa{
+          margin-left: 0%; 
+          background-color: black;
+          padding: 20px;
+}
+.editbtn1{
+          margin-left: 75%; 
+          cursor: pointer; 
+          padding-left: 30px;
+          padding-right: 30px; 
+          border: none; 
+          padding-top: 7px; 
+          padding-bottom: 7px; 
+          border-radius: 10px; 
+          background-color: green; 
+          color: white; 
+          position: relative; 
+          margin-top: 19px
+}
+.yourPContainer{
+          display: flex; 
+          align-items: center; 
+          cursor: pointer; 
+          margin-left: 9% 
+}
+.iconP{
+          margin: 4px;
+          color: white;
+          margin-top: -14px;
+}
+.text2{
+          margin-top: -0px; 
+          color: white
+}
+.text4{
+          margin-top: -13px; 
+          margin-left: 9%; 
+          color: #8e8e8e;
+}
+
+.ma{
+          overflow: hidden;
+}
+@media screen and (max-width:399px) {
+          .editbtn{
+                    padding-left: 50px; 
+                    padding-right: 50px; 
+                    
+          } 
+}
+@media screen and (max-width:339px) {
+          .editbtn1{
+                    margin-left: 65%; 
+                    
+          }
+}
+
+@media screen and (max-width:317px) {
+          .headertext1{
+                    font-size: 20px;
+          }
+          .text2{
+                    font-size: 12px;
+          }
+          .text4{
+                    font-size: 11px;
+          }
+}

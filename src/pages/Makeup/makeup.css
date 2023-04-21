@@ -1,0 +1,263 @@
+.makeupContent{
+    flex: 6;
+    width: 95%;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-items: 'center'; 
+    align-items: center;
+    margin: auto; 
+  }
+
+
+  .modal {
+    width: 45%;
+    height: 70%;
+    margin: auto;
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 20px;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .overlay {
+    background-color: rgb(255 255 255 / 93%);
+  }
+  
+.productdesincontent{
+  font-size: 11px;
+  color:white
+}
+.otherproductdesincontent{
+  font-size:11px; 
+  color:white; 
+  margin-top:-10px
+}
+  .insidemakeupcontent{
+    flex-basis: 18%;
+    background-color:rgb(255, 255, 255);
+    margin:2px;
+    margin-top: 10px;
+    height: 51.6vh;
+    margin-top: 14px;
+    margin-left: 17px;
+    border-radius: 10px;
+    padding: 5px;
+  }
+
+  .makeupContentImage{
+    width: 83%;
+    margin-left: 25px;
+    height: 35vh;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+.makeProductImageForPostt{
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+  .makeupContentImageprofile{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  .sidebarimage{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+  }
+.leftSide{
+  flex:1;
+  background-color:rgb(216 216 219 / 62%); 
+  margin-top:14px
+
+}
+  @media screen and (max-width:1883px) {
+    .insidemakeupcontent{
+      flex-basis: 22%;
+      
+    }
+  }
+
+  @media screen and (max-width:1407px) {
+    .insidemakeupcontent{
+      flex-basis: 27%;
+      
+    }
+  }
+
+  @media screen and (max-width:1227px) {
+    .insidemakeupcontent{
+      flex-basis: 30%;
+    }
+    .modal {
+      width: 55%;
+    }
+  }
+
+  @media screen and (max-width:1193px) {
+    .insidemakeupcontent{
+      flex-basis: 27%;
+    }
+    .leftSide{
+      display: none;
+    }
+    .makeupContent{
+      margin-left: 60px;
+    }
+  }
+
+
+
+  @media screen and (max-width:976px) {
+    .insidemakeupcontent{
+      flex-basis: 30%;
+    }
+    .makeupContent{
+      margin-left: 46px;
+    }
+    
+  }
+
+  
+  @media screen and (max-width:960px) {
+    .insidemakeupcontent{
+      flex-basis: 36%;
+    }
+    .makeupContent{
+      margin-left: 146px;
+    }
+    .modal {
+      width: 77%;
+    }
+    
+  }
+
+  @media screen and (max-width:876px) {
+    .makeupContent{
+      margin-left: 100px;
+    }
+    .insidemakeupcontent{
+      flex-basis: 42%;
+    }
+  }
+
+  
+  @media screen and (max-width:744px) {
+    .insidemakeupcontent{
+      flex-basis: 42.6%;
+    }
+    .makeupContent{
+      margin-left: 30px;
+    }
+    .modal {
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width:645px) {
+    .insidemakeupcontent{
+      flex-basis: 47.6%;
+    }
+    .makeupContent{
+      margin-left: 40px;
+    }
+  }
+
+  @media screen and (max-width:648px) {
+    .insidemakeupcontent{
+      flex-basis: 40.6%;
+    }
+    .makeupContent{
+      margin-left: 20px;
+    }
+  }
+
+  /* @media screen and (max-width:617px) {
+    .insidemakeupcontent{
+      flex-basis: 50%;
+    }
+    
+  } */
+
+  @media screen and (max-width:617px) {
+    .insidemakeupcontent{
+      flex-basis: 44%;
+    }
+    .makeupContent{
+      margin-left: 0px;
+    }
+    .makeupContentImage{
+      width: 100%;
+      margin-left: 0px;
+      height: 42vh;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  @media screen and (max-width:790px) {
+    .modal {
+      width: 93%;
+    }
+  }
+
+  @media screen and (max-width:561px) {
+    .makeProductImageForPostt{
+      width: 40px;
+      height: 50px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    .makeupContentImage{
+
+      margin-left: 0px;
+      height: 40vh;
+      
+    }
+  }
+
+  @media screen and (max-width:544px) {
+    .productdesincontent{
+      font-size: 9px;
+    }
+  }
+  
+  @media screen and (max-width:530px) {
+    .makeupContentImage{
+      width: 100%;
+      margin-left: 0px;
+      height: 35vh;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  @media screen and (max-width:492px) {
+    .insidemakeupcontent{
+      flex-basis: 76%;
+      margin-left: 40px;
+    }
+    
+  }
+
+  @media screen and (max-width:378px) {
+    .insidemakeupcontent{
+      flex-basis: 80%;
+      margin-left: 20px;
+    }
+    
+  }
+  @media screen and (max-width: 600px) {
+    .modal-content {
+      width: 80%;
+      height: 80%;
+    }
+  }
+  

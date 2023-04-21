@@ -1,0 +1,19 @@
+
+
+@media screen and (max-width:281px) {
+    .slidercatimage{
+        width: 18vmax;
+        border-radius: 0px;
+        height: 19vmax;
+        object-fit: contain;
+      }
+    .mainSlideCatContainer{
+      width: 38vmax;
+      margin: 3px;
+      background-color: rgb(246, 246, 246);
+      padding: 2px;
+      border-radius: 10px;
+      margin-left: -20px;
+    }
+}
+
