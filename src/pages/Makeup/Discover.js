@@ -20,13 +20,26 @@ export default function Discover({item}) {
 
   const [product , setproduct] = useState('');
   const [productitem , setproductitem] = useState('');
-  const [user, setuser] = useState([]);
-
+  
   const [Like, setLike] = useState([item?.like.includes(id) ? anotherlikeicon : LikeIcon]);
   const [count, setCount] = useState(item?.like?.length);
   const [Comments, setComments] = useState(item?.comments);
   const [commentwriting, setcommentwriting] = useState('');
   const [show, setshow] = useState(false);
+  
+  
+  const [user, setuser] = useState([]);
+  useEffect(() => {
+    const getuser = async () => {
+      try {
+        const res = await axios.get(`http://192.168.18.4:5000/api/user/post/user/details/${id}`)
+        setuser(res.data);
+      } catch (error) {
+        console.log("Some error occured")
+      }
+    }
+    getuser();
+  }, [])
 
 
   const handleLike = async () => {
@@ -61,25 +74,39 @@ export default function Discover({item}) {
 
   const handleshow = () => {
     if (show === false) {
-      setshow(true)
+      setshow(true);
     } else {
-      setshow(false)
+      setshow(false);
+    };
+  };
+
+  const [Follow, setFollow] = useState(() => {
+    if (!user?.Userfollowing) {
+      return "Follow";
+    }
+    return user.Userfollowing.includes(item.user) ? "Following" : "Follow";
+  });
+  
+  useEffect(() => {
+    if (user.Userfollowing) {
+      setFollow(user.Userfollowing.includes(item.user) ? "Following" : "Follow");
+    }
+  }, [user, item]);
+  
+  console.log(user?.Userfollowing , "Userfollowing")
+  const handleFollow= async(e)=>{
+    if(Follow == "Follow"){
+      await fetch(`http://localhost:5000/api/user/feed/following/${id}` , {method:'PUT', headers:{'Content-Type':"application/JSON" , token:accessToken} , body:JSON.stringify({user:`${item?.user}`})})
+      setFollow("Following");
+    }else{
+      await fetch(`http://localhost:5000/api/user/feed/following/${id}` , {method:'PUT', headers:{'Content-Type':"application/JSON" , token:accessToken} , body:JSON.stringify({user:`${item?.user}`})})
+      setFollow("Follow");
     }
   }
- 
 
-  useEffect(() => {
-    const getuser = async () => {
-      try {
-        const res = await axios.get(`http://192.168.18.4:5000/api/user/post/user/details/${item.user}`)
-        setuser(res.data);
-      } catch (error) {
-        console.log("Some error occured")
-      }
-    }
-    getuser();
-  }, [])
 
+
+  
   useEffect(() => {
     const getProduct = async () => {
       try {
@@ -103,7 +130,7 @@ export default function Discover({item}) {
     <div className='insidemakeupcontent' onClick={()=>handleClick(item)}>
           {item?.image !== '' ? <img src={`${item.image}`} className='makeupContentImage' alt="" /> : item.video !== ''?
           
-          <video src={`${item?.video}`} controls controlsList="nodownload" className='makeupContentImage'></video>
+          <video  src={`${item?.video}`} controls controlsList="nodownload" className='makeupContentImage'></video>
 
            :""
             }
@@ -138,19 +165,21 @@ export default function Discover({item}) {
        contentLabel="Create New Group"
        className="modal"
        >
-          <div style={{display:"flex"}}>
+          <div className='ModalForDiscoverPage'>
           <div style={{flex:2}}>
             {productitem?.image == "" ? <video src={`${item?.video}`} controls controlsList="nodownload" style={{width:"100%" , height:"65vh" , marginTop:"-0px"}}></video> : 
-            <img src={`${productitem?.image}`} style={{width:"100%" , height:"65vh" , objectFit:"cover"}} className=""  alt="" />}
+            <img src={`${productitem?.image}`} className="ModalImage"  alt="" />}
           </div>
           <div style={{flex:2}}>
             <div style={{display:"flex" , justifyContent:"space-between"}}>
               <div style={{display:"flex" , alignItems:"center" , marginLeft:"20px"}}>
-                <img src={`https://news.artnet.com/app/news-upload/2022/12/prisma-labs-lensa-ai.jpg`} style={{width:"30px" , height:"30px", borderRadius:"50%"}} className=""  alt="" />
-                <p style={{marginLeft:"10px"}}>Suman</p>
+                {user.profile == "" ? 
+                <img src={`https://news.artnet.com/app/news-upload/2022/12/prisma-labs-lensa-ai.jpg`} style={{width:"30px" , height:"30px", borderRadius:"50%"}} className=""  alt="" />:<img src={`${user?.profile}`} style={{width:"30px" , height:"30px", borderRadius:"50%"}} className=""  alt="" />
+                }
+                <p style={{marginLeft:"10px"}}>{user?.username}</p>
               </div>
-              <div style={{marginTop:"10px"}}>
-                <button style={{paddingLeft:"25px" ,color:"white" ,borderRadius:"10px", paddingRight:"25px" , paddingTop:"4px" , paddingBottom:"4px" , backgroundColor:"black"}}>Follow</button>
+              <div style={{marginTop:"10px"}} onClick={handleFollow}>
+                <button style={{paddingLeft:"25px" ,color:"white" ,borderRadius:"10px", paddingRight:"25px" , paddingTop:"4px" , paddingBottom:"4px" , backgroundColor:"black"}}>{Follow}</button>
               </div>
             </div>
             <p style={{marginLeft:"30px"}}>{productitem?.title}</p>

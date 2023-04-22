@@ -11,7 +11,7 @@ const { generateOTP } = require("../utils/mail");
 const ResetToken = require("../models/ResetToken");
 const { isValidObjectId } = require("mongoose");
 require("dotenv").config();
-const VerificationTokenOTP = require("../models/VerificationToken")
+const VerificationTokenOTP = require("../models/verificationToken")
 const sparkPostTransport = require('nodemailer-sparkpost-transport')
 const transporter = nodemailer.createTransport(sparkPostTransport({
     'sparkPostApiKey': process.env.SPARKPOSTAPIKEY

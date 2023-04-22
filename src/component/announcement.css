@@ -12,6 +12,16 @@
     border-radius: 10px;
     
 }
+
+.liveannoContaienrText{
+    color:black;
+    font-size:13px; 
+    background-color:white; 
+    height:10px; 
+    margin-top:3.7px; 
+    display:flex; 
+    margin-right:30px
+}
 .contentType{
     display:flex;
     justify-content:center; 
@@ -180,6 +190,27 @@ h3{
     }
     .livecontentType{
         width: 100%;
+    }
+}
+
+@media screen and (max-width:553px) {
+    .liveannoContaienrText{
+        font-size:12px; 
+        height:14px; 
+        display:flex; 
+    }
+}
+
+@media screen and (max-width:443px) {
+    .liveannoContaienrText{
+        font-size:10px; 
+    }
+}
+
+@media screen and (max-width:396px) {
+    .liveannoContaienrText{
+        font-size:10px; 
+        width: 30px;
     }
 }
 

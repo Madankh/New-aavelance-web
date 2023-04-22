@@ -35,7 +35,7 @@ const Navbar = ({ socket }) => {
         <div className='navLeft'>
           <a href={"/"} style={{ textDecoration: 'none' }}>
             <h1 className='CompanyLogo'>Aavelance</h1>
-            <p style={{color:"white" , marginTop:"-13px" , marginLeft:"1px" , fontSize:"10px"}}>Your innovative partner</p>
+            <p className='CompanyLogoPtage' >Your innovative partner</p>
           </a>
         </div>
         <div className='navCenter'>

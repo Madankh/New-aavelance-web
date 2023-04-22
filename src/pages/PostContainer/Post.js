@@ -144,9 +144,10 @@ console.log(product)
        isOpen={modalIsOpen}
        onRequestClose={() => setModalIsOpen(false)}
        contentLabel="Create New Group"
+      // className={"ModalClasNameForAPostPage"}
        style={{
         content: {
-        width: "45%",
+        width: "85%",
         height: "70%",
         margin: "auto",
         display: "flex",
@@ -161,10 +162,10 @@ console.log(product)
            backgroundColor: "rgb(255 255 255 / 93%)",
          },
          }}>
-          <div style={{display:"flex"}}>
+          <div className='ModalForDiscoverPagee'>
           <div style={{flex:2}}>
             {post?.image == "" ? <video src={`${post?.video}`} controls controlsList="nodownload" style={{width:"100%" , height:"100vh" , marginTop:"-300px"}}></video> : 
-            <img src={`${post?.image}`} style={{width:"100%"}} className=""  alt="" />}
+            <img src={`${post?.image}`} className="ModalImage"  alt="" />}
           </div>
           <div style={{flex:2}}>
             <div style={{display:"flex" , justifyContent:"space-between"}}>

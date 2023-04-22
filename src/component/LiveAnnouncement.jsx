@@ -35,30 +35,37 @@ const LiveAnnouncement = () => {
         
         <div className='livecontentType' >
           <div style={{display:"flex" , cursor:"pointer"}}>
-            <p style={{color:"black" , fontSize:'13px' , backgroundColor:`${value}` , height:"10px" , marginTop:"3.7px" , display:"flex" , marginRight:"30px"}}>Livestream</p>
+            <p className='liveannoContaienrText'>Livestream</p>
           </div>
           <a href={"/"} style={{textDecoration:"none"}}>
           <div style={{display:"flex" , cursor:"pointer"}} >
-            <p style={{color:"black" , fontSize:'13px' , backgroundColor:`${value}` , height:"10px" , marginTop:"3.7px" , display:"flex" , marginRight:"30px"}}>Product</p>
+            <p className='liveannoContaienrText' >Product</p>
           </div>
           </a>
           <a href={"/your/feed"} style={{textDecoration:"none"}} >
           <div style={{display:"flex" , cursor:"pointer"}}>
-            <p style={{color:"black" , fontSize:'13px' , backgroundColor:`${value}` , height:"10px" , marginTop:"3.7px" , display:"flex" , marginRight:"30px" }}>Your Feed</p>
+            <p className='liveannoContaienrText' >Feed</p>
           </div>
           </a>
 
+          <a href={"/Discover"} style={{textDecoration:"none"}} >
+          <div style={{display:"flex" , cursor:"pointer"}}>
+            <p className='liveannoContaienrText'>Discover</p>
+          </div>
+          </a>
+        
           <a href={"/makeup/user/content"} style={{textDecoration:"none"}} >
           <div style={{display:"flex" , cursor:"pointer"}}>
-            <p style={{color:"black" , fontSize:'13px' , backgroundColor:`${value}` , height:"10px" , marginTop:"3.7px" , display:"flex" , marginRight:"30px"}}>Markup</p>
+            <p className='liveannoContaienrText' >Makeup</p>
           </div>
           </a>
 
           <a href={"/fashion/user/content"} style={{textDecoration:"none"}} >
           <div style={{display:"flex" , cursor:"pointer"}}>
-            <p style={{color:"black" , fontSize:'13px' , backgroundColor:`${value}` , height:"10px" , marginTop:"3.7px" , display:"flex" , marginRight:"30px"}}>Fashion</p>
+            <p className='liveannoContaienrText'>Fashion</p>
           </div>
           </a>
+
         </div>
 
       

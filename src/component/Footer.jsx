@@ -42,7 +42,7 @@ export const Footer = () => {
             <div className='Left'>
                 <h1 className='logo'>Aavelance.</h1>
                 <div className='Description'>
-                    There are many variation of passages of lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, ducimus sed earum non architecto numquam modi corporis sapiente, recusandae vitae nostrum illum omnis adipisci facilis. Harum dolore quisquam quae at.
+                Aavelance enables users to "Buy with community" as it allows people to buy products directly from other users, who are members of the Aavelance community. This creates a sense of community around the platform, where people can discover new products and connect with others who share their interests. By enabling people to buy products from within the community, Aavelance makes shopping a more social experience, and helps to build a stronger sense of engagement and loyalty among its users
                 </div>
                 <SocialContainer>
                     <SocialIcon color="3B5999" >

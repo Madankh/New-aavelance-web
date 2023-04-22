@@ -99,6 +99,9 @@ export default function MakeupContent({item}) {
     }
   }
 
+
+  
+
   return (
     <div className='insidemakeupcontent' onClick={()=>handleClick(item)}>
           {item?.image !== '' ? <img src={`${item.image}`} className='makeupContentImage' alt="" /> : item.video !== ''?
@@ -137,16 +140,18 @@ export default function MakeupContent({item}) {
        onRequestClose={() => setModalIsOpen(false)}
        contentLabel="Create New Group"
        className="modal">
-          <div style={{display:"flex"}}>
+          <div className='ModalForDiscoverPage'>
           <div style={{flex:2}}>
             {productitem?.image == "" ? <video src={`${item?.video}`} controls controlsList="nodownload" style={{width:"100%" , height:"77vh" , marginTop:"-50px"}}></video> : 
-            <img src={`${productitem?.image}`} style={{width:"100%" , height:"90vh"}} className=""  alt="" />}
+            <img src={`${productitem?.image}`} className="ModalImage"  alt="" />}
           </div>
           <div style={{flex:2}}>
             <div style={{display:"flex" , justifyContent:"space-between"}}>
               <div style={{display:"flex" , alignItems:"center" , marginLeft:"20px"}}>
-                <img src={`https://news.artnet.com/app/news-upload/2022/12/prisma-labs-lensa-ai.jpg`} style={{width:"30px" , height:"30px", borderRadius:"50%"}} className=""  alt="" />
-                <p style={{marginLeft:"10px"}}>Suman</p>
+              {user.profile == "" ? 
+                <img src={`https://news.artnet.com/app/news-upload/2022/12/prisma-labs-lensa-ai.jpg`} style={{width:"30px" , height:"30px", borderRadius:"50%"}} className=""  alt="" />:<img src={`${user?.profile}`} style={{width:"30px" , height:"30px", borderRadius:"50%"}} className=""  alt="" />
+                }
+                <p style={{marginLeft:"10px"}}>{user?.username}</p>
               </div>
               <div style={{marginTop:"10px"}}>
                 <button style={{paddingLeft:"25px" ,color:"white" ,borderRadius:"10px", paddingRight:"25px" , paddingTop:"4px" , paddingBottom:"4px" , backgroundColor:"black"}}>Follow</button>

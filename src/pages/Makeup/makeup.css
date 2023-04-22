@@ -76,7 +76,10 @@
   flex:1;
   background-color:rgb(216 216 219 / 62%); 
   margin-top:14px
+}
 
+.ModalForDiscoverPage{
+  display: flex;
 }
   @media screen and (max-width:1883px) {
     .insidemakeupcontent{
@@ -113,6 +116,12 @@
     }
   }
 
+
+  .ModalImage{
+    width:100%; 
+    height:65vh; 
+    object-fit:cover
+  }
 
 
   @media screen and (max-width:976px) {
@@ -246,6 +255,20 @@
     }
     
   }
+
+  @media screen and (max-width:469px) {
+    .ModalForDiscoverPage{
+      display: block;
+    }
+    .ModalImage{
+      width:75%; 
+      height:40vh; 
+      object-fit:cover;
+      margin-left: 40px;
+    }
+    
+  }
+
 
   @media screen and (max-width:378px) {
     .insidemakeupcontent{

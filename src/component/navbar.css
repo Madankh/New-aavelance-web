@@ -3,7 +3,12 @@
           height:60px;
           position: relative;
 }
-
+.CompanyLogoPtage{
+  color:white;
+  margin-top:-13px; 
+  margin-left:1px; 
+  font-size:10px
+}
 .navWrapper{
     padding:10px 20px;
     display:flex;
@@ -129,5 +134,25 @@
 }
 .discussAbout{
   margin-top: -4px;
+}
+}
+
+@media screen and (max-width:401px) {
+  .CompanyLogoPtage{
+    display: none;
+  }  
+}
+
+@media screen and (max-width:391px) {
+  .CompanyLogo{
+    color:white;
+    font-weight:600;
+    font-size:14px;
+    margin-top: -7px;
+    margin-left: -12px;
+    cursor:pointer;
+ }
+ .navWrapper{
+  padding:16px 13px;
 }
 }
