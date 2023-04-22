@@ -24,7 +24,7 @@ function Slidercategory() {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const res = await axios.get(`http://192.168.18.4:5000/api/products/getallProduct?category=Women's Fashion`)
+        const res = await axios.get(`http://139.162.11.30:5000/api/products/getallProduct?category=Women's Fashion`)
         setProducts(res.data);
       } catch (error) {
 
@@ -39,7 +39,7 @@ function Slidercategory() {
   useEffect(() => {
     const getPosts = async () => {
       try {
-        const res = await axios.get(`http://192.168.18.4:5000/api/post/getallpost?category=Women's Fashion`)
+        const res = await axios.get(`http://139.162.11.30:5000/api/post/getallpost?category=Women's Fashion`)
         setPosts(res.data);
       } catch (error) {
 

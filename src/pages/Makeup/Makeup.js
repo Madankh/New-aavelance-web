@@ -14,7 +14,7 @@ export default function Makeup() {
   useEffect(() => {
     const getPosts = async () => {
       try {
-        const res = await axios.get(`http://192.168.18.4:5000/api/post/getallpost?category=Beauty and Personal Care`)
+        const res = await axios.get(`http://139.162.11.30:5000/api/post/getallpost?category=Beauty and Personal Care`)
         setPosts(res.data);
       } catch (error) {
         console.log("Sorry you got error")

@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL = "http://192.168.18.4:5000/api/";
+const BASE_URL = "http://139.162.11.30:5000/api/";
 // const SELLERTOKEN = "";
 // const SELLERTOKEN = (JSON.parse(JSON.parse(localStorage.getItem("persist:root"))?.currentSeller)?.accessToken);
 // console.log(SELLERTOKEN)

@@ -17,7 +17,7 @@ export default function MainDiscover() {
   useEffect(() => {
     const getPosts = async () => {
       try {
-        const res = await axios.get(`http://192.168.18.4:5000/api/post/getallpost`)
+        const res = await axios.get(`http://139.162.11.30:5000/api/post/getallpost`)
         setPosts(res.data);
       } catch (error) {
         console.log("Sorry you got error")

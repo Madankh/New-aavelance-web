@@ -21,7 +21,7 @@ const CatProducts = ({cat , filters , sort , subcat}) => {
     useEffect(() => {
       const getProducts = async ()=>{
           try {
-              const res = await axios.get( subcat !== '' ? `http://192.168.18.4:5000/api/products/getallProduct?category=${cat}&subcategories=${subcat}`:  `http://192.168.18.4:5000/api/products/getallProduct?category=${cat}`);
+              const res = await axios.get( subcat !== '' ? `http://139.162.11.30:5000/api/products/getallProduct?category=${cat}&subcategories=${subcat}`:  `http://139.162.11.30:5000/api/products/getallProduct?category=${cat}`);
               setProducts(res.data);
             } catch (error) {
                 
