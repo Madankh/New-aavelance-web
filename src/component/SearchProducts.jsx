@@ -7,7 +7,6 @@ import "./searchProducts.css"
 const SearchProducts = ({title , filters , sort}) => {
     const [products , setProducts] = useState([]);
     const [filterProduct , setfilterProducts] = useState([]);
-    console.log(title)
 
     useEffect(() => {
       const getProducts = async ()=>{

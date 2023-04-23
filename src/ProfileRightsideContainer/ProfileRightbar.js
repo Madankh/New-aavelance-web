@@ -23,8 +23,6 @@ export default function ProfileRightbar() {
     getFollowing();
   }, [])
 
-  console.log(Followinguser)
-
   const [users , setUsers] = useState([]);
   useEffect(() => {
     const getuser = async()=>{
@@ -37,7 +35,6 @@ export default function ProfileRightbar() {
     }
     getuser();
   }, [])
-  console.log(users)
   
   return (
     <div className='Profilerightbar'>

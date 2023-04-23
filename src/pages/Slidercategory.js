@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
-import ReactDOM from "react-dom";
-import { Link } from "react-router-dom";
-import Carousel from "react-elastic-carousel";
 import "./styles.css";
 import ReactStars from "react-rating-stars-component";
-import Slider1 from "../component/Slider1";
 import axios from "axios";
 import Post from "../pages/PostContainer/Post"
 const options = {
@@ -12,11 +8,6 @@ const options = {
   activeColor: "tomato",
   size: window.innerWidth < 569 ? 17 : 18,
 };
-
-// const breakPoints = [
-//   { width: 2, itemsToShow: 6 },
-// ];
-
 
 
 function Slidercategory() {
@@ -31,7 +22,6 @@ function Slidercategory() {
       }
     }
     getProducts();
-    console.log(Products)
   }, [])
 
 

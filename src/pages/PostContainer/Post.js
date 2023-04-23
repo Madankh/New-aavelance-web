@@ -11,7 +11,6 @@ import Modal from 'react-modal';
 import CommentIcon from "../../FeedUserComponent/Images/speech-bubble.png";
 export default function Post({ post }) {
   let userDetails = useSelector(state => state.user)
-  let users = userDetails?.user;
   let id = userDetails?.currentUser?.others?._id;
   const accessToken = userDetails?.currentUser?.accessToken;
 
@@ -40,9 +39,6 @@ export default function Post({ post }) {
   const productLink = post?.ProductLinks[0]?.slice(35,90);
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
-
-  console.log(productLink)
-  console.log(post?.ProductLinks[0])
   const [product , setproduct] = useState('');
   
   useEffect(() => {
@@ -56,7 +52,6 @@ export default function Post({ post }) {
     };
     getProduct()
   }, []);
-console.log(product)
 
   const handleLike = async () => {
     if (Like == LikeIcon) {

@@ -31,8 +31,7 @@ function Slidercategory2() {
           }
       }
       getProducts();
-      console.log(Products)
-      
+    
     }, [])
 
 

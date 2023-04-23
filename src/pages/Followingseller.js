@@ -9,7 +9,6 @@ const options = {
   edit: false,
   activeColor: "tomato",
   size: window.innerWidth < 569 ? 17 : 18,
-  // value: 4.7,
 };
 
 

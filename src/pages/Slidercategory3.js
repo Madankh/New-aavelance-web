@@ -30,8 +30,6 @@ function Slidercategory3() {
       }
     }
     getProducts();
-    console.log(Products)
-
   }, [])
 
 

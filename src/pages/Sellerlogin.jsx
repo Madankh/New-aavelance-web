@@ -72,7 +72,7 @@ const Sellerlogin = () => {
       Sellerlogins(dispatch , {email , password});
    }
    const seller = useSelector((state) => state.seller);
-   console.log(seller)
+
     return (
         <Container>
             <Wrapper>

@@ -14,7 +14,6 @@ import SearchProductList from './pages/SearchProductList';
 import ShippingInfo from './pages/shippingInfo';
 import UpdateUserProfile from './pages/UpdateUserProfile/UpdateUserProfile';
 import Userprofile from './pages/Userprofile/userprofile'
-import ReturnOrder from './pages/ReturnOrder/ReturnOrder';
 import UpdateUserpassword from './pages/UpdateUserpassword/UpdateUserpassword';
 import ForgotPassword from './pages/ForgotPassword/ForgotPassword';
 import SellerForgotPassword from './pages/SellerForgotPassword/SellerForgotPassword';
@@ -39,7 +38,6 @@ import SellerRegister from './pages/SellerRegister';
 import SellerProduct from './Seller/pages/product/SellerProduct';
 import SellerprofileDetails from './Seller/SellerprofileDetails/SellerprofileDetails';
 import UpdateSellerProfileDetail from './Seller/UpdateSellerProfileDetail/UpdateSellerProfileDetail';
-import StreamingVideo from './pages/Streaming/StreamingVideo'
 import ReturnProduct from './Seller/ReturnOrder/ReturnProduct';
 import UpdateSellerpassword from './Seller/UpdateSellerpassword/UpdateSellerpassword';
 import SellerBankAccountUpdate from './Seller/SellerprofileDetails/sellerBankAccountUpdate'
@@ -47,15 +45,12 @@ import AddsellerBankAccount from './Seller/SellerprofileDetails/AddsellerBankAcc
 import NewProduct from './Seller/pages/newProduct/NewProduct';
 import Verifyemail from './component/Verifyemail';
 import UserProfile from "./UserProfile/Profile"
-///Influencer
 
-// import
 
 import HomepageForInfluencer from './Influencer/Influencerpages/InfluencerProfile/HomepageForInfluencer';
 import AddinfluenerBankAccount from './Influencer/InfluencerprofileDetails/AddinfluenerBankAccount'
 import InfluencerBankAccountUpdate from './Influencer/InfluencerprofileDetails/InfluencerBankAccountUpdate';
 import SellerVerifyemail from './component/SellerVerifyemail';
-import InfluencerVerifyemail from './component/InfluencerVerifyemail';
 import Followingseller from './pages/Followingseller';
 import FollowingSeller from './component/FollowingSeller';
 import ComplectedTransactions from './Seller/components/ComplectedTransactions/ComplectedTransactions';
@@ -72,9 +67,7 @@ function App() {
   
   const users = useSelector(state => state.user.currentUser);
   const seller = useSelector(state => state.seller.currentSeller);
-  const influencer = useSelector((state) => state.influencer);
   const user = users?.others?.username;
-  console.log(user == undefined)
   return (
     <>
     <BrowserRouter> 
@@ -91,12 +84,8 @@ function App() {
       <Route path="/Success"element={<Success/>} />
       <Route path='/verify/email' element={ users?.others?.verified === true ? <Navigate to="/" replace={true}/> : <Verifyemail/>}/>
       <Route path='/seller/verify/email' element={seller?.others?.verified === true ? <Navigate to="/admin" replace={true}/> : <SellerVerifyemail/>}/>
-      {/* <Route path='/influencer/verify/email' element={ influencer?.currentInfluencer?.others?.verified === true ? <Navigate to="/influencer" replace={true}/> :  <InfluencerVerifyemail/>}/> */}
       <Route path="/profile/:id" element={ <Profile/>}/>
-
       <Route path="/user/profile/:id" element={ users?.others?.verified === true ? <UserProfile/> :  <Navigate to="/login" replace={true}/> }/>
-
-      {/* <Route path="/profile/streaming/vid/:id" element={ <StreamingVideo/>}/> */}
       <Route path="/ResetPassword" element={ <ResetPassword/>}/>
       <Route path="/my/profile" element={user ? <Userprofile/>: <Navigate to="/login" replace={true}/>}/>
       <Route path="/Forgot/password" element={<ForgotPassword/>}/>
@@ -106,7 +95,6 @@ function App() {
       <Route path="/update/my/password" element={user ? <UpdateUserpassword/> :<Navigate to="/login" replace={true}/> }/>
       <Route path="/shippingInfo" element={user ? <ShippingInfo /> : <Navigate to="/login" replace={true}/>}/>
       <Route path="/order" element={user ? <Order/>: <Navigate to="/login" replace={true}/> }/>
-      {/* <Route path="/my/return/order" element={<ReturnOrder/>}/> */}
       <Route path="/reset/password" element={<ResetPassword/>}/>
       <Route path="/seller/reset/password" element={<SellerResetPassword/>}/>
       <Route path="/influencer/reset/password" element={<InfluencerResetPassword/>}/>
@@ -140,16 +128,11 @@ function App() {
       <Route path="/newProductAdmin" element={seller?.isSeller===true ? <NewProduct/> : <Sellerlogin/>} />
       <Route path="/ordersAdmin" element={seller?.isSeller===true ? <ordersAdmin/> : <Sellerlogin/>} />
       <Route path="/Returnorder" element={seller?.isSeller===true ? <ReturnProduct/> : <Sellerlogin/>}/>
-////user as a influencer
-      
       <Route path="/Chat" element={ users?.others?.verified === true ? <Chat/> :  <Navigate to="/login" replace={true}/>}/>
       <Route path="/user/earning" element={ user !== undefined ?  <HomepageForInfluencer/> : <Login/> }></Route>
-
       <Route path="/creator/transaction"element={user !== undefined || user !== null ? <UserTransactions/>: <Login/> } />
       <Route path="/completed/creator/transaction"element={user !== undefined || user !== null ? <UserComplectedTransactions/>: <Login/> } />
-     
       <Route path="/add/user/bank/account"element={user !== undefined || user !== null ? <AddinfluenerBankAccount/>: <Login/> } />
-     
       <Route path="/update/user/bank" element={user !== undefined || user !== null ? <InfluencerBankAccountUpdate/> : <Login/>} /> 
     </Routes> 
      

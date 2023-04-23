@@ -65,8 +65,6 @@ const Button = styled.button`
 
 const Register = () => {
    
-   // const [name , setName] = useState("");
-   // const [lastname , SetLastname] = useState("");
    const history = createBrowserHistory();
    const [username , setUsername] = useState("");
    const [phoneNumber , setPhonenumber] = useState("");

@@ -22,7 +22,7 @@ export default function ProfileMainPost() {
     }
     getPost();
   }, [id])
-  console.log(id)
+
   return (
     <div className='ProfilemainPostContainer'>
       <div>

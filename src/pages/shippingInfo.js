@@ -23,17 +23,12 @@ export default function () {
   const [phoneNo, setPhoneNo] = useState('');
   const [PaymentMethods, setPaymentMethods] = useState('');
 
-  let navigate = useNavigate();
-  let orderornot='';
-  let sellerId ; 
 
-  // let me = cart?.products?.map((item)=>{
-  //   sellerId = item.seller
-  // })
+  let orderornot='';
+
 
   const handleCreate = async()=>{
     {for (let i = 0; i < cart.products.length; i++) {
-      // console.log(cart.products[i])
         try {
            await fetch(
             'http://192.168.18.4:5000/api/order', {method: 'POST',
