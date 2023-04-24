@@ -31,7 +31,7 @@ const Home = ({socket}) => {
     ], [])
 
     const productsfetch = async () => {
-        const response = await axios.get('http://localhost:5000/api/products/getallProduct');
+        const response = await axios.get('http://139.162.11.30:80/api/products/getallProduct');
     }
     return (
         <div className='mainHome'>

@@ -8,17 +8,15 @@ export default function ReturnProduct() {
   const [sales, setSales] = useState([]);
   const admin = useSelector((state) => state.seller);
   let accessToken = admin.currentSeller.accessToken;
-  console.log(accessToken);
 
   useEffect(() => {
     const TotSales = async () => {
       try {
-        const res = await axios.get('http://192.168.18.4:5000/api/order/get/return/userOrder', {
+        const res = await axios.get('http://139.162.11.30:80/api/order/get/return/userOrder', {
           headers: {
             token: accessToken
           }
         })
-        console.log(res.data);
         setSales(res.data);
       } catch (error) {
 
@@ -62,7 +60,7 @@ export default function ReturnProduct() {
                 </div>
                  ))}
               </div>
-              <div className='address'>
+              <div className='address' style={{marginLeft:-8}}>
                 <h2 style={{ fontFamily: 'Source Sans Pro' , marginLeft: '10px'}}>ShippingInfo</h2>
                 <div style={{ marginTop: '-20px', marginLeft: '10px' }}>
                   <p style={{ fontFamily: 'Source Sans Pro' , marginLeft: '10px'}}><span>City</span> : {item.shippingInfo.city}</p>

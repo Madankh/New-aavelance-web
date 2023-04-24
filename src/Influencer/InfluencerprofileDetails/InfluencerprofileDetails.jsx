@@ -18,7 +18,7 @@ export default function InfluencerprofileDetails() {
   useEffect(() => {
         const getTransaction = async()=>{
           try {
-            const res = await axios.get(`http://localhost:5000/api/influencer/bank/account`, {
+            const res = await axios.get(`http://139.162.11.30:80/api/influencer/bank/account`, {
               headers:{
                 token: accessToken
               }
@@ -35,7 +35,7 @@ export default function InfluencerprofileDetails() {
       useEffect(() => {
         const getUser = async()=>{
           try {
-            const res = await axios.get(`http://localhost:5000/api/influencer/myself/${id}`, {
+            const res = await axios.get(`http://139.162.11.30:80/api/influencer/myself/${id}`, {
               headers:{
                 token: accessToken
               }

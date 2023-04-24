@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
+
 import styled from "styled-components";
 import { mobile } from '../../responsive';
 import { useState } from "react";
-import { Navigate } from "react-router-dom";
+
 const Error = styled.span`
   color:red;
 `;
@@ -75,7 +75,7 @@ const SellerForgotPassword = () => {
       e.preventDefault();
       try {
          await fetch(
-           'http://localhost:5000/api/seller/forgetpassword', {method: 'POST',
+           'http://139.162.11.30:80/api/seller/forgetpassword', {method: 'POST',
            headers: { 'Content-Type': 'application/json'},
            body: JSON.stringify({
              email:email

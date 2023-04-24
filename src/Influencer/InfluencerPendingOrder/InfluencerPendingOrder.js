@@ -18,7 +18,7 @@ export default function InfluencerPendingOrder() {
   useEffect(() => {
     const getProduct = async()=>{
       try {
-        const res = await axios.get('http://localhost:5000/api/order/get/affid/proccessing/userOrders', {
+        const res = await axios.get('http://139.162.11.30:80/api/order/get/affid/proccessing/userOrders', {
           headers:{
             token: accessToken
           }
@@ -36,7 +36,7 @@ export default function InfluencerPendingOrder() {
 
   // const handleDelete = (id) => {
   //   setProducts(Products.filter((item) => item._id !== id))
-  //   axios.delete(`http://localhost:5000/api/products/${id}`, {
+  //   axios.delete(`http://139.162.11.30:80/api/products/${id}`, {
   //     headers: {
   //       token: accessToken
   //     }

@@ -1,6 +1,5 @@
-import { SearchOutlined } from '@material-ui/icons';
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import "./announcement.css"
 import { createBrowserHistory } from "history";
 import { useState } from 'react';
@@ -9,6 +8,7 @@ const LiveAnnouncement = () => {
 
   const [searchValue , setSearchValue] = useState('');
   const history = createBrowserHistory();
+
   const handelSearch = (e)=>{
     if(e.key == "Enter"){
       e.preventDefault();
@@ -21,15 +21,7 @@ const LiveAnnouncement = () => {
     navigate(`/Products/${event}`);
   }
 
-  const [value , setvalue] = useState('white');
-  const [valueTxt , setvalueTxt] = useState("Product");
-  // const handlevalue=()=>{
-  //   if(value == "white"){
-  //     setvalue("black")
-  //   }else{
-  //     setvalue("white")
-  //   }
-  // }
+  
   return (
     <div className='liveannoContainer'>
         

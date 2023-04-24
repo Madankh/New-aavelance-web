@@ -15,7 +15,7 @@ export default function MainPost() {
   useEffect(() => {
    const getPost = async()=>{
     try {
-      const res = await axios.get(`http://192.168.18.4:5000/api/user/flw/${id}` , {
+      const res = await axios.get(`http://139.162.11.30:80/api/user/flw/${id}` , {
         headers:{
           token:accesstoken
         }
@@ -28,7 +28,6 @@ export default function MainPost() {
    getPost();
   }, [])
 
-  const [modalOpen, setModalOpen] = useState(true);
 
   return (
     <div className='mainPostContainer'>

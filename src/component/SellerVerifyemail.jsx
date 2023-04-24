@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import styled from "styled-components";
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { VerifySeller, VerifyUser } from '../pages/redux/apiCalls';
 
@@ -74,7 +73,6 @@ export default function SellerVerifyemail() {
    const dispatch = useDispatch();
    const seller = sellers?.currentSeller?.seller;
    const [OTP , setOTP] = useState('');
-   console.log(OTP)
    const handleOTP = (e)=>{
       e.preventDefault();
       VerifySeller(dispatch,{seller , OTP})

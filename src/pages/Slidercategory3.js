@@ -12,10 +12,7 @@ const options = {
 
 
 function Slidercategory3() {
-  const [items, setItems] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
-
   const [Products, setProducts] = useState([]);
-
   useEffect(() => {
     const getProducts = async () => {
       try {
@@ -54,7 +51,6 @@ function Slidercategory3() {
             <a href={`/product/find/${item?._id}`} style={{textDecoration:"none"}}>
             {item?.img?.slice(0,1).map((items)=>( 
               <img src={items} className="slidercatimagee" alt="" />
-              
             ))}
               <p className="slidercatTiltee">{item?.title?.slice(0,58)}</p>
               <p className="slidercatprice">Price : {`${item.price}`}</p>

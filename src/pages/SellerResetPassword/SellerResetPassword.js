@@ -1,8 +1,6 @@
-import { useSelector } from 'react-redux'; 
-import { useState} from "react";
+ import { useState} from "react";
 import styled from "styled-components";
 import { mobile } from '../../responsive';
-import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 
 const Error = styled.span`
@@ -72,14 +70,13 @@ const Link = styled.a`
 
 const SellerResetPassword = () => {
    const location = useLocation();
-    const code = location.search.split("?")[1];
-    console.log(code)
+   const code = location.search.split("?")[1];
    const [password , setPassword] = useState('');
    const handlechange = async(e)=>{
       e.preventDefault();
       try {
          await fetch(
-           `http://localhost:5000/api/seller/reset/password?${code}`, {method: 'PUT',
+           `http://139.162.11.30:80/api/seller/reset/password?${code}`, {method: 'PUT',
            headers: { 'Content-Type': 'application/json'},
            body: JSON.stringify({
              password:password

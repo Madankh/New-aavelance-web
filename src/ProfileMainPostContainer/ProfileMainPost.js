@@ -14,7 +14,7 @@ export default function ProfileMainPost() {
   useEffect(() => {
     const getPost = async()=>{
       try {
-        const res = await axios.get(`http://139.162.11.30:5000/api/post/get/post/${id}`)
+        const res = await axios.get(`http://139.162.11.30:80/api/post/get/post/${id}`)
         setPost(res.data);
       } catch (error) {
         console.log("error occured")

@@ -26,24 +26,23 @@ export default function Profile() {
         Userid = users?.currentUser?.others?._id;
     }
     const accessToken = users?.currentUser?.accessToken;
-    console.log(Userid)
     const [userDetails , setuserDetails] = useState('');
+    const [sellershop , setsellershop] = useState('');
     useEffect(() => {
         const getuserDetails = async ()=>{
             try {
-                const res = await axios.get(`http://192.168.18.4:5000/api/user/own/${Userid}` , {headers:{token:accessToken}})
+                const res = await axios.get(`http://139.162.11.30:80/api/user/own/${Userid}` , {headers:{token:accessToken}})
                 setuserDetails(res.data);
                 console.log(userDetails)
               } catch (error) {
               }
           }
           getuserDetails();
-        }, [])
-        const [sellershop , setsellershop] = useState('');
+        },[])
         useEffect(() => {
             const getSeller = async () => {
               try {
-                const res = await axios.get(`http://192.168.18.4:5000/api/seller/seller/` + id);
+                const res = await axios.get(`http://139.162.11.30:80/api/seller/seller/` + id);
                 setsellershop(res.data);
                 console.log(res.data)
               } catch (error) {
@@ -57,14 +56,14 @@ export default function Profile() {
     let Follow = userDetails?.following?.includes(id) === true ? "Unfollow":"Follow";
 
     const handleChange = async()=>{
-        if(Follow == "Follow"){
-            await axios.put(`http://192.168.18.4:5000/api/seller/${id}/follow` , {
+        if(Follow === "Follow"){
+            await axios.put(`http://139.162.11.30:80/api/seller/${id}/follow` , {
                 user: `${Userid}`
             });
             window.location.reload(true);
             
         }else{
-            await axios.put(`http://192.168.18.4:5000/api/seller/${id}/unfollow` , {
+            await axios.put(`http://139.162.11.30:80/api/seller/${id}/unfollow` , {
                 user:`${Userid}`
             });
             window.location.reload(true);
@@ -76,7 +75,7 @@ export default function Profile() {
     useEffect(() => {
         const getProducts = async ()=>{
             try {
-                const res = await axios.get(`http://192.168.18.4:5000/api/products/allproduct/${id}`)
+                const res = await axios.get(`http://139.162.11.30:80/api/products/allproduct/${id}`)
                 setProducts(res.data);
               } catch (error) {
               }

@@ -24,73 +24,7 @@ const options = {
 //   //   { width: 1200, itemsToShow: 4 }
 // ];
 
-const popularProducts = [
-  {
-    id: 1,
-    img:"../img/1603480300-mos-flats-women-s-juno-recycled-tailored-dress-shirt-light-blue.jpg" ,
-    title:"LAFULIT 8 PCS Under Cabinet Lighting Kit, Stick on Lights, Flexible Led Strip Lights with RF Remote and Power Adapter,for Kitchen Cabinets Shelf Desk Counter Corner",
-    price:"NPR 5000"
 
-},
-{
-    id: 2,
-    img:"../img/cool-clothes-for-men-6-1634310978.jpg" ,
-    title:"LAFULIT 8 PCS Under Cabinet Lighting Kit, Stick on Lights, Flexible Led Strip Lights with RF Remote and Power Adapter,for Kitchen Cabinets Shelf Desk Counter Corner",
-    price:"NPR 5000"
-},
-{
-    id: 3,
-    img:"../img/1605564519-mos-mens-aero-casual-shirt-grey-heather-merlot-1.jpg" ,
-    title:"LAFULIT 8 PCS Under Cabinet Lighting Kit, Stick on Lights, Flexible Led Strip Lights with RF Remote and Power Adapter,for Kitchen Cabinets Shelf Desk Counter Corner",
-    price:"NPR 5000"
-
-},
-{
-    id: 4,
-    img:"../img/shorts_71442211_1000.jpg" ,
-    title:"LAFULIT 8 PCS Under Cabinet Lighting Kit, Stick on Lights, Flexible Led Strip Lights with RF Remote and Power Adapter,for Kitchen Cabinets Shelf Desk Counter Corner",
-    price:"NPR 5000"
-},
-{
-    id: 5,
-    img:"../img/1603480300-mos-flats-women-s-juno-recycled-tailored-dress-shirt-light-blue.jpg" ,
-    title:"LAFULIT 8 PCS Under Cabinet Lighting Kit, Stick on Lights, Flexible Led Strip Lights with RF Remote and Power Adapter,for Kitchen Cabinets Shelf Desk Counter Corner",
-    price:"NPR 5000"
-
-},
-{
-    id: 6,
-    img:"../img/cool-clothes-for-men-6-1634310978.jpg" ,
-    title:"LAFULIT 8 PCS Under Cabinet Lighting Kit, Stick on Lights, Flexible Led Strip Lights with RF Remote and Power Adapter,for Kitchen Cabinets Shelf Desk Counter Corner",
-    price:"NPR 5000"
-},
-{
-    id: 7,
-    img:"../img/1605564519-mos-mens-aero-casual-shirt-grey-heather-merlot-1.jpg" ,
-    title : "LAFULIT 8 PCS Under Cabinet Lighting Kit, Stick on Lights, Flexible Led Strip Lights with RF Remote and Power Adapter,for Kitchen Cabinets Shelf Desk Counter Corners ",
-    price:"NPR 5000"
-
-},
-{
-    id: 8,
-    img:"../img/shorts_71442211_1000.jpg" ,
-    title:"LAFULIT 8 PCS Under Cabinet Lighting Kit, Stick on Lights, Flexible Led Strip Lights with RF Remote and Power Adapter,for Kitchen Cabinets Shelf Desk Counter Corner",
-    price:"NPR 5000"
-},
-{
-    id: 9,
-    img:"../img/mens-t-shirt-500x500.jpg" ,
-    title:"SUMMER SALE",
-    price:"NPR 5000"
-},
-{
-    id: 10,
-    img:"../img/6EE9AE33-2951-434A-AEA3-B6058E83FAF3.jpg" ,
-    title:"SUMMER SALE",
-    price:"NPR 5000"
-},
-
-]
 
 function Slidercategory3() {
   const [items, setItems] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
@@ -100,7 +34,7 @@ function Slidercategory3() {
   useEffect(() => {
     const getProducts = async ()=>{
         try {
-            const res = await axios.get(`http://localhost:5000/api/products/getallProduct?subcategories=Shoes`)
+            const res = await axios.get(`http://139.162.11.30:80/api/products/getallProduct?subcategories=Shoes`)
             setProducts(res.data);
           } catch (error) {
               

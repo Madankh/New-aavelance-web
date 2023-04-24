@@ -27,7 +27,7 @@ function Followingseller() {
   useEffect(() => {
     const getProducts = async ()=>{
         try {
-            const res = await axios.get(`http://localhost:5000/api/seller/influencer/flwpdu/${influencer?.currentInfluencer?.other?._id}`)
+            const res = await axios.get(`http://139.162.11.30:80/api/seller/influencer/flwpdu/${influencer?.currentInfluencer?.other?._id}`)
             setProducts(res.data);
           } catch (error) {
               

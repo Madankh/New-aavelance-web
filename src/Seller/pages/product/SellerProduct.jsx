@@ -18,7 +18,7 @@ export default function SellerProduct() {
     const getProduct = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/products/find/${productId}`
+          `http://139.162.11.30:80/api/products/find/${productId}`
         );
         setProduct(res.data);
       } catch (error) {}

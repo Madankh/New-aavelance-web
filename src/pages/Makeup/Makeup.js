@@ -4,8 +4,6 @@ import Navbar from '../../component/Navbar'
 import Announcement from '../../component/Announcement'
 import LiveAnnouncement from '../../component/LiveAnnouncement'
 import axios from 'axios'
-import ImageIcon from "../../Assest/image.png"
-import VideoIcon from "../../Assest/video.png"
 import MakeupContent from './makeupContent'
 import Rightbar from '../../FeedUserComponent/RightsideContainer/Rightbar'
 export default function Makeup() {
@@ -14,7 +12,7 @@ export default function Makeup() {
   useEffect(() => {
     const getPosts = async () => {
       try {
-        const res = await axios.get(`http://139.162.11.30:5000/api/post/getallpost?category=Beauty and Personal Care`)
+        const res = await axios.get(`http://139.162.11.30:80/api/post/getallpost?category=Beauty and Personal Care`)
         setPosts(res.data);
       } catch (error) {
         console.log("Sorry you got error")

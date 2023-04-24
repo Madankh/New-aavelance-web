@@ -8,8 +8,6 @@ import { useRef } from 'react';
 function GroupChatPage(CurrentChat) {
   const userDetails = useSelector((state) => state.user);
   const accesstoken = userDetails.currentUser.accessToken;
-  const [newMessage, setNewMessage] = useState("");
-  const [socketConnected, setSocketConnected] = useState(false);
   const id = userDetails?.currentUser?.others?._id;
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
@@ -19,10 +17,8 @@ function GroupChatPage(CurrentChat) {
   let selectedChatCompare;
   const user = userDetails?.currentUser?.others
 
-  const scrollRef = useRef();
   const socket = useRef();
 
-  const [image, setimage] = useState('');
 
   const fetchMessages = async()=>{
     if(!CurrentChat) return;
@@ -32,7 +28,7 @@ function GroupChatPage(CurrentChat) {
           token: `${accesstoken}`,
         },
       };
-      const { data } = await axios.get(`http://localhost:5000/api/message/get/all/group/msg/${CurrentChat?.CurrentChat?._id}`, config);
+      const { data } = await axios.get(`http://139.162.11.30:80/api/message/get/all/group/msg/${CurrentChat?.CurrentChat?._id}`, config);
       setMessages(data);
       socket.current.emit("join chat" , CurrentChat?.CurrentChat?._id);
     } catch (error) {
@@ -42,7 +38,7 @@ function GroupChatPage(CurrentChat) {
 
   useEffect(()=>{
     if(CurrentChat !== ''){
-      socket.current = io("http://localhost:5000");
+      socket.current = io("http://139.162.11.30:80");
       socket.current.emit("setup" , user);
 
     }
@@ -58,7 +54,7 @@ function GroupChatPage(CurrentChat) {
         setMessages([...messages, { content: message,image:imagePreview, sender: { profile: `${userDetails?.currentUser?.others?.profile}`, username: `${userDetails?.currentUser?.others?.username}` } }]);
       try {
         await fetch(
-          `http://localhost:5000/api/message/send/msg`, {
+          `http://139.162.11.30:80/api/message/send/msg`, {
             method: 'POST',
           headers: { 'Content-Type': 'application/json', token: accesstoken },
           body: JSON.stringify({

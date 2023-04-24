@@ -45,14 +45,6 @@ const FilterTitle = styled.span`
    font-weight:200
  `;
 
-// const FilterColor = styled.div`
-//    width:20px;
-//    height:20px;
-//    border-radius:50%;
-//    background-color: ${props => props.color};
-//    margin:0px 5px;
-//    cursor:pointer;
-//  `;
 
 const FilterSize = styled.select`
    margin-left:10px;
@@ -108,7 +100,6 @@ const Product = () => {
 
   let userDetails = useSelector(state => state.user)
   let userid = userDetails?.currentUser?.others?._id;
-
   const location = useLocation();
   const id = location.pathname.split("/")[3];
   const affid = window.location.search.split("=")[1];
@@ -119,19 +110,12 @@ const Product = () => {
   const dispatch = useDispatch();
   const [open, SetOpen] = useState(false);
   const [rating, setRating] = useState(0);
-  const [Comments , Setcomments] = useState([]);
   const [comment, setComment] = useState("");
   let counts = product.ratings;
   const user = useSelector((state) => state.user);
   const accessToken = user?.currentUser?.accessToken;
   const [seller , setseller] = useState('');
-  const [reviewuser , setreviewuser] = useState('');
   const sellerId = product?.seller
-  const isVisiable = false;
-  console.log(sellerId)
-
-  // console.log(product?.seller);
-
   useEffect(() => {
     const getProduct = async () => {
       try {
@@ -141,13 +125,13 @@ const Product = () => {
       } catch (error) {
 
       }
-    };
+    }
     getProduct()
   }, [id]);
 
 
   const handleQuantity = (type) => {
-    if (type == "dec") {
+    if (type === "dec") {
       quantity > 1 && setquantity(quantity - 1);
     } else {
       setquantity(quantity + 1);
@@ -169,7 +153,7 @@ const Product = () => {
 
   const handleCreate = async()=>{
     try {
-      await fetch('http://139.162.11.30:5000/api/products/reviews/product', {method: 'PUT',
+      await fetch('http://139.162.11.30:80/api/products/reviews/product', {method: 'PUT',
         headers: { 'Content-Type': 'application/json' , token : accessToken },
         body: JSON.stringify({
           productid : `${id}`,
@@ -184,8 +168,6 @@ const Product = () => {
                 SetOpen(false)
                 alert("Your review is submited")
                 window.location.reload(true)
-                console.log(data)
-
               }
             });
         })
@@ -214,7 +196,7 @@ const Product = () => {
   useEffect(() => {
     const getPosts = async () => {
       try {
-        const res = await axios.get(`http://139.162.11.30:5000/api/post/getallpost?category=${product?.categories}&subcategories=${product?.subcategories}`)
+        const res = await axios.get(`http://139.162.11.30:80/api/post/getallpost?category=${product?.categories}&subcategories=${product?.subcategories}`)
         setPosts(res.data);
         return () => {};
       } catch (error) {

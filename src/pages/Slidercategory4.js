@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Post from "../pages/PostContainer/Post"
 import "./styles.css";
-
-// import {popularProducts} from "../component/data";
-
 import ReactStars from "react-rating-stars-component";
-import { Link } from "react-router-dom";
 import axios from "axios";
 
 const options = {
@@ -16,17 +12,12 @@ const options = {
 
 const breakPoints = [
   { width: 1, itemsToShow: 6 },
-  //   { width: 550, itemsToShow: 2, itemsToScroll: 2 },
-  //   { width: 768, itemsToShow: 3 },
-  //   { width: 1200, itemsToShow: 4 }
+
 ];
 
 
 function Slidercategory4() {
-  const [items, setItems] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
-
   const [Products, setProducts] = useState([]);
-
   useEffect(() => {
     const getProducts = async () => {
       try {

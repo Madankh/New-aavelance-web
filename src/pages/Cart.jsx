@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Navbar from '../component/Navbar'
 import Announcement from '../component/Announcement'
@@ -91,10 +91,6 @@ const Cart = () => {
                             <span className='cartSummaryItemText'>Estimated Shipping</span>
                             <span className='cartSummaryItemText'>NPR 60</span>
                         </div>
-                        {/* <SummaryItem>
-                            <SummaryItemText>Shipping Discount</SummaryItemText>
-                            <SummaryItemPrice>$ - 4.90</SummaryItemPrice>
-                        </SummaryItem> */}
                         <div className='cartSummaryItem' type="total">
                             <span className='cartSummaryItemText' >Total</span>
                             <span className='cartSummaryItemText'>NPR {cart.total + 60}</span>

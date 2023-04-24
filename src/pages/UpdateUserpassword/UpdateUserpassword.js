@@ -1,5 +1,4 @@
-import { EmailOutlined, LocalPhoneOutlined } from '@material-ui/icons'
-import { AddLocationAltOutlined, ApartmentOutlined, AssignmentReturned, DomainAddOutlined, PasswordOutlined, People, Reorder } from '@mui/icons-material'
+import { PasswordOutlined } from '@mui/icons-material'
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -7,16 +6,14 @@ import Navbar from '../../component/Navbar'
 export default function UpdateUserpassword() {
 
   let User = useSelector(state => state.user);
-  // console.log(User);
   const accessToken = User?.currentUser?.accessToken;
-  // console.log(accessToken);
   const [oldpassword , setoldpassword] = useState('');
   const [newPassword , setnewPassword] = useState('');
   const [comfirmPassword , setcomfirmPassword] = useState('');
   console.log(accessToken);
 
   const clickUpdate = async()=>{
-     fetch(`http://localhost:5000/api/auth/update/password/${User.currentUser.others._id}` , { method: 'PUT',
+     fetch(`http://139.162.11.30:80/api/auth/update/password/${User?.currentUser?.others?._id}` , { method: 'PUT',
           headers: { 'Content-Type': 'application/json' , token : accessToken },
           body: JSON.stringify({
             oldpassword: `${oldpassword}`, newPassword: `${newPassword}`,

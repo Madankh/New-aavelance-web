@@ -1,6 +1,6 @@
 import { loginFailure, loginStart, loginSuccess } from "./userRedux"
 import { SellerloginFailure , SellerloginStart , SellerloginSuccess } from "./RegisteruserRedux";
-import { loginInfluencerStart , loginInfluencerSuccess , loginInfluencerFailure , logoutInfluencer } from "./influencerRedux";
+import { loginInfluencerStart , loginInfluencerSuccess , loginInfluencerFailure  } from "./influencerRedux";
 import { publicRequest, UserRequest   } from "../../requestMethos";
 import { addProductStart , addProductSuccess , addProductFailure , updateProductStart , updateProductSuccess , updateProductFailure } from "./productSlice";
 import { ordersStart , ordersSuccess , ordersFailure } from "./orderSlice";

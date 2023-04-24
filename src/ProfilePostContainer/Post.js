@@ -4,14 +4,7 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import { publicRequest } from '../requestMethos';
 export default function Post({detail}) {
-  console.log(detail)
-  const [count, setCount] = useState(0);
-  const [Comments, setComments] = useState([]);
-  const [commentwriting, setcommentwriting] = useState('');
-  const [show, setshow] = useState(false);
   const productLink = detail?.ProductLinks[0]?.slice(35,90);
-  console.log(productLink)
-  console.log(detail?.ProductLinks[0])
   const [product , setproduct] = useState('');
   
   useEffect(() => {
@@ -31,7 +24,7 @@ export default function Post({detail}) {
   useEffect(() => {
     const getuser = async()=>{
       try {
-        const res  = await axios.get(`http://192.168.18.4:5000/api/user/post/user/details/${detail.user}`)
+        const res  = await axios.get(`http://139.162.11.30:80/api/user/post/user/details/${detail.user}`)
         setuser(res.data);
       } catch (error) {
         console.log("Some error occured")

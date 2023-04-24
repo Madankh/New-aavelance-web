@@ -11,7 +11,6 @@ import Slidercategory2 from './Slidercategory2';
 import Slidercategory3 from './Slidercategory3';
 import Slidercategory4 from './Slidercategory4';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 import Slider2 from '../component/Slider2';
 import Slider3 from '../component/Slider3'
 import Followingseller from './Followingseller';

@@ -2,11 +2,10 @@ import React,{useState} from 'react';
 import "./shipping.css";
 import { useSelector  } from 'react-redux';
 import HomeIcon from '@mui/icons-material/Home';
-import { LocationCityOutlined, PinDropOutlined } from '@material-ui/icons';
-import { Phone, TransferWithinAStation } from '@mui/icons-material';
+import { LocationCityOutlined } from '@material-ui/icons';
+import { Phone } from '@mui/icons-material';
 import Navbar from '../component/Navbar';
-import { useNavigate } from 'react-router-dom';
-import styled from 'styled-components'
+
 
 
 export default function () {
@@ -18,8 +17,6 @@ export default function () {
   const [address, setAddress] = useState('');
   const [address_2, setAddress_2] = useState('');
   const [city, setCity] = useState('');
-  const [state, setState] = useState('');
-  const [pinCode, setPinCode] = useState('');
   const [phoneNo, setPhoneNo] = useState('');
   const [PaymentMethods, setPaymentMethods] = useState('');
 
@@ -31,7 +28,7 @@ export default function () {
     {for (let i = 0; i < cart.products.length; i++) {
         try {
            await fetch(
-            'http://192.168.18.4:5000/api/order', {method: 'POST',
+            'http://139.162.11.30:80/api/order', {method: 'POST',
             headers: { 'Content-Type': 'application/json' , token : accessToken },
             body: JSON.stringify({
               shippingInfo:{

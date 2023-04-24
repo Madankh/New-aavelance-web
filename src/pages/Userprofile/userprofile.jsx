@@ -1,5 +1,5 @@
 import { AccountBalanceOutlined, AttachMoney, EmailOutlined, LocalPhoneOutlined, LocationCityOutlined } from '@material-ui/icons';
-import { AddLocationAltOutlined, ApartmentOutlined, AssignmentReturned, BadgeOutlined, DomainAddOutlined, DriveFileRenameOutline, PasswordOutlined, People, Reorder } from '@mui/icons-material';
+import { AddLocationAltOutlined, ApartmentOutlined, BadgeOutlined, DomainAddOutlined, DriveFileRenameOutline, PasswordOutlined, People, Reorder } from '@mui/icons-material';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
@@ -8,15 +8,13 @@ import Navbar from '../../component/Navbar';
 import "./userprofile.css"
 export default function Userprofile() {
   let Users = useSelector(state => state.user);
-  console.log(Users?.currentUser?.others);
-  console.log(Users?.currentUser?.accessToken)
   let accessToken = Users?.currentUser?.accessToken;
 
   const [order , setOrder] = useState([]);
   useEffect(() => {
     const getOrder = async ()=>{
         try {
-            const res = await axios.get(`http://139.162.11.30:5000/api/order/myOrder` , {
+            const res = await axios.get(`http://139.162.11.30:80/api/order/myOrder` , {
               headers:{
                 token : accessToken
               }
@@ -35,7 +33,7 @@ export default function Userprofile() {
   useEffect(() => {
     const getBank = async ()=>{
         try {
-            const res = await axios.get(`http://139.162.11.30:5000/api/influencer/bank/user/account` , {
+            const res = await axios.get(`http://139.162.11.30:80/api/influencer/bank/user/account` , {
               headers: {
                 token: accessToken
               }})
@@ -54,12 +52,8 @@ export default function Userprofile() {
     <div className='ma'>
       <Navbar />
       <div className='mainUserProfile'>
-
-
-      {Bank != ''?  
+      {Bank !== ''?  
           Bank?.map((item)=>(
-
-         
       <div style={{ backgroundColor: "white",  marginRight: 10,  borderRadius: 20,  marginBottom:"20px" , width:"90%"  }}>
           <h2 style={{ marginLeft: 20 }}>Bank Details</h2>
           <div style={{ alignItems: "center", cursor: 'pointer' }}>
@@ -208,9 +202,7 @@ export default function Userprofile() {
             <p className='text4'>It's a good idea to use a strong password that you're not using elsewhere</p>
             </Link>
           </div>
-          {/* <Link to={"/update/my/password"}>
-              <button className='editbtn1'>Edit</button>
-            </Link> */}
+          
         </div>
 
       </div>

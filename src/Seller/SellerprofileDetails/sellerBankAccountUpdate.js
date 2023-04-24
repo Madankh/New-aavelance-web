@@ -33,7 +33,7 @@ const Button = styled.button`
       useEffect(() => {
             const bankAccount = async () => {
               try {
-                const res = await axios.get('http://localhost:5000/api/bankaccout/accountdetail', {
+                const res = await axios.get('http://139.162.11.30:80/api/bankaccout/accountdetail', {
                   headers: {
                     token: accessToken
                   }
@@ -54,7 +54,7 @@ const Button = styled.button`
       const handleUpdate = async()=>{
             try {
               await fetch(
-                `http://localhost:5000/api/bankaccout/${admin.currentSeller._id}`, {method: 'PUT',
+                `http://139.162.11.30:80/api/bankaccout/${admin.currentSeller._id}`, {method: 'PUT',
                 headers: { 'Content-Type': 'application/json' , token : accessToken },
                 body: JSON.stringify({
                   BankName:`${BankName}`,

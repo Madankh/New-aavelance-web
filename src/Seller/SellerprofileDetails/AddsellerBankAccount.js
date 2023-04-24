@@ -15,7 +15,7 @@ export default function AddsellerBankAccount() {
       const handleCreate = async()=>{
             try {
               await fetch(
-                'http://localhost:5000/api/bankaccout/accountdetail', {method: 'POST',
+                'http://139.162.11.30:80/api/bankaccout/accountdetail', {method: 'POST',
                 headers: { 'Content-Type': 'application/json' , token : accessToken },
                 body: JSON.stringify({
                   BankName:`${BankName}`,

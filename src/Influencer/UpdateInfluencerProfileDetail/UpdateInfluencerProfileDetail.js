@@ -16,7 +16,7 @@ export default function UpdateInfluencerProfileDetail() {
   const [City , setCity] = useState(`${influencer.currentInfluencer.others.City}`)
 
   const clickUpdate = async()=>{
-    fetch(`http://localhost:5000/api/influencer/change/details/${influencer.currentInfluencer.others._id}` , { method: 'PUT',
+    fetch(`http://139.162.11.30:80/api/influencer/change/details/${influencer.currentInfluencer.others._id}` , { method: 'PUT',
          headers: { 'Content-Type': 'application/json' , token : accessToken },
          body: JSON.stringify({
           email: `${email}`, PAN: `${PAN}`,

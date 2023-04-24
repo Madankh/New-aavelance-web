@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { AccountBalanceOutlined } from '@material-ui/icons'
-import { BadgeOutlined, DriveFileRenameOutline, LocationCityOutlined, Numbers } from '@mui/icons-material'
+import { BadgeOutlined, DriveFileRenameOutline, LocationCityOutlined } from '@mui/icons-material'
 import { useSelector } from 'react-redux';
 import axios from 'axios';
-import Topbar from '../components/topbar/Topbar';
 import Navbar from '../../component/Navbar';
 export default function InfluencerBankAccountUpdate() {
       const user = useSelector((state) => state.user);
@@ -13,7 +12,7 @@ export default function InfluencerBankAccountUpdate() {
       useEffect(() => {
         const getTransaction = async()=>{
           try {
-            const res = await axios.get(`http://localhost:5000/api/influencer/bank/account`, {
+            const res = await axios.get(`http://139.162.11.30:80/api/influencer/bank/account`, {
               headers:{
                 token: accessToken
               }
@@ -38,7 +37,7 @@ export default function InfluencerBankAccountUpdate() {
       const handleUpdate = async()=>{
             try {
               await fetch(
-                `http://localhost:5000/api/influencer/bank/${id}`, {method: 'PUT',
+                `http://139.162.11.30:80/api/influencer/bank/${id}`, {method: 'PUT',
                 headers: { 'Content-Type': 'application/json' , token : accessToken },
                 body: JSON.stringify({
                   BankName:`${BankName}`,

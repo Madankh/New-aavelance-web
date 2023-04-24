@@ -32,7 +32,7 @@ console.log(errors?.length >= 0)
   // console
 
   const clickUpdate = async()=>{
-     fetch(`http://localhost:5000/api/influencer/update/password/${influencer?.currentInfluencer?.others?._id}` , { method: 'PUT',
+     fetch(`http://139.162.11.30:80/api/influencer/update/password/${influencer?.currentInfluencer?.others?._id}` , { method: 'PUT',
           headers: { 'Content-Type': 'application/json' , token : accessToken },
           body: JSON.stringify({
             oldpassword: `${oldpassword}`, newPassword: `${newPassword}`,

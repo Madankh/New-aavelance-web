@@ -8,10 +8,7 @@ import { useState } from 'react';
 import Modal from '../../Modal/Modal';
 import axios from 'axios';
 export default function ContentPost() {
-  // const userDetails = useSelector((state)=>state.user);
   let userDetails = useSelector(state => state.user)
-  let user = userDetails?.user;
-  let id = userDetails?.currentUser?.others?._id;
   const accessToken = userDetails?.currentUser?.accessToken;
 
 
@@ -44,7 +41,7 @@ export default function ContentPost() {
     formData.append("subcategories", subcategories);
     formData.append("ProductLinks", ProductLinks);
     formData.append("video", file2);
-    await axios.post("http://localhost:5000/api/post/user/post", formData, { headers: { 'Content-Type': 'multipart/form-data', token: accessToken } }).then(() => {
+    await axios.post("http://139.162.11.30:80/api/post/user/post", formData, { headers: { 'Content-Type': 'multipart/form-data', token: accessToken } }).then(() => {
       window.location.reload()
     })
   }
@@ -62,7 +59,7 @@ export default function ContentPost() {
     formData.append("subcategories", subcategories);
     formData.append("ProductLinks", ProductLinks);
     formData.append("video", file2);
-    await axios.post("http://localhost:5000/api/post/user/post/video", formData, { headers: { 'Content-Type': 'multipart/form-data', token: accessToken } }).then(() => {
+    await axios.post("http://139.162.11.30:80/api/post/user/post/video", formData, { headers: { 'Content-Type': 'multipart/form-data', token: accessToken } }).then(() => {
       window.location.reload()
     })
   }

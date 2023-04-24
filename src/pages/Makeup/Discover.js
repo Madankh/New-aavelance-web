@@ -11,7 +11,6 @@ import CommentIcon from "../../FeedUserComponent/Images/speech-bubble.png";
 export default function Discover({item}) {
 
   let userDetails = useSelector(state => state.user)
-  let users = userDetails?.user;
   let id = userDetails?.currentUser?.others?._id;
   const accessToken = userDetails?.currentUser?.accessToken;
   const productLink = item?.ProductLinks[0]?.slice(35,90);
@@ -32,7 +31,7 @@ export default function Discover({item}) {
   useEffect(() => {
     const getuser = async () => {
       try {
-        const res = await axios.get(`http://139.162.11.30:5000/api/user/post/user/details/${id}`)
+        const res = await axios.get(`http://139.162.11.30:80/api/user/post/user/details/${id}`)
         setuser(res.data);
       } catch (error) {
         console.log("Some error occured")
@@ -44,11 +43,11 @@ export default function Discover({item}) {
 
   const handleLike = async () => {
     if (Like == LikeIcon) {
-      await fetch(`http://139.162.11.30:5000/api/post/${item._id}/like`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken } })
+      await fetch(`http://139.162.11.30:80/api/post/${item._id}/like`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken } })
       setLike(anotherlikeicon);
       setCount(count + 1);
     } else {
-      await fetch(`http://139.162.11.30:5000/api/post/${item._id}/like`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken } })
+      await fetch(`http://139.162.11.30:80/api/post/${item._id}/like`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken } })
       setLike(LikeIcon)
       setCount(count - 1);
     }
@@ -61,7 +60,7 @@ export default function Discover({item}) {
       "comment": `${commentwriting}`,
       "profile": `${userDetails?.currentUser?.others?.profile}`
     }
-    await fetch(`http://139.162.11.30:5000/api/post/comment/post`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken }, body: JSON.stringify(comment) })
+    await fetch(`http://139.162.11.30:80/api/post/comment/post`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken }, body: JSON.stringify(comment) })
     setComments(Comments.concat(comment));
     alert("Your Comment is post successfully")
   }
@@ -70,7 +69,6 @@ export default function Discover({item}) {
     addComment();
   }
 
-  console.log(Comments)
 
   const handleshow = () => {
     if (show === false) {
@@ -84,22 +82,22 @@ export default function Discover({item}) {
     if (!user?.Userfollowing) {
       return "Follow";
     }
-    return user.Userfollowing.includes(item.user) ? "Following" : "Follow";
+    return user?.Userfollowing?.includes(item.user) ? "Following" : "Follow";
   });
   
   useEffect(() => {
     if (user.Userfollowing) {
-      setFollow(user.Userfollowing.includes(item.user) ? "Following" : "Follow");
+      setFollow(user?.Userfollowing?.includes(item.user) ? "Following" : "Follow");
     }
   }, [user, item]);
   
   console.log(user?.Userfollowing , "Userfollowing")
   const handleFollow= async(e)=>{
-    if(Follow == "Follow"){
-      await fetch(`http://139.162.11.30:5000/api/user/feed/following/${id}` , {method:'PUT', headers:{'Content-Type':"application/JSON" , token:accessToken} , body:JSON.stringify({user:`${item?.user}`})})
+    if(Follow === "Follow"){
+      await fetch(`http://139.162.11.30:80/api/user/feed/following/${id}` , {method:'PUT', headers:{'Content-Type':"application/JSON" , token:accessToken} , body:JSON.stringify({user:`${item?.user}`})})
       setFollow("Following");
     }else{
-      await fetch(`http://139.162.11.30:5000/api/user/feed/following/${id}` , {method:'PUT', headers:{'Content-Type':"application/JSON" , token:accessToken} , body:JSON.stringify({user:`${item?.user}`})})
+      await fetch(`http://139.162.11.30:80/api/user/feed/following/${id}` , {method:'PUT', headers:{'Content-Type':"application/JSON" , token:accessToken} , body:JSON.stringify({user:`${item?.user}`})})
       setFollow("Follow");
     }
   }
@@ -120,7 +118,7 @@ export default function Discover({item}) {
   }, []);
 
   const handleClick = (item)=>{
-    if(modalIsOpen == false){
+    if(modalIsOpen === false){
       setModalIsOpen(true);
       setproductitem(item);
     }

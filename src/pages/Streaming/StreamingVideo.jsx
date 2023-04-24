@@ -36,13 +36,13 @@ export default function Profile() {
       let [Follow, SetFollow] = useState(followinguser == true ? "Unfollow" : "Follow");
       const handleChange = async () => {
             if (Follow == "Follow") {
-                  await axios.put(`http://localhost:5000/api/seller/${id}/follow`, {
+                  await axios.put(`http://139.162.11.30:80/api/seller/${id}/follow`, {
                         user: `${Userid}`
                   });
                   SetFollow("Unfollow")
 
             } else {
-                  await axios.put(`http://localhost:5000/api/seller/${id}/unfollow`, {
+                  await axios.put(`http://139.162.11.30:80/api/seller/${id}/unfollow`, {
                         user: `${Userid}`
                   });
                   SetFollow("Follow")
@@ -54,7 +54,7 @@ export default function Profile() {
       useEffect(() => {
             const getProducts = async () => {
                   try {
-                        const res = await axios.get(`http://localhost:5000/api/products/allproduct/${id}`)
+                        const res = await axios.get(`http://139.162.11.30:80/api/products/allproduct/${id}`)
                         setProducts(res.data);
                   } catch (error) {
 

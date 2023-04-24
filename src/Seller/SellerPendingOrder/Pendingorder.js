@@ -17,7 +17,7 @@ export default function Pendingorder() {
   useEffect(() => {
     const getProduct = async()=>{
       try {
-        const res = await axios.get('http://192.168.18.4:5000/api/order/get/proccessing/userOrders', {
+        const res = await axios.get('http://139.162.11.30:80/api/order/get/proccessing/userOrders', {
           headers:{
             token: accessToken
           }

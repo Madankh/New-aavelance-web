@@ -1,5 +1,5 @@
 import { EmailOutlined, LocalPhoneOutlined } from '@material-ui/icons'
-import { AddLocationAltOutlined, ApartmentOutlined, AssignmentReturned, DomainAddOutlined, PasswordOutlined, People, Reorder } from '@mui/icons-material'
+import { AddLocationAltOutlined } from '@mui/icons-material'
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
 import Navbar from '../../component/Navbar'
@@ -16,7 +16,7 @@ export default function UpdateUserProfile() {
   console.log(Users?.currentUser?.other?.phoneNumber);
 
   const handleClick = async () => {
-    fetch(`http://localhost:5000/api/user/${Users?.currentUser?.other?._id}`, {
+    fetch(`http://139.162.11.30:80/api/user/${Users?.currentUser?.other?._id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json', token: accessToken },
       body: JSON.stringify({

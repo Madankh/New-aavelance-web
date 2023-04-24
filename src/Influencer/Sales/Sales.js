@@ -19,7 +19,7 @@ export default function Sales() {
   useEffect(() => {
     const TotSales = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/order/get/userOrder', {
+        const res = await axios.get('http://139.162.11.30:80/api/order/get/userOrder', {
           headers: {
             token: accessToken
           }
@@ -37,7 +37,7 @@ export default function Sales() {
   useEffect(() => {
     const PreviousTotSales = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/order/get/previos/week/userOrder', {
+        const res = await axios.get('http://139.162.11.30:80/api/order/get/previos/week/userOrder', {
           headers: {
             token: accessToken
           }
@@ -57,7 +57,7 @@ export default function Sales() {
   useEffect(() => {
     const OnemonthTotSales = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/order/get/one/month/userOrder', {
+        const res = await axios.get('http://139.162.11.30:80/api/order/get/one/month/userOrder', {
           headers: {
             token: accessToken
           }

@@ -17,7 +17,7 @@ export default function UpdateInfluencerProfile() {
   console.log(Users.currentUser.other.phoneNumber)
 
   const handleClick = async () => {
-    fetch(`http://localhost:5000/api/user/${Users.currentUser.other._id}`, {
+    fetch(`http://139.162.11.30:80/api/user/${Users.currentUser.other._id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json', token: accessToken },
       body: JSON.stringify({

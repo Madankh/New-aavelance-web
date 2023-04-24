@@ -9,7 +9,6 @@ import {
   ForumOutlined,
   Category,
   AddCircleOutline,
-  WifiTethering,
   Reorder,
   Home,
 } from "@material-ui/icons";
@@ -29,7 +28,6 @@ export default function Topbar() {
   const [Products, setProducts] = useState([]);
   const admin = useSelector((state) => state.seller);
   const [isVisiable, setisVisiable] = useState(false);
-  let seller = admin?.currentSeller?.paymentDateAt;
   let accessToken = admin?.currentSeller?.accessToken;
 
   const handleisvisiable = ()=>{
@@ -44,7 +42,7 @@ export default function Topbar() {
     const getProduct = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/order/get/proccessing/userOrders",
+          "http://139.162.11.30:80/api/order/get/proccessing/userOrders",
           {
             headers: {
               token: accessToken,
@@ -157,14 +155,6 @@ export default function Topbar() {
                       Pending orders
                     </li>
                   </Link>
-
-                  {/* <Link to={"/sellerOrder"} className="link">
-                            <li className='sidebarListItem' >
-                                <WifiTethering className='sidebarIcon' />
-                                 Go live
-                            </li>
-                        </Link> */}
-
                   <Link to={"/Returnorder"} className="link">
                     <li className="sidebarListItemisVisiable">
                       <div style={{ display: "flex" }}>

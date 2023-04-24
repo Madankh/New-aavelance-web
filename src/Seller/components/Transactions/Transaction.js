@@ -13,7 +13,7 @@ export default function Transaction() {
   useEffect(() => {
         const getTransaction = async()=>{
           try {
-            const res = await axios.get(`http://192.168.18.4:5000/api/transfer/get/transaction`, {
+            const res = await axios.get(`http://139.162.11.30:80/api/transfer/get/transaction`, {
               headers:{
                 token: accessToken
               }

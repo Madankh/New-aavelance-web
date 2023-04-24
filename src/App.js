@@ -16,10 +16,8 @@ import Userprofile from './pages/Userprofile/userprofile'
 import UpdateUserpassword from './pages/UpdateUserpassword/UpdateUserpassword';
 import ForgotPassword from './pages/ForgotPassword/ForgotPassword';
 import SellerForgotPassword from './pages/SellerForgotPassword/SellerForgotPassword';
-import InfluencerForgotPassword from './pages/InfluencerForgotPassword/InfluencerForgotPassword';
 import ResetPassword from './pages/ResetPassword/ResetPassword';
 import SellerResetPassword from './pages/SellerResetPassword/SellerResetPassword';
-import InfluencerResetPassword from './pages/InfluencerResetPassword/InfluencerResetPassword';
 import CatProductList from './pages/CatProductList';
 
 import { BrowserRouter , Routes , Navigate , Route} from "react-router-dom";
@@ -50,6 +48,7 @@ import HomepageForInfluencer from './Influencer/Influencerpages/InfluencerProfil
 import AddinfluenerBankAccount from './Influencer/InfluencerprofileDetails/AddinfluenerBankAccount'
 import InfluencerBankAccountUpdate from './Influencer/InfluencerprofileDetails/InfluencerBankAccountUpdate';
 import SellerVerifyemail from './component/SellerVerifyemail';
+import Followingseller from './pages/Followingseller';
 import FollowingSeller from './component/FollowingSeller';
 import ComplectedTransactions from './Seller/components/ComplectedTransactions/ComplectedTransactions';
 import UserTransactions from './Influencer/components/InfluencerTransactions/UserComplectedTransactions';
@@ -78,7 +77,6 @@ function App() {
       <Route path="/Cart"element={<Cart/>} />  
       <Route path="/Register"element={user ? <Navigate to="/" replace={true}/> : <Register/>} />
       <Route path="/Login"element={user ? <Navigate to="/" replace={true} />: <Login/>} />  
-
       <Route path="/Success"element={<Success/>} />
       <Route path='/verify/email' element={ users?.others?.verified === true ? <Navigate to="/" replace={true}/> : <Verifyemail/>}/>
       <Route path='/seller/verify/email' element={seller?.others?.verified === true ? <Navigate to="/admin" replace={true}/> : <SellerVerifyemail/>}/>
@@ -88,14 +86,12 @@ function App() {
       <Route path="/my/profile" element={user ? <Userprofile/>: <Navigate to="/login" replace={true}/>}/>
       <Route path="/Forgot/password" element={<ForgotPassword/>}/>
       <Route path="/Seller/Forgot/password" element={<SellerForgotPassword/>}/>
-      <Route path="/Influencer/Forgot/password" element={<InfluencerForgotPassword/>}/>
       <Route path="/update/my/profile" element={user ? <UpdateUserProfile/> :<Navigate to="/login" replace={true}/> }/>
       <Route path="/update/my/password" element={user ? <UpdateUserpassword/> :<Navigate to="/login" replace={true}/> }/>
       <Route path="/shippingInfo" element={user ? <ShippingInfo /> : <Navigate to="/login" replace={true}/>}/>
       <Route path="/order" element={user ? <Order/>: <Navigate to="/login" replace={true}/> }/>
       <Route path="/reset/password" element={<ResetPassword/>}/>
       <Route path="/seller/reset/password" element={<SellerResetPassword/>}/>
-      <Route path="/influencer/reset/password" element={<InfluencerResetPassword/>}/>
       <Route path="/following/seller" element={<FollowingSeller/>}/>
 
       <Route path="/your/feed" element={user ? <FeedHome/> : <Navigate to="/login" replace={true}/>} />

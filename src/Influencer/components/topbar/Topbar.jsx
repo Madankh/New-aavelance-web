@@ -23,7 +23,7 @@ export default function Topbar() {
   useEffect(() => {
     const getProduct = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/order/get/affid/proccessing/userOrders', {
+        const res = await axios.get('http://139.162.11.30:80/api/order/get/affid/proccessing/userOrders', {
           headers: {
             token: accessToken
           }
@@ -46,7 +46,7 @@ export default function Topbar() {
   //   const PostRevenue = async()=>{
   //     try {
   //       fetch(
-  //        'http://localhost:5000/api/transfer/money', {method: 'POST',
+  //        'http://139.162.11.30:80/api/transfer/money', {method: 'POST',
   //         headers: { 'Content-Type': 'application/json' , token : accessToken },
   //         body: JSON.stringify({
   //          amount:amount,

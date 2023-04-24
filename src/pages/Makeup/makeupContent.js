@@ -30,12 +30,12 @@ export default function MakeupContent({item}) {
 
 
   const handleLike = async () => {
-    if (Like == LikeIcon) {
-      await fetch(`http://139.162.11.30:5000/api/post/${item._id}/like`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken } })
+    if (Like === LikeIcon) {
+      await fetch(`http://139.162.11.30:80/api/post/${item._id}/like`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken } })
       setLike(anotherlikeicon);
       setCount(count + 1);
     } else {
-      await fetch(`http://139.162.11.30:5000/api/post/${item._id}/like`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken } })
+      await fetch(`http://139.162.11.30:80/api/post/${item._id}/like`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken } })
       setLike(LikeIcon)
       setCount(count - 1);
     }
@@ -48,7 +48,7 @@ export default function MakeupContent({item}) {
       "comment": `${commentwriting}`,
       "profile": `${userDetails?.currentUser?.others?.profile}`
     }
-    await fetch(`http://139.162.11.30:5000/api/post/comment/post`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken }, body: JSON.stringify(comment) })
+    await fetch(`http://139.162.11.30:80/api/post/comment/post`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken }, body: JSON.stringify(comment) })
     setComments(Comments.concat(comment));
     alert("Your Comment is post successfully")
   }
@@ -71,7 +71,7 @@ export default function MakeupContent({item}) {
   useEffect(() => {
     const getuser = async () => {
       try {
-        const res = await axios.get(`http://139.162.11.30:5000/api/user/post/user/details/${item.user}`)
+        const res = await axios.get(`http://139.162.11.30:80/api/user/post/user/details/${item.user}`)
         setuser(res.data);
       } catch (error) {
         console.log("Some error occured")
@@ -93,7 +93,7 @@ export default function MakeupContent({item}) {
   }, []);
 
   const handleClick = (item)=>{
-    if(modalIsOpen == false){
+    if(modalIsOpen === false){
       setModalIsOpen(true);
       setproductitem(item);
     }
@@ -148,7 +148,7 @@ export default function MakeupContent({item}) {
           <div style={{flex:2}}>
             <div style={{display:"flex" , justifyContent:"space-between"}}>
               <div style={{display:"flex" , alignItems:"center" , marginLeft:"20px"}}>
-              {user.profile == "" ? 
+              {user.profile === "" ? 
                 <img src={`https://news.artnet.com/app/news-upload/2022/12/prisma-labs-lensa-ai.jpg`} style={{width:"30px" , height:"30px", borderRadius:"50%"}} className=""  alt="" />:<img src={`${user?.profile}`} style={{width:"30px" , height:"30px", borderRadius:"50%"}} className=""  alt="" />
                 }
                 <p style={{marginLeft:"10px"}}>{user?.username}</p>
@@ -197,7 +197,7 @@ export default function MakeupContent({item}) {
             </div>}
               </div>
               <div style={{ display: "flex", alignItems: "center", marginLeft: 20, cursor: "pointer" }} onClick={handleshow}>
-              {id == undefined || null ? 
+              {id === undefined || null ? 
               <a href='/login' style={{textDecoration:"none"}}>
                 <div style={{display:"flex" , alignItems:"center"}} >
                   <img src={`${CommentIcon}`} className="iconsforPost" alt="" />

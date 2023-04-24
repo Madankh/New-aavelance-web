@@ -4,7 +4,6 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { register } from "./redux/apiCalls";
 import { createBrowserHistory } from "history";
-import { Navigate } from "react-router-dom";
 import { useNavigate } from 'react-router';
 import Navbar from "../component/Navbar";
 const Container = styled.div`
@@ -65,7 +64,6 @@ const Button = styled.button`
 
 const Register = () => {
    
-   const history = createBrowserHistory();
    const [username , setUsername] = useState("");
    const [phoneNumber , setPhonenumber] = useState("");
    const [email , setEmail] = useState("");

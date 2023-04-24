@@ -11,7 +11,7 @@ const SearchProducts = ({title , filters , sort}) => {
     useEffect(() => {
       const getProducts = async ()=>{
           try {
-              const res = await axios.get( title ? `http://192.168.18.4:5000/api/products/getallProduct?search_query=${title}`:  `http://192.168.18.4:5000/api/products/getallProduct`);
+              const res = await axios.get( title ? `http://139.162.11.30:80/api/products/getallProduct?search_query=${title}`:  `http://139.162.11.30:80/api/products/getallProduct`);
               setProducts(res.data);
             } catch (error) {
                 
