@@ -54,7 +54,7 @@ const server = createServer(app);
 const io = new Server(server , {
     pingTimeout:6000,
     cors: {
-        origin: "http://localhost:3000"
+        origin: "http://http://192.168.18.4/:3000"
     }
 });
 
@@ -91,5 +91,5 @@ io.on("connection" , (socket)=>{
 
 
 server.listen(port , ()=>{
-    console.log(`Server is running at http://localhost:${port}`)
+    console.log(`Server is running at http://http://192.168.18.4/:${port}`)
 })
