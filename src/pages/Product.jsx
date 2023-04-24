@@ -3,9 +3,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components"
 import Announcement from "../component/Announcement";
-import { Footer } from "../component/Footer";
 import Navbar from "../component/Navbar";
-import { Newsletter } from "../component/Newsletter";
 import { mobile } from "../responsive";
 import { publicRequest } from "../requestMethos"
 import { addProduct } from "./redux/cartRedux";

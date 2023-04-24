@@ -1,7 +1,6 @@
 import "./productList.css"
 import { DataGrid } from '@material-ui/data-grid';
 import { DeleteOutline } from "@material-ui/icons";
-import { ProductRows } from "../../pages/dummydata";
 import {Link} from "react-router-dom";
 import { useEffect, useState } from "react";
 import Sidebar from "../../components/sidebar/Sidebar";
@@ -10,7 +9,7 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 
 export default function ProductList() {
-  const [data, setdata] = useState(ProductRows);
+  const [data, setdata] = useState([]);
   const [Products, setProducts] = useState([])
   const admin = useSelector((state)=> state.seller);
   let seller = admin;

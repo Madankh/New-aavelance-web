@@ -1,18 +1,10 @@
 import { Link, useLocation } from "react-router-dom";
 import Chart from "../../components/chart/Chart";
 import "./Sellerproduct.css";
-import { productData } from "../dummydata";
 import { Publish } from "@material-ui/icons";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
-import {
-  getStorage,
-  ref,
-  uploadBytesResumable,
-  getDownloadURL,
-} from "firebase/storage";
-import app from "../../../firebase";
 import Topbar from "../../components/topbar/Topbar";
 // import { async } from "@firebase/util";
 

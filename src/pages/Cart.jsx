@@ -3,10 +3,8 @@ import styled from 'styled-components'
 import Navbar from '../component/Navbar'
 import Announcement from '../component/Announcement'
 import { Footer } from "../component/Footer"
-import { Add, Delete, Remove } from '@material-ui/icons'
-import { mobile } from '../responsive'
 import { useSelector , useDispatch } from 'react-redux';
-import StripeCheckout from 'react-stripe-checkout'
+
 import { Link } from 'react-router-dom'
 import { removeProduct } from './redux/cartRedux'
 import "./cart.css"
@@ -75,15 +73,7 @@ const Cart = () => {
                                     </div>
                                 </div>
                                 <span className='cartPriceDetail'>
-                                    {/* <div style={{color:"red" , cursor:"pointer"}} onClick={()=>handleRemove(product._id)}>{<Delete/>}</div>
-                                    <div className='ProductAmountContainer'>
-                                        <Add />
-                                        <div className='ProductAmount'>{product.quantity}</div>
-                                        <Remove />
-                                    </div>
-                                    <div className='ProductPrice'>
-                                        {product.price * product.quantity}
-                                    </div> */}
+                                   
                                 </span>
                             </div>
 
@@ -118,7 +108,6 @@ const Cart = () => {
                         </Link>
                         
                     }
-                        {/* </StripeCheckout> */}
 
                     </div>
                 </div>

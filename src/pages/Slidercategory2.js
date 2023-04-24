@@ -2,11 +2,7 @@ import React, { useEffect, useState } from "react";
 import Post from "../pages/PostContainer/Post"
 import "./styles.css";
 
-// import {popularProducts} from "../component/data";
-
 import ReactStars from "react-rating-stars-component";
-import Slider2 from "../component/Slider2";
-import { Link } from "react-router-dom";
 import axios from "axios";
 
 const options = {
@@ -24,7 +20,7 @@ function Slidercategory2() {
   useEffect(() => {
     const getProducts = async ()=>{
         try {
-            const res = await axios.get(`http://139.162.11.30:5000/api/products/getallProduct?category=Men's Fashion`)
+            const res = await axios.get(`http://139.162.11.30:80/api/products/getallProduct?category=Men's Fashion`)
             setProducts(res.data);
           } catch (error) {
               
@@ -39,7 +35,7 @@ function Slidercategory2() {
   useEffect(() => {
     const getPosts = async () => {
       try {
-        const res = await axios.get(`http://139.162.11.30:5000/api/post/getallpost?category=Men's Fashion`)
+        const res = await axios.get(`http://139.162.11.30:80/api/post/getallpost?category=Men's Fashion`)
         setPosts(res.data);
       } catch (error) {
 

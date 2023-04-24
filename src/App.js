@@ -2,7 +2,6 @@ import './App.css';
 import Cart from './pages/Cart';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import Pay from './pages/Pay';
 import Product from './pages/Product';
 import Home from './pages/Home';
 import ProductList from './pages/ProductList';
@@ -51,7 +50,6 @@ import HomepageForInfluencer from './Influencer/Influencerpages/InfluencerProfil
 import AddinfluenerBankAccount from './Influencer/InfluencerprofileDetails/AddinfluenerBankAccount'
 import InfluencerBankAccountUpdate from './Influencer/InfluencerprofileDetails/InfluencerBankAccountUpdate';
 import SellerVerifyemail from './component/SellerVerifyemail';
-import Followingseller from './pages/Followingseller';
 import FollowingSeller from './component/FollowingSeller';
 import ComplectedTransactions from './Seller/components/ComplectedTransactions/ComplectedTransactions';
 import UserTransactions from './Influencer/components/InfluencerTransactions/UserComplectedTransactions';
@@ -80,7 +78,7 @@ function App() {
       <Route path="/Cart"element={<Cart/>} />  
       <Route path="/Register"element={user ? <Navigate to="/" replace={true}/> : <Register/>} />
       <Route path="/Login"element={user ? <Navigate to="/" replace={true} />: <Login/>} />  
-      <Route path="/pay" element={<Pay/>}/>
+
       <Route path="/Success"element={<Success/>} />
       <Route path='/verify/email' element={ users?.others?.verified === true ? <Navigate to="/" replace={true}/> : <Verifyemail/>}/>
       <Route path='/seller/verify/email' element={seller?.others?.verified === true ? <Navigate to="/admin" replace={true}/> : <SellerVerifyemail/>}/>

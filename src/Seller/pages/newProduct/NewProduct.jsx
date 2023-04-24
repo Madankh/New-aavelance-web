@@ -2,9 +2,6 @@ import Sidebar from '../../../Seller/components/sidebar/Sidebar'
 import './newProduct.css'
 import Topbar from './../../components/topbar/Topbar'
 import { useState } from 'react'
-import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import app from '../../../firebase'
-import {addProduct} from '../../../pages/redux/apiCalls'
 import { useDispatch, useSelector } from 'react-redux';
 import addimag from "../newProduct/add-product.png"
 import axios from 'axios';
