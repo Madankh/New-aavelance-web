@@ -58,22 +58,35 @@ router.get("/user/account" , verifyToken , async(req , res)=>{
 })
 
 //Update user bankaccount
-router.put("/:id" , verifyToken , async(req , res)=>{
+router.put("/:id", verifyToken, async(req, res) => {
     try {
-        // if(req.params.id === req.user.id){
-            let user = await UserBankAccount.findOne({user:req.params.id});
-            updateaccount = await UserBankAccount.findByIdAndUpdate(
-                user._id ,{
-                    $set:req.body
-                },{new:true})
-                await updateaccount.save();
-                res.json("You bank information has successfully updated");
-            // }else{
-            //     return res.status(400).json("Some error occured")
-            // }
-     }catch(error){
-        res.status(500).json("Internal error occured")
-    }         
-});
+      const { BankName, accountName, accountNumber, BankAddress } = req.body;
+      if (!BankName || !accountName || !accountNumber || !BankAddress) {
+        return res.status(400).json("Missing required fields");
+      }
+      // Validate account number format
+      const accountNumberRegex = /^\d{9,18}$/;
+      if (!accountNumberRegex.test(accountNumber)) {
+        return res.status(400).json("Invalid account number format" );
+      }
+      const user = await UserBankAccount.findOne({ user: req.params.id });
+      if (!user) {
+        return res.status(404).json("User bank account not found");
+      }
+      const cipher = crypto.createCipheriv(algorithm , secretKey , inVec);
+      const secBankName = cipher.update(BankName, 'utf-8', 'hex');
+      const secaccountName = cipher.update(accountName, 'utf-8', 'hex');
+      const secaccountNumber = cipher.update(accountNumber, 'utf-8', 'hex');
+      const secBankAddress = cipher.update(BankAddress, 'utf-8', 'hex');
+      await UserBankAccount.findByIdAndUpdate(user._id, {
+        $set: { BankName: secBankName, accountName: secaccountName, accountNumber: secaccountNumber, BankAddress: secBankAddress }
+      }, { new: true });
+      return res.status(200).json("Your bank information has been successfully updated" );
+    } catch (error) {
+      console.error(error);
+      return res.status(500).json("Internal error occurred" );
+    }
+  });
+  
 
 module.exports = router;

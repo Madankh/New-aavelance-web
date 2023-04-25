@@ -200,8 +200,8 @@ router.post("/forgetpassword", async (req, res) => {
         from: "contact@aavelance.com",
         to: user.email,
         subject: 'Password Reset ',
-        html:generatePasswordResetTemplate(`http://localhost:3000/reset/password?token=${RandomTxt}&_id=${user._id}`)
-        // html: `http://localhost:3000/reset/password?token=${RandomTxt}&_id=${user._id}`
+        html:generatePasswordResetTemplate(`http://139.162.11.30:80/reset/password?token=${RandomTxt}&_id=${user._id}`)
+        // html: `http://139.162.11.30:80/reset/password?token=${RandomTxt}&_id=${user._id}`
       })
 
       res.json({success:true, message:"Password reset link is sent to your email"})

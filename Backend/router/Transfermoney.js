@@ -111,9 +111,7 @@ router.get("/get/main/transaction/:id", mainAdminverifyToken, async (req, res) =
         const transaction = await PendingSellerMoney.find({ seller: req.params.id }).sort({$natural:-1});;
         if (!transaction) {
             res.status(404).json("You Don't Have Any Transaction Right Now");
-        }
-        
-        // let ma = [];
+        } 
         const pendingTransaction = await Promise.all(transaction.map((item)=>{
             if(item.status === "Pending"){
                 return item;
@@ -121,7 +119,6 @@ router.get("/get/main/transaction/:id", mainAdminverifyToken, async (req, res) =
         }))
         const filterPendingTransaction = pendingTransaction.filter(x => x !== undefined)
         res.status(200).json(filterPendingTransaction)
-        // }
     } catch (error) {
         return res.status(500).json("Internal error occured");
     }
@@ -191,9 +188,7 @@ router.get("/get/status/complected/transaction", sellerverifyToken, async (req, 
                 }
             }))
             let items = ComplectedTransaction.filter(x => x !== undefined);
-            // if(Transaction.status == "Complected"){
                 res.status(200).json(items);
-            // }
         }
     } catch (error) {
         return res.status(500).json("Internal error occured");
