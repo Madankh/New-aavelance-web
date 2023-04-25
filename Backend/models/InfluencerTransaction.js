@@ -15,6 +15,9 @@ const UserMoneySchema = new mongoose.Schema(
             type:Number,
             required:true
         },
+        executeDate:{
+            type : Date,
+        },
         status:{
             type : String,
             required : true,

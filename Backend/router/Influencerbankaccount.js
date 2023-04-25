@@ -1,7 +1,5 @@
 const router = require("express").Router();
-const Influencer = require("../models/Influencer");
 const UserBankAccount = require("../models/InfluencerBankAccount");
-const {InfluencerverifyToken} = require("./InfluencerverifyToken");
 const { verifyToken } = require("./verifyToken");
 const crypto = require('crypto');
 require("dotenv").config();
@@ -58,7 +56,7 @@ router.get("/user/account" , verifyToken , async(req , res)=>{
                 resolve(item);
             });
         }))
-        res.json(account)
+        return res.json(account)
     } catch (error) {
         return res.status(400).json('Some error occured')
     }

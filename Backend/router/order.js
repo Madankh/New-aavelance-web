@@ -1,18 +1,15 @@
 const router = require("express").Router();
 const Order = require("../models/Order");
 const Product = require("../models/Product");
-const Influencer = require("../models/Influencer");
 const Pendingsellermoney = require("../models/Pendingsellermoney")
-const { mainAdminverifyToken } = require("./mainAdminverify");
 const { sellerverifyToken } = require("./SellerverifyToken");
-const { verifyToken, verifyTokenAndAdmin } = require("./verifyToken");
+const { verifyToken } = require("./verifyToken");
 const Seller = require("../models/Seller");
 const dotenv = require("dotenv");
-const { InfluencerverifyToken } = require("./InfluencerverifyToken");
 const User = require("../models/User");
 const InfluencerTransaction = require("../models/InfluencerTransaction");
 dotenv.config();
-const { S3Client, PutObjectCommand, AbortMultipartUploadCommand } = require("@aws-sdk/client-s3");
+const { S3Client } = require("@aws-sdk/client-s3");
 const { getSignedUrl } = require("@aws-sdk/s3-request-presigner");
 const { GetObjectCommand } = require("@aws-sdk/client-s3");
 
@@ -1036,6 +1033,7 @@ router.get("/get/affid/userOrder", verifyToken, async (req, res) => {
         user: req.user.id,
         amount: Income,
         Sales:Sales,
+        executeDate:paymentDateAt,
         status: "Pending",
       });
       
