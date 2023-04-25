@@ -9,31 +9,38 @@ const algorithm = process.env.ALGORITHM;
 const secretKey = process.env.BankACEn;
 const inVec = process.env.INVEC
 
-//Create bank account
-router.post("/create/bank/account", verifyToken, async(req , res)=>{
-    // try {
-        
-        
-        let cipher = crypto.createCipheriv(algorithm , secretKey , inVec)
-        let secBankName =  cipher.update(req.body.BankName, 'utf-8' , "hex")
-        let secaccountName = cipher.update(req.body.accountName, 'utf-8' , "hex")
-        let secaccountNumber = cipher.update(req.body.accountNumber, 'utf-8' , "hex")
-        let secBankAddress = cipher.update(req.body.BankAddress, 'utf-8' , "hex")
-
-        cipher.final('hex');
-        const newBank = await UserBankAccount.create({
-            BankName : secBankName,
-            accountName : secaccountName,
-            accountNumber : secaccountNumber,
-            BankAddress : secBankAddress,
-            user : req.user.id
-        });
-        const saveAccout = await newBank.save();
-        res.status(200).json("You successfully add a bank account on aavelance");
-    // } catch (error) {
-    //    return res.status(500).json("Some error occure");
-    // };
-});
+//Create user bank account
+router.post("/create/bank/account", verifyToken, async(req, res) => {
+    try {
+      const { BankName, accountName, accountNumber, BankAddress } = req.body;
+      if (!BankName || !accountName || !accountNumber || !BankAddress) {
+        return res.status(400).json("Missing required fields");
+      }
+      // Validate account number format
+      const accountNumberRegex = /^\d{9,18}$/;
+      if (!accountNumberRegex.test(accountNumber)) {
+        return res.status(400).json("Invalid account number format" );
+      }
+      const cipher = crypto.createCipheriv(algorithm, secretKey, inVec);
+      const secBankName = cipher.update(BankName, 'utf-8', 'hex');
+      const secaccountName = cipher.update(accountName, 'utf-8', 'hex');
+      const secaccountNumber = cipher.update(accountNumber, 'utf-8', 'hex');
+      const secBankAddress = cipher.update(BankAddress, 'utf-8', 'hex');
+      cipher.final('hex');
+      const newBank = await UserBankAccount.create({
+        BankName: secBankName,
+        accountName: secaccountName,
+        accountNumber: secaccountNumber,
+        BankAddress: secBankAddress,
+        user: req.user.id
+      });
+      return res.status(200).json("Your bank account has been created successfully" );
+    } catch (error) {
+      console.error(error);
+      return res.status(500).json("Internal error occurred" );
+    }
+  });
+  
 
 
 //Get a user bank
