@@ -25,7 +25,7 @@ function Slidercategory4() {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const res = await axios.get(`http://172.232.73.46:80/api/products/getallProduct?category=Beauty & Personal Care`)
+        const res = await axios.get(`http://api.aavelance.com/api/products/getallProduct?category=Beauty & Personal Care`)
         setProducts(res.data);
       } catch (error) {
 

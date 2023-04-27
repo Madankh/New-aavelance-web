@@ -17,7 +17,7 @@ export default function SellerprofileDetails() {
   useEffect(() => {
     const getBank = async ()=>{
         try {
-            const res = await axios.get(`http://172.232.73.46:80/api/bankaccout/accountdetail` , {
+            const res = await axios.get(`http://api.aavelance.com/api/bankaccout/accountdetail` , {
               headers: {
                 token: accessToken
               }})

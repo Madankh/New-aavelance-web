@@ -153,7 +153,7 @@ const Product = () => {
 
   const handleCreate = async()=>{
     try {
-      await fetch('http://172.232.73.46:80/api/products/reviews/product', {method: 'PUT',
+      await fetch('http://api.aavelance.com/api/products/reviews/product', {method: 'PUT',
         headers: { 'Content-Type': 'application/json' , token : accessToken },
         body: JSON.stringify({
           productid : `${id}`,
@@ -196,7 +196,7 @@ const Product = () => {
   useEffect(() => {
     const getPosts = async () => {
       try {
-        const res = await axios.get(`http://172.232.73.46:80/api/post/getallpost?category=${product?.categories}&subcategories=${product?.subcategories}`)
+        const res = await axios.get(`http://api.aavelance.com/api/post/getallpost?category=${product?.categories}&subcategories=${product?.subcategories}`)
         setPosts(res.data);
         return () => {};
       } catch (error) {
@@ -275,7 +275,7 @@ const Product = () => {
 
           </AddContainer>
           <div >
-            <textarea style={{width:"0px" , height:"0px"}} security={true} ref={textAreaRef} value={`http://139.162.11.30:3000/product/find/${product?._id}?affid=${userid}`}></textarea>
+            <textarea style={{width:"0px" , height:"0px"}} security={true} ref={textAreaRef} value={`http://www.aavelance.com/product/find/${product?._id}?affid=${userid}`}></textarea>
           </div>
           <button onClick={handleCopy} className="copyproduct">Copy Product Link</button>
           <p style={{ fontSize: '12px' }}>Shipping time : 1 to 2 days</p>

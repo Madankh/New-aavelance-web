@@ -14,7 +14,7 @@ function Order() {
   useEffect(() => {
     const getOrder = async () => {
       try {
-        const res = await axios.get(`http://139.162.11.30:80/api/order/myOrder`, {
+        const res = await axios.get(`http://api.aavelance.com/api/order/myOrder`, {
           headers: {
             token: accessToken
           }

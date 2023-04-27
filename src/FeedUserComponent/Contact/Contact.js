@@ -38,7 +38,7 @@ export default function Contact() {
           token: `${accesstoken}`,
         },
       };
-      const { data } = await axios.get(`http://172.232.73.46:80/api/auth/get/search/user?search=${search}`, config);
+      const { data } = await axios.get(`http://api.aavelance.com/api/auth/get/search/user?search=${search}`, config);
       setLoading(false);
       setSearchResult(data);
     } catch (error) {
@@ -59,7 +59,7 @@ export default function Contact() {
           token: `${accesstoken}`,
         },
       };
-      const { data } = await axios.get(`http://172.232.73.46:80/api/chat/groups`, config);
+      const { data } = await axios.get(`http://api.aavelance.com/api/chat/groups`, config);
       setCopy(data);
       setMyGroupChat(data)
     }
@@ -85,7 +85,7 @@ export default function Contact() {
       console.log("sorry error occured");
     } else {
       try {
-        await fetch("http://172.232.73.46:80/api/chat/create/group", {
+        await fetch("http://api.aavelance.com/api/chat/create/group", {
           method: "POST",
           headers: { "Content-Type": "application/json", token: accesstoken },
           body: JSON.stringify({

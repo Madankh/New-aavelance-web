@@ -18,7 +18,7 @@ export default function SellerProduct() {
     const getProduct = async () => {
       try {
         const res = await axios.get(
-          `http://172.232.73.46:80/api/products/find/${productId}`
+          `http://api.aavelance.com/api/products/find/${productId}`
         );
         setProduct(res.data);
       } catch (error) {}

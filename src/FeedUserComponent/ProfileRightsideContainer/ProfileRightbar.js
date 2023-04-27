@@ -14,7 +14,7 @@ export default function ProfileRightbar() {
   useEffect(() => {
     const getFollowing = async()=>{
       try {
-        const res = await axios.get(`http://172.232.73.46:80/api/post/followers/${id}`);
+        const res = await axios.get(`http://api.aavelance.com/api/post/followers/${id}`);
         setFollowinguser(res.data);
       } catch (error) {
         console.log("Error")
@@ -29,7 +29,7 @@ export default function ProfileRightbar() {
   useEffect(() => {
     const getuser = async()=>{
       try {
-        const res  = await axios.get(`http://172.232.73.46:80/api/user/all/user/${idforSuggest}`)
+        const res  = await axios.get(`http://api.aavelance.com/api/user/all/user/${idforSuggest}`)
         setUsers(res.data);
       } catch (error) {
         console.log("Some error occured")

@@ -18,7 +18,7 @@ export default function ProductList() {
   useEffect(() => {
     const getProduct = async()=>{
       try {
-        const res = await axios.get('http://172.232.73.46:80/api/products/allpro', {
+        const res = await axios.get('http://api.aavelance.com/api/products/allpro', {
           headers:{
             token: accessToken
           }
@@ -34,7 +34,7 @@ export default function ProductList() {
 
   const handleDelete = (id) => {
     setProducts(Products.filter((item) => item._id !== id))
-    axios.delete(`http://172.232.73.46:80/api/products/${id}`, {
+    axios.delete(`http://api.aavelance.com/api/products/${id}`, {
       headers: {
         token: accessToken
       }

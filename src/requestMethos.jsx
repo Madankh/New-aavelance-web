@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL = "http://172.232.73.46:80/api/";
+const BASE_URL = "http://api.aavelance.com/api/";
 export const publicRequest = axios.create({
     baseURL:BASE_URL,
 })

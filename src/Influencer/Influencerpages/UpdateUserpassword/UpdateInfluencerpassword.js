@@ -16,7 +16,7 @@ export default function UpdateInfluencerpassword() {
   const [comfirmPassword , setcomfirmPassword] = useState('');
 
   const clickUpdate = async()=>{
-     fetch(`http://172.232.73.46:80/api/seller/update/password/${User.currentUser.other._id}` , { method: 'PUT',
+     fetch(`http://api.aavelance.com/api/seller/update/password/${User.currentUser.other._id}` , { method: 'PUT',
           headers: { 'Content-Type': 'application/json' , token : accessToken },
           body: JSON.stringify({
             oldpassword: `${oldpassword}`, newPassword: `${newPassword}`,

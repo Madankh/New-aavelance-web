@@ -28,7 +28,7 @@ function GroupChatPage(CurrentChat) {
           token: `${accesstoken}`,
         },
       };
-      const { data } = await axios.get(`http://172.232.73.46:80/api/message/get/all/group/msg/${CurrentChat?.CurrentChat?._id}`, config);
+      const { data } = await axios.get(`http://api.aavelance.com/api/message/get/all/group/msg/${CurrentChat?.CurrentChat?._id}`, config);
       setMessages(data);
       socket.current.emit("join chat" , CurrentChat?.CurrentChat?._id);
     } catch (error) {
@@ -38,7 +38,7 @@ function GroupChatPage(CurrentChat) {
 
   useEffect(()=>{
     if(CurrentChat !== ''){
-      socket.current = io("http://172.232.73.46:80");
+      socket.current = io("http://api.aavelance.com");
       socket.current.emit("setup" , user);
 
     }
@@ -54,7 +54,7 @@ function GroupChatPage(CurrentChat) {
         setMessages([...messages, { content: message,image:imagePreview, sender: { profile: `${userDetails?.currentUser?.others?.profile}`, username: `${userDetails?.currentUser?.others?.username}` } }]);
       try {
         await fetch(
-          `http://172.232.73.46:80/api/message/send/msg`, {
+          `http://api.aavelance.com/api/message/send/msg`, {
             method: 'POST',
           headers: { 'Content-Type': 'application/json', token: accesstoken },
           body: JSON.stringify({

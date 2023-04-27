@@ -16,7 +16,7 @@ export default function UpdateUserProfile() {
   console.log(Users?.currentUser?.other?.phoneNumber);
 
   const handleClick = async () => {
-    fetch(`http://172.232.73.46:80/api/user/${Users?.currentUser?.other?._id}`, {
+    fetch(`http://api.aavelance.com/api/user/${Users?.currentUser?.other?._id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json', token: accessToken },
       body: JSON.stringify({

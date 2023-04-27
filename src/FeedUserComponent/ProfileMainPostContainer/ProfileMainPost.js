@@ -13,7 +13,7 @@ export default function ProfileMainPost() {
   useEffect(() => {
     const getPost = async()=>{
       try {
-        const res = await axios.get(`http://172.232.73.46:80/api/post/get/post/${id}`)
+        const res = await axios.get(`http://api.aavelance.com/api/post/get/post/${id}`)
         setPost(res.data);
       } catch (error) {
         console.log("error occured")

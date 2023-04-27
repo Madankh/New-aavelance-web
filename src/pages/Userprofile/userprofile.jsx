@@ -14,7 +14,7 @@ export default function Userprofile() {
   useEffect(() => {
     const getOrder = async ()=>{
         try {
-            const res = await axios.get(`http://172.232.73.46:80/api/order/myOrder` , {
+            const res = await axios.get(`http://api.aavelance.com/api/order/myOrder` , {
               headers:{
                 token : accessToken
               }
@@ -33,7 +33,7 @@ export default function Userprofile() {
   useEffect(() => {
     const getBank = async ()=>{
         try {
-            const res = await axios.get(`http://172.232.73.46:80/api/influencer/bank/user/account` , {
+            const res = await axios.get(`http://api.aavelance.com/api/influencer/bank/user/account` , {
               headers: {
                 token: accessToken
               }})

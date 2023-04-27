@@ -31,7 +31,7 @@ export default function Profile() {
     useEffect(() => {
         const getuserDetails = async ()=>{
             try {
-                const res = await axios.get(`http://172.232.73.46:80/api/user/own/${Userid}` , {headers:{token:accessToken}})
+                const res = await axios.get(`http://api.aavelance.com/api/user/own/${Userid}` , {headers:{token:accessToken}})
                 setuserDetails(res.data);
                 console.log(userDetails)
               } catch (error) {
@@ -42,7 +42,7 @@ export default function Profile() {
         useEffect(() => {
             const getSeller = async () => {
               try {
-                const res = await axios.get(`http://172.232.73.46:80/api/seller/seller/` + id);
+                const res = await axios.get(`http://api.aavelance.com/api/seller/seller/` + id);
                 setsellershop(res.data);
                 console.log(res.data)
               } catch (error) {
@@ -57,13 +57,13 @@ export default function Profile() {
 
     const handleChange = async()=>{
         if(Follow === "Follow"){
-            await axios.put(`http://172.232.73.46:80/api/seller/${id}/follow` , {
+            await axios.put(`http://api.aavelance.com/api/seller/${id}/follow` , {
                 user: `${Userid}`
             });
             window.location.reload(true);
             
         }else{
-            await axios.put(`http://172.232.73.46:80/api/seller/${id}/unfollow` , {
+            await axios.put(`http://api.aavelance.com/api/seller/${id}/unfollow` , {
                 user:`${Userid}`
             });
             window.location.reload(true);
@@ -75,7 +75,7 @@ export default function Profile() {
     useEffect(() => {
         const getProducts = async ()=>{
             try {
-                const res = await axios.get(`http://172.232.73.46:80/api/products/allproduct/${id}`)
+                const res = await axios.get(`http://api.aavelance.com/api/products/allproduct/${id}`)
                 setProducts(res.data);
               } catch (error) {
               }
