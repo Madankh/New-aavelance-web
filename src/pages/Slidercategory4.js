@@ -21,7 +21,7 @@ function Slidercategory4() {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const res = await axios.get(`http://139.162.11.30:80/api/products/getallProduct?category=Beauty and Personal Care`)
+        const res = await axios.get(`http://172.232.73.46:80/api/products/getallProduct?category=Beauty and Personal Care`)
         setProducts(res.data);
       } catch (error) {
 
@@ -35,7 +35,7 @@ function Slidercategory4() {
   useEffect(() => {
     const getPosts = async () => {
       try {
-        const res = await axios.get(`http://139.162.11.30:80/api/post/getallpost?category=Beauty and Personal Care`)
+        const res = await axios.get(`http://172.232.73.46:80/api/post/getallpost?category=Beauty and Personal Care`)
         setPosts(res.data);
       } catch (error) {
 

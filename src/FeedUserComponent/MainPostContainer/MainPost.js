@@ -15,7 +15,7 @@ export default function MainPost() {
   useEffect(() => {
    const getPost = async()=>{
     try {
-      const res = await axios.get(`http://139.162.11.30:80/api/user/flw/${id}` , {
+      const res = await axios.get(`http://172.232.73.46:80/api/user/flw/${id}` , {
         headers:{
           token:accesstoken
         }

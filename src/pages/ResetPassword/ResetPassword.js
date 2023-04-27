@@ -80,7 +80,7 @@ const ResetPassword = () => {
       e.preventDefault();
       try {
          await fetch(
-           `http://139.162.11.30:80/api/auth/reset/password?${code}`, {method: 'PUT',
+           `http://172.232.73.46:80/api/auth/reset/password?${code}`, {method: 'PUT',
            headers: { 'Content-Type': 'application/json'},
            body: JSON.stringify({
              password:password

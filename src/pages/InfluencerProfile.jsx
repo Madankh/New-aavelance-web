@@ -35,13 +35,13 @@ export default function InfluencerProfile() {
     let [Follow , SetFollow] = useState(followinguser == true ? "Unfollow" : "Follow");
     const handleChange = async()=>{
         if(Follow == "Follow"){
-            await axios.put(`http://139.162.11.30:80/api/seller/${id}/influencer/follow` , {
+            await axios.put(`http://172.232.73.46:80/api/seller/${id}/influencer/follow` , {
                 influencer: `${Influencerid}`
             });
             SetFollow("Unfollow")
             
         }else{
-            await axios.put(`http://139.162.11.30:80/api/seller/${id}/influencer/unfollow` , {
+            await axios.put(`http://172.232.73.46:80/api/seller/${id}/influencer/unfollow` , {
                 influencer:`${Influencerid}`
             });
             SetFollow("Follow")
@@ -53,7 +53,7 @@ export default function InfluencerProfile() {
     useEffect(() => {
         const getProducts = async ()=>{
             try {
-                const res = await axios.get(`http://139.162.11.30:80/api/products/allproduct/${id}`)
+                const res = await axios.get(`http://172.232.73.46:80/api/products/allproduct/${id}`)
                 setProducts(res.data);
               } catch (error) {
 

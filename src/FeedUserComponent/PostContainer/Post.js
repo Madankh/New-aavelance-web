@@ -17,7 +17,7 @@ export default function Post({ post }) {
   useEffect(() => {
     const getuser = async () => {
       try {
-        const res = await axios.get(`http://139.162.11.30:80/api/user/post/user/details/${post.user}`)
+        const res = await axios.get(`http://172.232.73.46:80/api/user/post/user/details/${post.user}`)
         setuser(res.data);
       } catch (error) {
         console.log("Some error occured")
@@ -49,11 +49,11 @@ console.log(product)
 
   const handleLike = async () => {
     if (Like == LikeIcon) {
-      await fetch(`http://139.162.11.30:80/api/post/${post._id}/like`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken } })
+      await fetch(`http://172.232.73.46:80/api/post/${post._id}/like`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken } })
       setLike(anotherlikeicon);
       setCount(count + 1);
     } else {
-      await fetch(`http://139.162.11.30:80/api/post/${post._id}/like`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken } })
+      await fetch(`http://172.232.73.46:80/api/post/${post._id}/like`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken } })
       setLike(LikeIcon)
       setCount(count - 1);
     }
@@ -66,7 +66,7 @@ console.log(product)
       "comment": `${commentwriting}`,
       "profile": `${userDetails?.currentUser?.others?.profile}`
     }
-    await fetch(`http://139.162.11.30:80/api/post/comment/post`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken }, body: JSON.stringify(comment) })
+    await fetch(`http://172.232.73.46:80/api/post/comment/post`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken }, body: JSON.stringify(comment) })
     setComments(Comments.concat(comment));
   }
 

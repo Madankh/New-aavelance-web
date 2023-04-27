@@ -12,7 +12,7 @@ export default function FeaturedInfo() {
     useEffect(() => {
       const income = async () => {
         try {
-          const res = await axios.get('http://139.162.11.30:80/api/order/get/userOrder', {
+          const res = await axios.get('http://172.232.73.46:80/api/order/get/userOrder', {
             headers: {
               token: accessToken
             }

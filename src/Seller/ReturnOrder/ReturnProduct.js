@@ -12,7 +12,7 @@ export default function ReturnProduct() {
   useEffect(() => {
     const TotSales = async () => {
       try {
-        const res = await axios.get('http://139.162.11.30:80/api/order/get/return/userOrder', {
+        const res = await axios.get('http://172.232.73.46:80/api/order/get/return/userOrder', {
           headers: {
             token: accessToken
           }

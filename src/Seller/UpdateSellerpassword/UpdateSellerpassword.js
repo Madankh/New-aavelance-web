@@ -15,7 +15,7 @@ export default function UpdateSellerpassword() {
   const [comfirmPassword , setcomfirmPassword] = useState('');
 
   const clickUpdate = async()=>{
-     fetch(`http://139.162.11.30:80/api/seller/update/password/${admin.currentSeller._id}` , { method: 'PUT',
+     fetch(`http://172.232.73.46:80/api/seller/update/password/${admin.currentSeller._id}` , { method: 'PUT',
           headers: { 'Content-Type': 'application/json' , token : accessToken },
           body: JSON.stringify({
             oldpassword: `${oldpassword}`, newPassword: `${newPassword}`,

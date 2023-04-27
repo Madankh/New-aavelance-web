@@ -12,7 +12,7 @@ export default function InfluencerBankAccountUpdate() {
       useEffect(() => {
         const getTransaction = async()=>{
           try {
-            const res = await axios.get(`http://139.162.11.30:80/api/influencer/bank/account`, {
+            const res = await axios.get(`http://172.232.73.46:80/api/influencer/bank/account`, {
               headers:{
                 token: accessToken
               }
@@ -37,7 +37,7 @@ export default function InfluencerBankAccountUpdate() {
       const handleUpdate = async()=>{
             try {
               await fetch(
-                `http://139.162.11.30:80/api/influencer/bank/${id}`, {method: 'PUT',
+                `http://172.232.73.46:80/api/influencer/bank/${id}`, {method: 'PUT',
                 headers: { 'Content-Type': 'application/json' , token : accessToken },
                 body: JSON.stringify({
                   BankName:`${BankName}`,

@@ -13,7 +13,7 @@ export default function UpdateUserpassword() {
   console.log(accessToken);
 
   const clickUpdate = async()=>{
-     fetch(`http://139.162.11.30:80/api/auth/update/password/${User?.currentUser?.others?._id}` , { method: 'PUT',
+     fetch(`http://172.232.73.46:80/api/auth/update/password/${User?.currentUser?.others?._id}` , { method: 'PUT',
           headers: { 'Content-Type': 'application/json' , token : accessToken },
           body: JSON.stringify({
             oldpassword: `${oldpassword}`, newPassword: `${newPassword}`,

@@ -13,7 +13,7 @@ export default function ComplectedTransactions() {
   useEffect(() => {
         const getTransaction = async()=>{
           try {
-            const res = await axios.get(`http://139.162.11.30:80/api/transfer/get/status/complected/transaction`, {
+            const res = await axios.get(`http://172.232.73.46:80/api/transfer/get/status/complected/transaction`, {
               headers:{
                 token: accessToken
               }

@@ -18,7 +18,7 @@ export default function UpdateSellerProfileDetail() {
   const accessToken = Seller?.currentSeller?.accessToken;
   
   const handleClick = async () => {
-    fetch(`http://139.162.11.30:80/api/seller/${Seller?.currentSeller?._id}`, {
+    fetch(`http://172.232.73.46:80/api/seller/${Seller?.currentSeller?._id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json', token: accessToken },
       body: JSON.stringify({

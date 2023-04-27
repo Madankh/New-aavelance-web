@@ -75,7 +75,7 @@ const SellerForgotPassword = () => {
       e.preventDefault();
       try {
          await fetch(
-           'http://139.162.11.30:80/api/seller/forgetpassword', {method: 'POST',
+           'http://172.232.73.46:80/api/seller/forgetpassword', {method: 'POST',
            headers: { 'Content-Type': 'application/json'},
            body: JSON.stringify({
              email:email

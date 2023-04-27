@@ -153,7 +153,7 @@ const Product = () => {
 
   const handleCreate = async()=>{
     try {
-      await fetch('http://139.162.11.30:80/api/products/reviews/product', {method: 'PUT',
+      await fetch('http://172.232.73.46:80/api/products/reviews/product', {method: 'PUT',
         headers: { 'Content-Type': 'application/json' , token : accessToken },
         body: JSON.stringify({
           productid : `${id}`,
@@ -196,7 +196,7 @@ const Product = () => {
   useEffect(() => {
     const getPosts = async () => {
       try {
-        const res = await axios.get(`http://139.162.11.30:80/api/post/getallpost?category=${product?.categories}&subcategories=${product?.subcategories}`)
+        const res = await axios.get(`http://172.232.73.46:80/api/post/getallpost?category=${product?.categories}&subcategories=${product?.subcategories}`)
         setPosts(res.data);
         return () => {};
       } catch (error) {

@@ -23,7 +23,7 @@ export default function Order() {
   useEffect(() => {
     const getOrder = async()=>{
       try {
-        const res = await axios.get(`http://139.162.11.30:80/api/order/Single/order/${orderId}`, {
+        const res = await axios.get(`http://172.232.73.46:80/api/order/Single/order/${orderId}`, {
           headers:{
             token: accessToken
           }
@@ -48,7 +48,7 @@ export default function Order() {
   const handleClick = async()=> {
     const res = await axios({
       method:'PUT',
-      url:`http://139.162.11.30:80/api/order/update/status/${orderId}`,
+      url:`http://172.232.73.46:80/api/order/update/status/${orderId}`,
       data:{
         status:`${Orderstatus}`
       }

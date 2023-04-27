@@ -20,7 +20,7 @@ const Products = ({cat , filters , sort}) => {
     useEffect(() => {
       const getProducts = async ()=>{
           try {
-              const res = await axios.get( cat ? `http://139.162.11.30:80/api/products/getallProduct?subcategories=${cat}`:  `http://139.162.11.30:80/api/products/getallProduct`);
+              const res = await axios.get( cat ? `http://172.232.73.46:80/api/products/getallProduct?subcategories=${cat}`:  `http://172.232.73.46:80/api/products/getallProduct`);
               setProducts(res.data);
             } catch (error) {
                 

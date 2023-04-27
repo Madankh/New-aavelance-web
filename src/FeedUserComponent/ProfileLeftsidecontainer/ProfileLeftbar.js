@@ -20,7 +20,7 @@ export default function ProfileLeftbar() {
   useEffect(() => {
     const getuser = async()=>{
       try {
-        const res  = await axios.get(`http://139.162.11.30:80/api/user/post/user/details/${id}`)
+        const res  = await axios.get(`http://172.232.73.46:80/api/user/post/user/details/${id}`)
         setuser(res.data);
       } catch (error) {
         console.log("Some error occured")
@@ -35,7 +35,7 @@ export default function ProfileLeftbar() {
   useEffect(() => {
     const getFollowing = async()=>{
       try {
-        const res = await axios.get(`http://139.162.11.30:80/api/post/following/${id}`);
+        const res = await axios.get(`http://172.232.73.46:80/api/post/following/${id}`);
         setFollowinguser(res.data);
       } catch (error) {
         console.log("Error")
@@ -46,10 +46,10 @@ export default function ProfileLeftbar() {
 
   const handleFollow = async()=>{
     if(Follow === "Follow"){
-      await fetch(`http://139.162.11.30:80/api/user/following/${id}` , {method:'PUT', headers:{'Content-Type':"application/JSON" , token:accessToken} , body:JSON.stringify({user:`${user.other._id}`})})
+      await fetch(`http://172.232.73.46:80/api/user/following/${id}` , {method:'PUT', headers:{'Content-Type':"application/JSON" , token:accessToken} , body:JSON.stringify({user:`${user.other._id}`})})
       setUnFollow("UnFollow")
     }else{
-      await fetch(`http://139.162.11.30:80/api/user/following/${id}` , {method:'PUT', headers:{'Content-Type':"application/JSON" , token:accessToken} , body:JSON.stringify({user:`${user.other._id}`})})
+      await fetch(`http://172.232.73.46:80/api/user/following/${id}` , {method:'PUT', headers:{'Content-Type':"application/JSON" , token:accessToken} , body:JSON.stringify({user:`${user.other._id}`})})
       setUnFollow("Follow")
     }
   }

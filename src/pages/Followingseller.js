@@ -19,7 +19,7 @@ function Followingseller() {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const res = await axios.get(`http://139.162.11.30:80/api/seller/flwpdu/${users?.currentUser?.others?._id}`);
+        const res = await axios.get(`http://172.232.73.46:80/api/seller/flwpdu/${users?.currentUser?.others?._id}`);
         setProducts(res.data);
       } catch (error) {
 
