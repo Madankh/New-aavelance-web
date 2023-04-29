@@ -9,23 +9,31 @@
   }
 
 
-  .modal {
-    width: 45%;
+  .ModalImagee{
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+}
+
+
+.ModalClasNameForAPostPage {
+    width: 70%;
     height: 70%;
     margin: auto;
-    margin-top: 120px;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
     padding: 20px;
     border: none;
     background-color: #fff;
+    margin-top: 85px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   
-  .overlay {
+  .ModalClasNameForAPostPage__overlay {
     background-color: rgb(255 255 255 / 93%);
   }
+  
   
 .productdesincontent{
   font-size: 11px;
@@ -117,11 +125,6 @@
   }
 
 
-  .ModalImage{
-    width:100%; 
-    height:65vh; 
-    object-fit:cover
-  }
 
 
   @media screen and (max-width:976px) {
@@ -155,6 +158,14 @@
     .insidemakeupcontent{
       flex-basis: 42%;
     }
+    .ModalClasNameForAPostPage {
+      width: 77%;
+      height: 77%;
+     
+    }
+    .ModalForDiscoverPage{
+      display: block;
+    }
   }
 
   
@@ -185,6 +196,9 @@
     }
     .makeupContent{
       margin-left: 20px;
+    }
+    .ModalImagee{
+      height: 60vh;
     }
   }
 
@@ -266,6 +280,9 @@
       object-fit:cover;
       margin-left: 40px;
     }
+    .ModalImagee{
+      height: 50vh;
+    }
     
   }
 
@@ -274,6 +291,9 @@
     .insidemakeupcontent{
       flex-basis: 80%;
       margin-left: 20px;
+    }
+    .ModalImagee{
+      height: 40vh;
     }
     
   }

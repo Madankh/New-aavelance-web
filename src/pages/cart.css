@@ -154,30 +154,24 @@
           .cartPriceDetail{
                    margin-right: 210px;
           }
-          /* .ProductPrice{
-                    font-size: 19px;
-                    margin-left: 66px;
-                    margin-top: -20px;
-                    font-weight: 600;
-          }
-          .ProductAmount{
-                    font-size: 19px;
-                    margin-left: 40px;
-                    margin-top: -20px;
-          } */
+          .cartproductTitle{
+            font-size: 13px;
+            margin-top: -10px;
+  }
+         
                  
 }
 
 @media screen and (max-width:397px) {
           .cartproductTitle{
                     font-size: 11px;
-                    margin-top: -16px;
+                    margin-top: -7px;
           }
 }
 
 @media screen and (max-width:350px) {
           .cartproductTitle{
                     font-size: 9px;
-                    margin-top: -16px;
+                    margin-top: -7px;
           }
 }

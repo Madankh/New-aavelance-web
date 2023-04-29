@@ -133,7 +133,7 @@ export default function Contact() {
       <div className='rightsidebar' style={{marginLeft:"0px" , marginTop:"10px"}}>
         {!CurrentChat == '' ? 
         <Message CurrentChat={CurrentChat} />
-        :<p style={{color:"white" , backgroundColor:"#ffffff3d" ,borderRadius:"10px", padding:"10px" , fontSize:"90px" , marginLeft:"80px" , marginTop:"35px"}}>Start a conversation with your group and friends</p>
+        :<p className='forntpage' >Start a conversation with your group and friends</p>
         }
         
       </div>

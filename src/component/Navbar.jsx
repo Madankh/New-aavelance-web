@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import { Notifications, SearchOutlined, ShoppingCartOutlined } from '@material-ui/icons';
+import { SearchOutlined, ShoppingCartOutlined } from '@material-ui/icons';
 import { Badge } from '@material-ui/core';
 import { mobile } from '../responsive';
 import { useSelector } from "react-redux";
-import { Link, Navigate } from 'react-router-dom';
 import { useDispatch } from "react-redux"
 import { logout } from '../pages/redux/userRedux'
 import { createBrowserHistory } from "history";
 import "./navbar.css";
 
-const Navbar = ({ socket }) => {
+const Navbar = () => {
   const quantity = useSelector(state => state.cart.quantity);
   const user = useSelector(state => state.user)
   const dispatch = useDispatch();
@@ -65,7 +63,7 @@ const Navbar = ({ socket }) => {
           </a>
           <a href={"/cart"} >
           </a>
-          {user ?
+          {user.currentUser ?
             <a href={`/user/profile/${id}`}>
               <div className='navMenuItem'>Profile</div>
             </a> : ''

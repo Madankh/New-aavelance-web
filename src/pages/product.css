@@ -144,6 +144,7 @@
 @media screen and (max-width:752px) {
     .ProductWrapper{
         display:block;
+        margin-left: 10px;
     }
     .Desc{
        font-size: 13px;

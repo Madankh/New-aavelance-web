@@ -14,7 +14,7 @@ export default function MakeupContent({item}) {
   let users = userDetails?.user;
   let id = userDetails?.currentUser?.others?._id;
   const accessToken = userDetails?.currentUser?.accessToken;
-  const productLink = item?.ProductLinks[0]?.slice(35,90);
+  const productLink = item?.ProductLinks[0]?.slice(38,90);
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
@@ -139,11 +139,11 @@ export default function MakeupContent({item}) {
        isOpen={modalIsOpen}
        onRequestClose={() => setModalIsOpen(false)}
        contentLabel="Create New Group"
-       className="modal">
+       className="ModalClasNameForAPostPage">
           <div className='ModalForDiscoverPage'>
           <div style={{flex:2}}>
             {productitem?.image == "" ? <video src={`${item?.video}`} controls controlsList="nodownload" style={{width:"100%" , height:"77vh" , marginTop:"-50px"}}></video> : 
-            <img src={`${productitem?.image}`} className="ModalImage"  alt="" />}
+            <img src={`${productitem?.image}`} className="ModalImagee"  alt="" />}
           </div>
           <div style={{flex:2}}>
             <div style={{display:"flex" , justifyContent:"space-between"}}>

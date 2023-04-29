@@ -7,7 +7,15 @@
     border-radius: 10px;
   }
   
-  
+  .messageContainerInmessagePage{
+    background-color: white;
+    padding-left:10px;
+     padding-right:10px; 
+    border-radius:10px;
+    display: flex; 
+    align-items: start; 
+    /* width:80%  */
+  }
   
   .group-name {
     padding: 10px;
@@ -23,6 +31,13 @@
     display: flex;
   }
   
+  .messageText{
+    margin-left: 7px;
+    margin-top: -15px; 
+    color: gray; 
+    font-size: 13px;
+    text-align: start;
+  }
 .group-add-button {
     background-color: #ffffff;
     color: rgb(5, 5, 5);
@@ -155,4 +170,23 @@
     border-radius: 2px;
     padding-top: 2px;
     margin-left: -4px;
+  }
+
+  @media screen and (max-width:626px) {
+    .messageText{
+      width: 300px;
+    }
+    .messageContainerInmessagePage{
+      width:100% 
+    }
+  }
+
+  @media screen and (max-width:386px) {
+    .messageText{
+      width: 250px;
+    }
+    .messageContainerInmessagePage{
+      width:100% ;
+      overflow: hidden;
+    }
   }

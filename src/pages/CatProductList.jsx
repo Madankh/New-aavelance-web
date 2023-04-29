@@ -63,17 +63,17 @@ const CatProductList = () => {
                         <p className="subcatmobiletitle" style={{width:"110%" , fontSize:"10px" , textAlign:"start" , marginLeft:"-10px"}}>{item.value}</p>
                     </div>
                     )): cat == "Men's Fashion" ? MenFashion.map((item)=>(
-                        <div className="submobileitems" style={{marginLeft:"10px" , alignItems:"center"}}>
+                        <div className="submobileitems" style={{marginLeft:"10px" , alignItems:"center"}} onClick={()=>handlemobile(item.value)}>
                             <img src={`${item?.img}`} className="subcatmobileimage" alt="" />
                             <p className="subcatmobiletitle" style={{width:"110%" , fontSize:"10px" , textAlign:"start" , marginLeft:"-10px"}}>{item.value}</p>
                         </div>
                     )): cat == "Kid's Fashion" ? KidFashio.map((item)=>(
-                        <div className="submobileitems" style={{marginLeft:"10px" , alignItems:"center"}}>
+                        <div className="submobileitems" style={{marginLeft:"10px" , alignItems:"center"}} onClick={()=>handlemobile(item.value)}>
                             <img src={`${item?.img}`} className="subcatmobileimage" alt="" />
                             <p className="subcatmobiletitle" style={{width:"110%" , fontSize:"10px" , textAlign:"start" , marginLeft:"-10px"}}>{item.value}</p>
                         </div>
                     )): cat == "Beauty and Personal Care" ? Beauty.map((item)=>(
-                        <div className="submobileitems" style={{marginLeft:"10px" , alignItems:"center"}}>
+                        <div className="submobileitems" style={{marginLeft:"10px" , alignItems:"center"}} onClick={()=>handlemobile(item.value)}>
                             <img src={`${item?.img}`} className="subcatmobileimage" alt="" />
                             <p className="subcatmobiletitle" style={{width:"110%" , fontSize:"10px" , textAlign:"center" , marginLeft:"-10px"}}>{item.value}</p>
                         </div>

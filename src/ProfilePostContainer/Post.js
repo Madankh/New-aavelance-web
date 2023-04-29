@@ -35,7 +35,7 @@ export default function Post({detail}) {
 
 
   return (
-    <div className='PostContainer'>
+    <div className='PostContainerr'>
       <div className='SubPostContainer'>
         <div>
           <div style={{ display: 'flex', alignItems: "center" }}>

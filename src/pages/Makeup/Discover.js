@@ -13,7 +13,9 @@ export default function Discover({item}) {
   let userDetails = useSelector(state => state.user)
   let id = userDetails?.currentUser?.others?._id;
   const accessToken = userDetails?.currentUser?.accessToken;
-  const productLink = item?.ProductLinks[0]?.slice(35,90);
+  const productLink = item?.ProductLinks[0]?.slice(38,90);
+
+  console.log(productLink);
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
@@ -161,12 +163,12 @@ export default function Discover({item}) {
        isOpen={modalIsOpen}
        onRequestClose={() => setModalIsOpen(false)}
        contentLabel="Create New Group"
-       className="modal"
+       className="ModalClasNameForAPostPage"
        >
           <div className='ModalForDiscoverPage'>
           <div style={{flex:2}}>
-            {productitem?.image == "" ? <video src={`${item?.video}`} controls controlsList="nodownload" style={{width:"100%" , height:"65vh" , marginTop:"-0px"}}></video> : 
-            <img src={`${productitem?.image}`} className="ModalImage"  alt="" />}
+            {productitem?.image == "" ? <video src={`${item?.video}`} controls controlsList="nodownload" style={{width:"100%" , height:"60vh" , marginTop:"0px"}}></video> : 
+            <img src={`${productitem?.image}`} className="ModalImagee"   alt="" />}
           </div>
           <div style={{flex:2}}>
             <div style={{display:"flex" , justifyContent:"space-between"}}>
@@ -232,8 +234,7 @@ export default function Discover({item}) {
                 <img src={`${CommentIcon}`} className="iconsforPost" alt="" />
                 <p style={{ marginLeft: "6px" }}>{Comments.length} Comments</p>
             </div>}
-                {/* <img src={`${CommentIcon}`} className="iconsforPost" alt="" />
-                <p style={{ marginLeft: "6px" }}>{Comments.length} Comments</p> */}
+
               </div>
             </div>
 

@@ -31,7 +31,7 @@ export default function Post({ post }) {
   const [Comments, setComments] = useState(post.comments);
   const [commentwriting, setcommentwriting] = useState('');
   const [show, setshow] = useState(false);
-  const productLink = post?.ProductLinks[0]?.slice(35,90);
+  const productLink = post?.ProductLinks[0]?.slice(38,90);
   const [product , setproduct] = useState('');
   
   useEffect(() => {
@@ -45,7 +45,7 @@ export default function Post({ post }) {
     };
     getProduct()
   }, []);
-console.log(product)
+console.log(productLink , "THIs is product link");
 
   const handleLike = async () => {
     if (Like == LikeIcon) {

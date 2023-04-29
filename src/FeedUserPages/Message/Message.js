@@ -133,14 +133,14 @@ function GroupChatPage(CurrentChat) {
     <div className="group-chat-page">
       <div className="group-name">
         {CurrentChat?.CurrentChat?.Chatname}
-        <div className="group-buttons">
+        {/* <div className="group-buttons">
           <button className="group-add-button" onClick={handleAddClick}>
             Add
           </button>
           <button className="group-remove-button" onClick={handleRemoveClick}>
             Remove
           </button>
-        </div>
+        </div> */}
       </div>
       <div className="message-box">
         {messages.map((msg, index) => (
@@ -151,11 +151,11 @@ function GroupChatPage(CurrentChat) {
               <div>
                 <div style={{ display:"inline-flex", alignItems: "center" }}>
                   
-                  <div style={{ backgroundColor: "white",paddingLeft:"10px"  , paddingRight:"10px" , borderRadius:"10px", display: "flex", alignItems: "start", width:"80%"   }}>
+                  <div className='messageContainerInmessagePage' >
                     <img src={msg?.sender?.profile} className="profileimagee" alt="" />
                     <div>
                       <p style={{ marginLeft: "7px" , marginTop:"6px" }}>{msg?.sender?.username}</p>
-                      <p style={{ marginLeft: "7px", marginTop: "-15px", color: "gray", fontSize: "13px", textAlign: "start" }}>
+                      <p className='messageText' >
                        {renderMessageContent(msg?.content)}
                     </p>
                       {msg.image !== "" ? 

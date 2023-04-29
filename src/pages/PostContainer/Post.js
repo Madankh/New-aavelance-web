@@ -36,7 +36,7 @@ export default function Post({ post }) {
   const [commentwriting, setcommentwriting] = useState('');
   const [productitem , setproductitem] = useState('');
   const [show, setshow] = useState(false);
-  const productLink = post?.ProductLinks[0]?.slice(35,90);
+  const productLink = post?.ProductLinks[0]?.slice(38,90);
 
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [product , setproduct] = useState('');
@@ -139,28 +139,12 @@ export default function Post({ post }) {
        isOpen={modalIsOpen}
        onRequestClose={() => setModalIsOpen(false)}
        contentLabel="Create New Group"
-      // className={"ModalClasNameForAPostPage"}
-       style={{
-        content: {
-        width: "85%",
-        height: "70%",
-        margin: "auto",
-        display: "flex",
-        flexDirection: "column",
-        borderRadius: "10px",
-        padding: "20px",
-        border: "none",
-        backgroundColor: "#fff",
-        boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
-         },
-         overlay: {
-           backgroundColor: "rgb(255 255 255 / 93%)",
-         },
-         }}>
+      className="ModalClasNameForAPostPage"
+       >
           <div className='ModalForDiscoverPagee'>
           <div style={{flex:2}}>
-            {post?.image == "" ? <video src={`${post?.video}`} controls controlsList="nodownload" style={{width:"100%" , height:"100vh" , marginTop:"-300px"}}></video> : 
-            <img src={`${post?.image}`} className="ModalImage"  alt="" />}
+            {post?.image == "" ? <video src={`${post?.video}`} controls controlsList="nodownload" style={{width:"100%" , height:"60vh" , marginTop:"0px"}}></video> : 
+            <img src={`${post?.image}`} className="ModalImagee"  alt="" />}
           </div>
           <div style={{flex:2}}>
             <div style={{display:"flex" , justifyContent:"space-between"}}>
