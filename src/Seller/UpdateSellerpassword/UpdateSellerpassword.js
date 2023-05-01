@@ -15,7 +15,7 @@ export default function UpdateSellerpassword() {
   const [comfirmPassword , setcomfirmPassword] = useState('');
 
   const clickUpdate = async()=>{
-     fetch(`http://api.aavelance.com/api/seller/update/password/${admin.currentSeller._id}` , { method: 'PUT',
+     fetch(`https://api.aavelance.com/api/seller/update/password/${admin.currentSeller._id}` , { method: 'PUT',
           headers: { 'Content-Type': 'application/json' , token : accessToken },
           body: JSON.stringify({
             oldpassword: `${oldpassword}`, newPassword: `${newPassword}`,

@@ -3,7 +3,7 @@ import "../Makeup/makeup.css"
 import Navbar from '../../component/Navbar'
 import Announcement from '../../component/Announcement'
 import LiveAnnouncement from '../../component/LiveAnnouncement'
-import { useSelector } from 'react-redux';
+
 import axios from 'axios';
 import Discover from '../Makeup/Discover'
 import Rightbar from "../../FeedUserComponent/RightsideContainer/Rightbar"

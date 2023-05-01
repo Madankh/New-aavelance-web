@@ -15,7 +15,7 @@ export default function Follow({userdetails}) {
 
     const [Follow , setFollow] = useState(addFriends);
     const handleFollow= async(e)=>{
-            await fetch(`http://api.aavelance.com/api/user/feed/following/${userdetails._id}` , {method:'PUT', headers:{'Content-Type':"application/JSON" , token:accessToken} , body:JSON.stringify({user:`${id}`})})
+            await fetch(`https://api.aavelance.com/api/user/feed/following/${userdetails._id}` , {method:'PUT', headers:{'Content-Type':"application/JSON" , token:accessToken} , body:JSON.stringify({user:`${id}`})})
             setFollow(UserToFollow);
       }
   return (

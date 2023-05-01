@@ -28,7 +28,7 @@ const Home = ({socket}) => {
     const [details , setdetails]=useState('');
 
     const productsfetch = async () => {
-        const response = await axios.get(`http://api.aavelance.com/api/user/own/${user?.others?._id}` , {headers:{token:accessToken}});
+        const response = await axios.get(`https://api.aavelance.com/api/user/own/${user?.others?._id}` , {headers:{token:accessToken}});
         setdetails(response?.data)
     }
     let isTrue = details?.following == '';

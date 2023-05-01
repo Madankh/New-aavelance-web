@@ -20,7 +20,7 @@ export default function Leftbar() {
   useEffect(() => {
    const getPost = async()=>{
     try {
-      const res = await axios.get(`http://api.aavelance.com/api/user/flw/${id}` , {
+      const res = await axios.get(`https://api.aavelance.com/api/user/flw/${id}` , {
         headers:{
           token:accesstoken
         }

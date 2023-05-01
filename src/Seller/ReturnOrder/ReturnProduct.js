@@ -12,7 +12,7 @@ export default function ReturnProduct() {
   useEffect(() => {
     const TotSales = async () => {
       try {
-        const res = await axios.get('http://api.aavelance.com/api/order/get/return/userOrder', {
+        const res = await axios.get('https://api.aavelance.com/api/order/get/return/userOrder', {
           headers: {
             token: accessToken
           }

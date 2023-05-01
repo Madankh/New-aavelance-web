@@ -23,7 +23,7 @@ export default function Order() {
   useEffect(() => {
     const getOrder = async()=>{
       try {
-        const res = await axios.get(`http://api.aavelance.com/api/order/Single/order/${orderId}`, {
+        const res = await axios.get(`https://api.aavelance.com/api/order/Single/order/${orderId}`, {
           headers:{
             token: accessToken
           }
@@ -48,7 +48,7 @@ export default function Order() {
   const handleClick = async()=> {
     const res = await axios({
       method:'PUT',
-      url:`http://api.aavelance.com/api/order/update/status/${orderId}`,
+      url:`https://api.aavelance.com/api/order/update/status/${orderId}`,
       data:{
         status:`${Orderstatus}`
       }

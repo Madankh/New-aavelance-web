@@ -87,7 +87,8 @@
 
 .discussAbout{
   display: flex;
-  align-items: center
+  align-items: center;
+  
 }
 
 @media screen and (max-width:1004px) {
@@ -134,6 +135,7 @@
 }
 .discussAbout{
   margin-top: -4px;
+  margin-left: 10px;
 }
 }
 

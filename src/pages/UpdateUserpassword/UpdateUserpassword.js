@@ -13,7 +13,7 @@ export default function UpdateUserpassword() {
   console.log(accessToken);
 
   const clickUpdate = async()=>{
-     fetch(`http://api.aavelance.com/api/auth/update/password/${User?.currentUser?.others?._id}` , { method: 'PUT',
+     fetch(`https://api.aavelance.com/api/auth/update/password/${User?.currentUser?.others?._id}` , { method: 'PUT',
           headers: { 'Content-Type': 'application/json' , token : accessToken },
           body: JSON.stringify({
             oldpassword: `${oldpassword}`, newPassword: `${newPassword}`,

@@ -588,7 +588,7 @@ export const Beauty = [
             name: 'Face Wash & Eye Cream',
             id: "Face Wash & Eye Cream",
             value: "Face Wash & Eye Cream",
-            img:"http://cdn.shopify.com/s/files/1/0280/6241/6930/products/Product_Ingredient_2_1_grande.jpg?v=1649496910"
+            img:"https://cdn.shopify.com/s/files/1/0280/6241/6930/products/Product_Ingredient_2_1_grande.jpg?v=1649496910"
             
           },
           {

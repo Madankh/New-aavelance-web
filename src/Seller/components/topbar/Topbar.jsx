@@ -42,7 +42,7 @@ export default function Topbar() {
     const getProduct = async () => {
       try {
         const res = await axios.get(
-          "http://api.aavelance.com/api/order/get/proccessing/userOrders",
+          "https://api.aavelance.com/api/order/get/proccessing/userOrders",
           {
             headers: {
               token: accessToken,

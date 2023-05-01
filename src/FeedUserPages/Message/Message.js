@@ -28,7 +28,7 @@ function GroupChatPage(CurrentChat) {
           token: `${accesstoken}`,
         },
       };
-      const { data } = await axios.get(`http://api.aavelance.com/api/message/get/all/group/msg/${CurrentChat?.CurrentChat?._id}`, config);
+      const { data } = await axios.get(`https://api.aavelance.com/api/message/get/all/group/msg/${CurrentChat?.CurrentChat?._id}`, config);
       setMessages(data);
       socket.current.emit("join chat" , CurrentChat?.CurrentChat?._id);
     } catch (error) {
@@ -38,7 +38,7 @@ function GroupChatPage(CurrentChat) {
 
   useEffect(()=>{
     if(CurrentChat !== ''){
-      socket.current = io("http://api.aavelance.com");
+      socket.current = io("https://api.aavelance.com");
       socket.current.emit("setup" , user);
 
     }
@@ -54,7 +54,7 @@ function GroupChatPage(CurrentChat) {
         setMessages([...messages, { content: message,image:imagePreview, sender: { profile: `${userDetails?.currentUser?.others?.profile}`, username: `${userDetails?.currentUser?.others?.username}` } }]);
       try {
         await fetch(
-          `http://api.aavelance.com/api/message/send/msg`, {
+          `https://api.aavelance.com/api/message/send/msg`, {
             method: 'POST',
           headers: { 'Content-Type': 'application/json', token: accesstoken },
           body: JSON.stringify({
@@ -133,14 +133,14 @@ function GroupChatPage(CurrentChat) {
     <div className="group-chat-page">
       <div className="group-name">
         {CurrentChat?.CurrentChat?.Chatname}
-        {/* <div className="group-buttons">
+        <div className="group-buttons">
           <button className="group-add-button" onClick={handleAddClick}>
             Add
           </button>
           <button className="group-remove-button" onClick={handleRemoveClick}>
             Remove
           </button>
-        </div> */}
+        </div>
       </div>
       <div className="message-box">
         {messages.map((msg, index) => (
@@ -173,7 +173,7 @@ function GroupChatPage(CurrentChat) {
       <div className="input-field">
       <label htmlFor="image-input" className="image-icon">
         <svg
-          xmlns="http://www.w3.org/2000/svg"
+          xmlns="https://www.w3.org/2000/svg"
           width="34"
           height="34"
           viewBox="0 0 24 24"
@@ -224,7 +224,7 @@ function GroupChatPage(CurrentChat) {
 
       <button onClick={handleSendClick} className="send-button">
         <svg
-          xmlns="http://www.w3.org/2000/svg"
+          xmlns="https://www.w3.org/2000/svg"
           width="14"
           height="14"
           viewBox="0 0 24 24"

@@ -18,7 +18,7 @@ export default function UpdateSellerProfileDetail() {
   const accessToken = Seller?.currentSeller?.accessToken;
   
   const handleClick = async () => {
-    fetch(`http://api.aavelance.com/api/seller/${Seller?.currentSeller?._id}`, {
+    fetch(`https://api.aavelance.com/api/seller/${Seller?.currentSeller?._id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json', token: accessToken },
       body: JSON.stringify({

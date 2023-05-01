@@ -76,7 +76,7 @@ const SellerResetPassword = () => {
       e.preventDefault();
       try {
          await fetch(
-           `http://api.aavelance.com/api/seller/reset/password?${code}`, {method: 'PUT',
+           `https://api.aavelance.com/api/seller/reset/password?${code}`, {method: 'PUT',
            headers: { 'Content-Type': 'application/json'},
            body: JSON.stringify({
              password:password

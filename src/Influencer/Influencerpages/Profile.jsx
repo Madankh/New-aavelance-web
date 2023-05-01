@@ -36,13 +36,13 @@ export default function Profile() {
     let [Follow , SetFollow] = useState(followinguser == true ? "Unfollow" : "Follow");
     const handleChange = async()=>{
         if(Follow == "Follow"){
-            await axios.put(`http://api.aavelance.com/api/seller/${id}/follow` , {
+            await axios.put(`https://api.aavelance.com/api/seller/${id}/follow` , {
                 user: `${Userid}`
             });
             SetFollow("Unfollow")
             
         }else{
-            await axios.put(`http://api.aavelance.com/api/seller/${id}/unfollow` , {
+            await axios.put(`https://api.aavelance.com/api/seller/${id}/unfollow` , {
                 user:`${Userid}`
             });
             SetFollow("Follow")
@@ -54,7 +54,7 @@ export default function Profile() {
     useEffect(() => {
         const getProducts = async ()=>{
             try {
-                const res = await axios.get(`http://api.aavelance.com/api/products/allproduct/${id}`)
+                const res = await axios.get(`https://api.aavelance.com/api/products/allproduct/${id}`)
                 setProducts(res.data);
               } catch (error) {
 

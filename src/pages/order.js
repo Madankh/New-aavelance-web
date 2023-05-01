@@ -14,7 +14,7 @@ function Order() {
   useEffect(() => {
     const getOrder = async () => {
       try {
-        const res = await axios.get(`http://api.aavelance.com/api/order/myOrder`, {
+        const res = await axios.get(`https://api.aavelance.com/api/order/myOrder`, {
           headers: {
             token: accessToken
           }
@@ -35,7 +35,7 @@ function Order() {
 
   const handleReturnOrder = async(item)=>{
       await fetch(
-        `http://139.162.11.30:80/api/order/return/order/update/status/${item}`, {method: 'PUT',
+        `https://139.162.11.30:80/api/order/return/order/update/status/${item}`, {method: 'PUT',
         headers: { 'Content-Type': 'application/json' , token : accessToken },
         body: JSON.stringify({
           return_order_reason:`${reason}`,

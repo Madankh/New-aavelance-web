@@ -23,7 +23,7 @@ export default function Topbar() {
   useEffect(() => {
     const getProduct = async () => {
       try {
-        const res = await axios.get('http://api.aavelance.com/api/order/get/affid/proccessing/userOrders', {
+        const res = await axios.get('https://api.aavelance.com/api/order/get/affid/proccessing/userOrders', {
           headers: {
             token: accessToken
           }
@@ -46,7 +46,7 @@ export default function Topbar() {
   //   const PostRevenue = async()=>{
   //     try {
   //       fetch(
-  //        'http://api.aavelance.com/api/transfer/money', {method: 'POST',
+  //        'https://api.aavelance.com/api/transfer/money', {method: 'POST',
   //         headers: { 'Content-Type': 'application/json' , token : accessToken },
   //         body: JSON.stringify({
   //          amount:amount,

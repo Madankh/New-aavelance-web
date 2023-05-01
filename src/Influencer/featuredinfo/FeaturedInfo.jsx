@@ -14,7 +14,7 @@ export default function FeaturedInfo() {
   useEffect(() => {
     const income = async () => {
       try {
-        const res = await axios.get('http://api.aavelance.com/api/order/get/affid/userOrder', {
+        const res = await axios.get('https://api.aavelance.com/api/order/get/affid/userOrder', {
           headers: {
             token: accessToken
           }
@@ -37,7 +37,7 @@ export default function FeaturedInfo() {
      useEffect(() => {
       const TotSales = async () => {
         try {
-          const res = await axios.get('http://api.aavelance.com/api/order/get/affid/return/userOrder', {
+          const res = await axios.get('https://api.aavelance.com/api/order/get/affid/return/userOrder', {
             headers: {
               token: accessToken
             }

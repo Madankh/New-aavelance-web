@@ -14,7 +14,7 @@ export default function UserTransactions() {
     useEffect(() => {
         const getTransaction = async ()=>{
             try {
-                const res = await axios.get(`http://api.aavelance.com/api/influencer/transaction/get/transaction`,
+                const res = await axios.get(`https://api.aavelance.com/api/influencer/transaction/get/transaction`,
                { headers:{
                   token: accessToken
                 }})

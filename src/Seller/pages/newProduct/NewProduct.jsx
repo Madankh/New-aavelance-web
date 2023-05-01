@@ -127,7 +127,7 @@ export default function NewProduct() {
 
     formData.append("Hair_Type", Hair_Type);
     formData.append("Skin_Type", Skin_Type);
-    await axios.post("http://api.aavelance.com/api/products/product", formData, { headers: { 'Content-Type': 'multipart/form-data', token: accessToken } }).then(() => {
+    await axios.post("https://api.aavelance.com/api/products/product", formData, { headers: { 'Content-Type': 'multipart/form-data', token: accessToken } }).then(() => {
       alert("You successfully upload product")
       // window.location.reload()
     })

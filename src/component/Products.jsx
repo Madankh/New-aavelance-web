@@ -20,7 +20,7 @@ const Products = ({cat , filters , sort}) => {
     useEffect(() => {
       const getProducts = async ()=>{
           try {
-              const res = await axios.get( cat ? `http://api.aavelance.com/api/products/getallProduct?subcategories=${cat}`:  `http://api.aavelance.com/api/products/getallProduct`);
+              const res = await axios.get( cat ? `https://api.aavelance.com/api/products/getallProduct?subcategories=${cat}`:  `https://api.aavelance.com/api/products/getallProduct`);
               setProducts(res.data);
             } catch (error) {
                 

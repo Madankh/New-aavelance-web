@@ -50,7 +50,7 @@ export default function () {
   const handleCreate = async()=>{
     try {
       await fetch(
-        'http://api.aavelance.com/api/order', {method: 'POST',
+        'https://api.aavelance.com/api/order', {method: 'POST',
         headers: { 'Content-Type': 'application/json' , token : accessToken },
         body: JSON.stringify({
           shippingInfo:{

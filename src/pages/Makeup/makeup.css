@@ -10,9 +10,9 @@
 
 
   .ModalImagee{
-    width: 100%;
+    width: 60%;
     height: 70vh;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 
@@ -60,7 +60,7 @@
     width: 83%;
     margin-left: 25px;
     height: 35vh;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 10px;
   }
 .makeProductImageForPostt{
@@ -96,10 +96,21 @@
     }
   }
 
+  @media screen and (max-width:1578px) {
+    .ModalImagee{
+      margin-left: 100px;
+    }
+  }
+
   @media screen and (max-width:1407px) {
     .insidemakeupcontent{
       flex-basis: 27%;
       
+    }
+    .ModalImagee{
+      margin-left: 10px;
+      height: 70vh;
+      width: 100%;
     }
   }
 
@@ -134,7 +145,11 @@
     .makeupContent{
       margin-left: 46px;
     }
-    
+    .ModalImagee{
+      width: 60%;
+      height: 70vh;
+      object-fit: contain;
+  }
   }
 
   
@@ -147,6 +162,9 @@
     }
     .modal {
       width: 77%;
+    }
+    .ModalImagee{
+      margin-left: 150px;
     }
     
   }
@@ -166,6 +184,9 @@
     .ModalForDiscoverPage{
       display: block;
     }
+    .ModalImagee{
+      margin-left: 150px;
+    }
   }
 
   
@@ -178,6 +199,9 @@
     }
     .modal {
       width: 80%;
+    }
+    .ModalImagee{
+      margin-left: 100px;
     }
   }
 
@@ -209,9 +233,10 @@
     
   } */
 
-  @media screen and (max-width:617px) {
+  /* @media screen and (max-width:617px) {
     .insidemakeupcontent{
       flex-basis: 44%;
+      
     }
     .makeupContent{
       margin-left: 0px;
@@ -220,10 +245,11 @@
       width: 100%;
       margin-left: 0px;
       height: 42vh;
-      object-fit: cover;
+      object-fit: contain;
       border-radius: 10px;
     }
-  }
+    
+  } */
 
   @media screen and (max-width:790px) {
     .modal {
@@ -244,6 +270,9 @@
       height: 40vh;
       
     }
+    .ModalImagee{
+      margin-left: 40px;
+    }
   }
 
   @media screen and (max-width:544px) {
@@ -257,7 +286,7 @@
       width: 100%;
       margin-left: 0px;
       height: 35vh;
-      object-fit: cover;
+      object-fit: contain;
       border-radius: 10px;
     }
   }
@@ -304,3 +333,13 @@
     }
   }
   
+
+  @media screen and (max-width:289px) {
+    .makeupContentImage{
+      width: 100%;
+      margin-left: 0px;
+    }
+    .insidemakeupcontent{
+      margin-left: 0px;
+    }
+  }

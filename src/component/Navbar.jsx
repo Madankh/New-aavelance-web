@@ -50,7 +50,7 @@ const Navbar = () => {
               <svg viewBox="0 0 24 24" width="30" height="30" xmlns="http://www.w3.org/2000/svg" style={{marginTop:"-2px"}}>
                 <path fill="#FFFFFF" d="M5.5 20H18.5C19.328 20 20 19.328 20 18.5V7.5C20 6.672 19.328 6 18.5 6H5.5C4.672 6 4 6.672 4 7.5V18.5C4 19.328 4.672 20 5.5 20ZM6 8H18V18H6V8ZM8 10H16V12H8V10ZM8 14H14V16H8V14Z" />
               </svg>
-              <p className='Discuss'>Discuss</p>
+              {/* <p className='Discuss'>Discuss</p> */}
             </div>
           </a>
           {user.currentUser ? <div className='navMenuItem' onClick={handleLogout}>Logout</div> : [<a href={"/register"}><div className='navMenuItem'>Register</div></a>, <a href="/login"><div className='navMenuItem'>Login</div></a>]}

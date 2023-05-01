@@ -14,7 +14,7 @@ export default function UserCompletedTransactions() {
     useEffect(() => {
         const getTransaction = async ()=>{
             try {
-                const res = await axios.get(`http://api.aavelance.com/api/influencer/transaction/get/status/complected/transaction`,
+                const res = await axios.get(`https://api.aavelance.com/api/influencer/transaction/get/status/complected/transaction`,
                { headers:{
                   token: accessToken
                 }})

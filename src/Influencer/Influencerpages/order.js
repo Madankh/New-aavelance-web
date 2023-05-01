@@ -14,7 +14,7 @@ function Order() {
   useEffect(() => {
     const getOrder = async () => {
       try {
-        const res = await axios.get(`http://api.aavelance.com/api/order/myOrder`, {
+        const res = await axios.get(`https://api.aavelance.com/api/order/myOrder`, {
           headers: {
             token: accessToken
           }
@@ -38,7 +38,7 @@ function Order() {
 
   const handleReturnOrder = async(item)=>{
       await fetch(
-        `http://api.aavelance.com/api/order/return/order/update/status/${item}`, {method: 'PUT',
+        `https://api.aavelance.com/api/order/return/order/update/status/${item}`, {method: 'PUT',
         headers: { 'Content-Type': 'application/json' , token : accessToken },
         body: JSON.stringify({
           status:`Return processing`,

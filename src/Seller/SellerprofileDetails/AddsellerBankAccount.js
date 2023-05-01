@@ -15,7 +15,7 @@ export default function AddsellerBankAccount() {
       const handleCreate = async()=>{
             try {
               await fetch(
-                'http://api.aavelance.com/api/bankaccout/accountdetail', {method: 'POST',
+                'https://api.aavelance.com/api/bankaccout/accountdetail', {method: 'POST',
                 headers: { 'Content-Type': 'application/json' , token : accessToken },
                 body: JSON.stringify({
                   BankName:`${BankName}`,

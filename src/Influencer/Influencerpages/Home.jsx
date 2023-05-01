@@ -31,7 +31,7 @@ const Home = ({socket}) => {
     ], [])
 
     const productsfetch = async () => {
-        const response = await axios.get('http://api.aavelance.com/api/products/getallProduct');
+        const response = await axios.get('https://api.aavelance.com/api/products/getallProduct');
     }
     return (
         <div className='mainHome'>

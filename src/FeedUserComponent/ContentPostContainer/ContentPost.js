@@ -41,7 +41,7 @@ export default function ContentPost() {
     formData.append("subcategories", subcategories);
     formData.append("ProductLinks", ProductLinks);
     formData.append("video", file2);
-    await axios.post("http://api.aavelance.com/api/post/user/post", formData, { headers: { 'Content-Type': 'multipart/form-data', token: accessToken } }).then(() => {
+    await axios.post("https://api.aavelance.com/api/post/user/post", formData, { headers: { 'Content-Type': 'multipart/form-data', token: accessToken } }).then(() => {
       window.location.reload()
     })
   }
@@ -59,7 +59,7 @@ export default function ContentPost() {
     formData.append("subcategories", subcategories);
     formData.append("ProductLinks", ProductLinks);
     formData.append("video", file2);
-    await axios.post("http://api.aavelance.com/api/post/user/post/video", formData, { headers: { 'Content-Type': 'multipart/form-data', token: accessToken } }).then(() => {
+    await axios.post("https://api.aavelance.com/api/post/user/post/video", formData, { headers: { 'Content-Type': 'multipart/form-data', token: accessToken } }).then(() => {
       window.location.reload()
     })
   }

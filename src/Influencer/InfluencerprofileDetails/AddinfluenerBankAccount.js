@@ -15,7 +15,7 @@ export default function AddinfluenerBankAccount() {
       const handleCreate = async()=>{
             try {
               await fetch(
-                'http://api.aavelance.com/api/influencer/bank/create/bank/account', {method: 'POST',
+                'https://api.aavelance.com/api/influencer/bank/create/bank/account', {method: 'POST',
                 headers: { 'Content-Type': 'application/json' , token : accessToken },
                 body: JSON.stringify({
                   BankName:`${BankName}`,

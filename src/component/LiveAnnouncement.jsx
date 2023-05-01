@@ -26,18 +26,19 @@ const LiveAnnouncement = () => {
     <div className='liveannoContainer'>
         
         <div className='livecontentType' >
+          
           <div style={{display:"flex" , cursor:"pointer"}}>
             <p className='liveannoContaienrText'>Livestream</p>
           </div>
+
           <a href={"/"} style={{textDecoration:"none"}}>
           <div style={{display:"flex" , cursor:"pointer"}} >
             <p className='liveannoContaienrText' >Product</p>
           </div>
           </a>
+
           <a href={"/your/feed"} style={{textDecoration:"none"}} >
-          <div style={{display:"flex" , cursor:"pointer"}}>
             <p className='liveannoContaienrText' >Feed</p>
-          </div>
           </a>
 
           <a href={"/Discover"} style={{textDecoration:"none"}} >

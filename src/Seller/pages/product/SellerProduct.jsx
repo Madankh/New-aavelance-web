@@ -18,7 +18,7 @@ export default function SellerProduct() {
     const getProduct = async () => {
       try {
         const res = await axios.get(
-          `http://api.aavelance.com/api/products/find/${productId}`
+          `https://api.aavelance.com/api/products/find/${productId}`
         );
         setProduct(res.data);
       } catch (error) {}
@@ -83,7 +83,7 @@ export default function SellerProduct() {
     formData.append("price", price);
     formData.append("Stock", Stock);
 
-    await axios.put(`http://192.168.18.4:5000/api/products/${productId}`, formData, { headers: { 'Content-Type': 'multipart/form-data', token: accessToken } }).then((data) => {
+    await axios.put(`https://192.168.18.4:5000/api/products/${productId}`, formData, { headers: { 'Content-Type': 'multipart/form-data', token: accessToken } }).then((data) => {
       alert(data.data)
       // window.location.reload()
     })

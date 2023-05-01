@@ -73,7 +73,7 @@ const ForgotPassword = () => {
       e.preventDefault();
       try {
          await fetch(
-           'http://api.aavelance.com/api/auth/forgetpassword', {method: 'POST',
+           'https://api.aavelance.com/api/auth/forgetpassword', {method: 'POST',
            headers: { 'Content-Type': 'application/json'},
            body: JSON.stringify({
              email:email

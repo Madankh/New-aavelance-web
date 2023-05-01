@@ -19,7 +19,7 @@ export default function Post({detail}) {
   useEffect(() => {
     const getuser = async()=>{
       try {
-        const res  = await axios.get(`http://api.aavelance.com/api/user/post/user/details/${detail.user}`)
+        const res  = await axios.get(`https://api.aavelance.com/api/user/post/user/details/${detail.user}`)
         setuser(res.data);
       } catch (error) {
         console.log("Some error occured")
@@ -32,11 +32,11 @@ export default function Post({detail}) {
   
   const handleLike = async() => {
     if (Like == LikeIcon) {
-      await fetch(`http://api.aavelance.com/api/post/${post._id}/like` , {method:"PUT" , headers:{'Content-Type':"application/Json" , token:accessToken}})
+      await fetch(`https://api.aavelance.com/api/post/${post._id}/like` , {method:"PUT" , headers:{'Content-Type':"application/Json" , token:accessToken}})
       setLike(anotherlikeicon);
       setCount(count + 1);
     } else {
-      await fetch(`http://api.aavelance.com/api/post/${post._id}/like` , {method:"PUT" , headers:{'Content-Type':"application/Json" , token:accessToken}})
+      await fetch(`https://api.aavelance.com/api/post/${post._id}/like` , {method:"PUT" , headers:{'Content-Type':"application/Json" , token:accessToken}})
       setLike(LikeIcon)
       setCount(count - 1);
     }
