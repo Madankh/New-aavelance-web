@@ -54,7 +54,7 @@ const server = createServer(app);
 const io = new Server(server , {
     pingTimeout:6000,
     cors: {
-        origin: "https://www.aavelance.com/"
+        origin: "http://www.aavelance.com/"
     }
 });
 
