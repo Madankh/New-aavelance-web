@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-
+const https = require('https');
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
@@ -50,11 +50,26 @@ app.use("/api/bankaccout" , bank);
 app.use("/api/transfer" , Transfer);
 app.use("/api/influencer/transaction" , InfluencerTransaction);
 
-const server = createServer(app);
+
+// HTTPS redirection middleware
+app.use((req, res, next) => {
+    if (req.headers['x-forwarded-proto'] !== 'https' && process.env.NODE_ENV === 'production') {
+      return res.redirect('https://' + req.get('host') + req.url);
+    }
+    next();
+  });
+
+  const options = {
+    key: fs.readFileSync('/etc/letsencrypt/live/www.aavelance.com/privkey.pem'),
+    cert: fs.readFileSync('/etc/letsencrypt/live/www.aavelance.com/fullchain.pem')
+  };
+
+const server = https.createServer(options ,app);
+
 const io = new Server(server , {
-    pingTimeout:6000,
+    pingTimeout: 6000,
     cors: {
-        origin: "http://www.aavelance.com/"
+        origin: "https://www.aavelance.com/"
     }
 });
 
