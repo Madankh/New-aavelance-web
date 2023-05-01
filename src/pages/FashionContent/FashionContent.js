@@ -16,7 +16,7 @@ export default function FashionContent() {
   useEffect(() => {
     const getPosts = async () => {
       try {
-        const res = await axios.get(`http://api.aavelance.com/api/post/getallpost?category=Women's Fashion`)
+        const res = await axios.get(`https://api.aavelance.com/api/post/getallpost?category=Women's Fashion`)
         setPosts(res.data);
       } catch (error) {
         console.log("Sorry you got error")

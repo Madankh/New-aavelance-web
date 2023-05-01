@@ -31,11 +31,11 @@ export default function MakeupContent({item}) {
 
   const handleLike = async () => {
     if (Like === LikeIcon) {
-      await fetch(`http://api.aavelance.com/api/post/${item._id}/like`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken } })
+      await fetch(`https://api.aavelance.com/api/post/${item._id}/like`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken } })
       setLike(anotherlikeicon);
       setCount(count + 1);
     } else {
-      await fetch(`http://api.aavelance.com/api/post/${item._id}/like`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken } })
+      await fetch(`https://api.aavelance.com/api/post/${item._id}/like`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken } })
       setLike(LikeIcon)
       setCount(count - 1);
     }
@@ -48,7 +48,7 @@ export default function MakeupContent({item}) {
       "comment": `${commentwriting}`,
       "profile": `${userDetails?.currentUser?.others?.profile}`
     }
-    await fetch(`http://api.aavelance.com/api/post/comment/post`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken }, body: JSON.stringify(comment) })
+    await fetch(`https://api.aavelance.com/api/post/comment/post`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken }, body: JSON.stringify(comment) })
     setComments(Comments.concat(comment));
     alert("Your Comment is post successfully")
   }
@@ -71,7 +71,7 @@ export default function MakeupContent({item}) {
   useEffect(() => {
     const getuser = async () => {
       try {
-        const res = await axios.get(`http://api.aavelance.com/api/user/post/user/details/${item.user}`)
+        const res = await axios.get(`https://api.aavelance.com/api/user/post/user/details/${item.user}`)
         setuser(res.data);
       } catch (error) {
         console.log("Some error occured")

@@ -33,7 +33,7 @@ export default function Discover({item}) {
   useEffect(() => {
     const getuser = async () => {
       try {
-        const res = await axios.get(`http://api.aavelance.com/api/user/post/user/details/${id}`)
+        const res = await axios.get(`https://api.aavelance.com/api/user/post/user/details/${id}`)
         setuser(res.data);
       } catch (error) {
         console.log("Some error occured")
@@ -45,11 +45,11 @@ export default function Discover({item}) {
 
   const handleLike = async () => {
     if (Like == LikeIcon) {
-      await fetch(`http://api.aavelance.com/api/post/${item._id}/like`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken } })
+      await fetch(`https://api.aavelance.com/api/post/${item._id}/like`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken } })
       setLike(anotherlikeicon);
       setCount(count + 1);
     } else {
-      await fetch(`http://api.aavelance.com/api/post/${item._id}/like`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken } })
+      await fetch(`https://api.aavelance.com/api/post/${item._id}/like`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken } })
       setLike(LikeIcon)
       setCount(count - 1);
     }
@@ -62,7 +62,7 @@ export default function Discover({item}) {
       "comment": `${commentwriting}`,
       "profile": `${userDetails?.currentUser?.others?.profile}`
     }
-    await fetch(`http://api.aavelance.com/api/post/comment/post`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken }, body: JSON.stringify(comment) })
+    await fetch(`https://api.aavelance.com/api/post/comment/post`, { method: "PUT", headers: { 'Content-Type': "application/Json", token: accessToken }, body: JSON.stringify(comment) })
     setComments(Comments.concat(comment));
     alert("Your Comment is post successfully")
   }
@@ -96,10 +96,10 @@ export default function Discover({item}) {
   console.log(user?.Userfollowing , "Userfollowing")
   const handleFollow= async(e)=>{
     if(Follow === "Follow"){
-      await fetch(`http://api.aavelance.com/api/user/feed/following/${id}` , {method:'PUT', headers:{'Content-Type':"application/JSON" , token:accessToken} , body:JSON.stringify({user:`${item?.user}`})})
+      await fetch(`https://api.aavelance.com/api/user/feed/following/${id}` , {method:'PUT', headers:{'Content-Type':"application/JSON" , token:accessToken} , body:JSON.stringify({user:`${item?.user}`})})
       setFollow("Following");
     }else{
-      await fetch(`http://api.aavelance.com/api/user/feed/following/${id}` , {method:'PUT', headers:{'Content-Type':"application/JSON" , token:accessToken} , body:JSON.stringify({user:`${item?.user}`})})
+      await fetch(`https://api.aavelance.com/api/user/feed/following/${id}` , {method:'PUT', headers:{'Content-Type':"application/JSON" , token:accessToken} , body:JSON.stringify({user:`${item?.user}`})})
       setFollow("Follow");
     }
   }

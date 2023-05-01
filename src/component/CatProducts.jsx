@@ -21,7 +21,7 @@ const CatProducts = ({cat , filters , sort , subcat}) => {
     useEffect(() => {
       const getProducts = async ()=>{
           try {
-              const res = await axios.get( subcat !== '' ? `http://api.aavelance.com/api/products/getallProduct?category=${cat}&subcategories=${subcat}`:  `http://api.aavelance.com/api/products/getallProduct?category=${cat}`);
+              const res = await axios.get( subcat !== '' ? `https://api.aavelance.com/api/products/getallProduct?category=${cat}&subcategories=${subcat}`:  `https://api.aavelance.com/api/products/getallProduct?category=${cat}`);
               setProducts(res.data);
             } catch (error) {
                 

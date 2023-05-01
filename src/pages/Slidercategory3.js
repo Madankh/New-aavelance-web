@@ -16,7 +16,7 @@ function Slidercategory3() {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const res = await axios.get(`http://api.aavelance.com/api/products/getallProduct?category=Kid's Fashion`)
+        const res = await axios.get(`https://api.aavelance.com/api/products/getallProduct?category=Kid's Fashion`)
         setProducts(res.data);
       } catch (error) {
 
@@ -30,7 +30,7 @@ function Slidercategory3() {
   useEffect(() => {
     const getPosts = async () => {
       try {
-        const res = await axios.get(`http://api.aavelance.com/api/post/getallpost?category=Kid's Fashion`)
+        const res = await axios.get(`https://api.aavelance.com/api/post/getallpost?category=Kid's Fashion`)
         setPosts(res.data);
       } catch (error) {
 
