@@ -211,44 +211,43 @@ router.post("/login" ,[
 })
 
 //Forget Password
-router.post("/forgetpassword", async (req, res) => {
-  const {email} = req.body;
-  if(!email){
-      return res.status(400).json("Please provide a valid email");
-  };
-  const seller = await Seller.findOne({email:email});
-  if(!seller){
-      return res.status(400).json("User not found!")
-  };
-  const token = await SellerResetToken.findOne({seller:seller._id});
-  if(token) return res.status(200).json("After one hour you can request for another token")
+// router.post("/forgetpassword", async (req, res) => {
+//   const {email} = req.body;
+//   if(!email){
+//       return res.status(400).json("Please provide a valid email");
+//   };
+//   const seller = await Seller.findOne({email:email});
+//   if(!seller){
+//       return res.status(400).json("User not found!")
+//   };
+//   const token = await SellerResetToken.findOne({seller:seller._id});
+//   if(token) return res.status(200).json("After one hour you can request for another token")
   
 
-  //Generating Token 
-  const RandomTxt = crypto.randomBytes(20).toString("hex");
-  const restToken = new SellerResetToken({seller:seller._id , token:RandomTxt});
-  console.log(RandomTxt);
-  await restToken.save();
-  client.transmissions.send({
-    content: {
-      from: 'contact@aavelance.com',
-      subject: 'Successfully Verify email',
-      html:generatePasswordResetTemplate(`https://www.aavelance.com/seller/reset/password?token=${RandomTxt}&_id=${seller._id}`)
-      // html:`Aavelance send you a Forgot password link click the button to Forgot a password <br> <a href="http://localhost:3000/seller/reset/password?token=${RandomTxt}&_id=${seller._id}">Reset Password</a>`
-    },
-    recipients: [
-      {address: seller.email}
-    ]
-  })
-  .then(data => {
-    return res.status(200).json("Password reset link is sent to your email")
-  })
-  .catch(err => {
-    return res.json('Whoops! Something went wrong');
-  });
+//   //Generating Token 
+//   const RandomTxt = crypto.randomBytes(20).toString("hex");
+//   const restToken = new SellerResetToken({seller:seller._id , token:RandomTxt});
+//   console.log(RandomTxt);
+//   await restToken.save();
+//   client.transmissions.send({
+//     content: {
+//       from: 'contact@aavelance.com',
+//       subject: 'Successfully Verify email',
+//       html:generatePasswordResetTemplate(`https://www.aavelance.com/seller/reset/password?token=${RandomTxt}&_id=${seller._id}`)
+//     },
+//     recipients: [
+//       {address: seller.email}
+//     ]
+//   })
+//   .then(data => {
+//     return res.status(200).json("Password reset link is sent to your email")
+//   })
+//   .catch(err => {
+//     return res.json('Whoops! Something went wrong');
+//   });
 
     
-})
+// })
 
 //reset password
 router.put("/reset/password", async (req, res) => {
@@ -349,7 +348,7 @@ router.post("/forgetpassword", async (req, res) => {
       from: "contact@aavelance.com",
       to: seller.email,
       subject: 'Password Reset ',
-      html: `http://localhost:3000/reset/password?token=${RandomTxt}&_id=${seller._id}`
+      html: `http://www.aavelance.com/reset/password?token=${RandomTxt}&_id=${seller._id}`
     })
 
     res.status(200).json("Password reset link is sent to your email")
@@ -360,7 +359,7 @@ router.post("/forgetpassword", async (req, res) => {
 
 //reset password
 router.put("/reset/password", async (req, res) => {
-  // try {
+  try {
       const {token , _id} = req.query;
       if(!token || !_id){
           return res.status(400).json("Invalid request")
@@ -400,9 +399,9 @@ router.put("/reset/password", async (req, res) => {
       await ResetToken.findOne({seller:seller._id})
       res.status(200).json("Done")
   
-  //   } catch (error) {
-  //     return res.status(403).json("Internal error")
-  //   }
+    } catch (error) {
+      return res.status(403).json("Internal error")
+    }
   })
 
 
