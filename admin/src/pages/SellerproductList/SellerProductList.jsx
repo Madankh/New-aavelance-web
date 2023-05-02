@@ -16,7 +16,7 @@ export default function SellerProductList() {
   useEffect(() => {
     const Products = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/main/seller/product/by/${id}`, {
+        const res = await axios.get(`https://api.aavelance.com/api/main/seller/product/by/${id}`, {
           headers: {
             token: accessToken
           }

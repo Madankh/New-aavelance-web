@@ -15,7 +15,7 @@ export default function UpdateSellerPaymentStatus(item) {
     const handleChange = async()=> {
       const res = await axios({
         method:'PUT',
-        url:`http://localhost:5000/api/main/pending/payment/${item?.item?._id}`, headers:{token:accessToken},
+        url:`https://api.aavelance.com/api/main/pending/payment/${item?.item?._id}`, headers:{token:accessToken},
         data:{
           status:`${Status}`
         }

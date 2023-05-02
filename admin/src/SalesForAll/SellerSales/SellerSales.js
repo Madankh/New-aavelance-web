@@ -20,7 +20,7 @@ export default function SellerSales() {
   useEffect(() => {
     const TotSales = async () => {
       try {
-        const res = await axios.get(`http://192.168.100.27:5000/api/main/get/userOrder/${id}`, {
+        const res = await axios.get(`https://api.aavelance.com/api/main/get/userOrder/${id}`, {
           headers: {
             token: accessToken
           }
@@ -38,7 +38,7 @@ export default function SellerSales() {
   useEffect(() => {
     const PreviousTotSales = async () => {
       try {
-        const res = await axios.get(`http://192.168.100.27:5000/api/main/get/previos/one/week/userOrder/${id}`, {
+        const res = await axios.get(`https://api.aavelance.com/api/main/get/previos/one/week/userOrder/${id}`, {
           headers: {
             token: accessToken
           }
@@ -55,7 +55,7 @@ export default function SellerSales() {
   useEffect(() => {
     const PreviousTwotSales = async () => {
       try {
-        const res = await axios.get(`http://192.168.100.27:5000/api/main/get/two/weeks/userOrder/${id}`, {
+        const res = await axios.get(`https://api.aavelance.com/api/main/get/two/weeks/userOrder/${id}`, {
           headers: {
             token: accessToken
           }
@@ -72,7 +72,7 @@ export default function SellerSales() {
   useEffect(() => {
     const PreviousThreetSales = async () => {
       try {
-        const res = await axios.get(`http://192.168.100.27:5000/api/main/get/previous/three/weeks/userOrder/${id}`, {
+        const res = await axios.get(`https://api.aavelance.com/api/main/get/previous/three/weeks/userOrder/${id}`, {
           headers: {
             token: accessToken
           }
@@ -89,7 +89,7 @@ export default function SellerSales() {
   useEffect(() => {
     const PreviousFourtSales = async () => {
       try {
-        const res = await axios.get(`http://192.168.100.27:5000/api/main/get/previous/four/weeks/userOrder/${id}`, {
+        const res = await axios.get(`https://api.aavelance.com/api/main/get/previous/four/weeks/userOrder/${id}`, {
           headers: {
             token: accessToken
           }

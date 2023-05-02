@@ -16,7 +16,7 @@ export default function SellerPendingproductList() {
   useEffect(() => {
     const pendingProducts = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/main/get/pending/userOrders/${id}`, {
+        const res = await axios.get(`https://api.aavelance.com/api/main/get/pending/userOrders/${id}`, {
           headers: {
             token: accessToken
           }
@@ -29,8 +29,7 @@ export default function SellerPendingproductList() {
     pendingProducts();
   }, []);
 
-console.log(id)
-console.log(pendingproduct)
+
 
   const columns = [
     { field: 'id', headerName: 'ID', width: 90 },

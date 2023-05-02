@@ -19,7 +19,7 @@ export default function SellerReturnPendingproductList() {
   useEffect(() => {
     const pendingorder = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/main/get/return/userOrders/${id}`, {
+        const res = await axios.get(`https://api.aavelance.com/api/main/get/return/userOrders/${id}`, {
           headers: {
             token: accessToken
           }

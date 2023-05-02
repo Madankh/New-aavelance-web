@@ -23,7 +23,7 @@ export default function InfluencerChangeReturnorderStatus() {
 //   useEffect(() => {
 //     const getOrder = async()=>{
 //       try {
-//         const res = await axios.get(`http://localhost:5000/api/order/Single/order/${orderId}`, {
+//         const res = await axios.get(`https://api.aavelance.com/api/order/Single/order/${orderId}`, {
 //           headers:{
 //             token: accessToken
 //           }
@@ -45,7 +45,7 @@ export default function InfluencerChangeReturnorderStatus() {
 //   const handleClick = async()=> {
 //     const res = await axios({
 //       method:'PUT',
-//       url:`http://localhost:5000/api/order/update/status/${orderId}`,
+//       url:`https://api.aavelance.com/api/order/update/status/${orderId}`,
 //       data:{
 //         status:`${Orderstatus}`
 //       }

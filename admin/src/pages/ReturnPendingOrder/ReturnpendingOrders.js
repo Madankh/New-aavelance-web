@@ -12,7 +12,7 @@ export default function ReturnpendingOrders() {
   useEffect(() => {
     const pendingorder = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/main/get/return/pending/order`, {
+        const res = await axios.get(`https://api.aavelance.com/api/main/get/return/pending/order`, {
           headers: {
             token: accessToken
           }

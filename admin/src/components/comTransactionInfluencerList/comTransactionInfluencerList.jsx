@@ -11,7 +11,7 @@ export default function ComTransactionInfluencerList() {
   useEffect(() => {
     const getOrder = async()=>{
       try {
-        const res = await axios.get(`http://localhost:5000/api/influencer/transaction/Complected/transaction/for/mainAdmin`, {
+        const res = await axios.get(`https://api.aavelance.com/api/influencer/transaction/Complected/transaction/for/mainAdmin`, {
           headers:{
             token: accessToken
           }

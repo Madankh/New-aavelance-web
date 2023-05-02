@@ -24,7 +24,7 @@ export default function SellerChangePendingorderStatus() {
   // useEffect(() => {
   //   const getOrder = async()=>{
   //     try {
-  //       const res = await axios.get(`http://localhost:5000/api/main/update/status/${orderId}`, {
+  //       const res = await axios.get(`https://api.aavelance.com/api/main/update/status/${orderId}`, {
   //         headers:{
   //           token: accessToken
   //         }
@@ -46,7 +46,7 @@ export default function SellerChangePendingorderStatus() {
 //   const handleClick = async()=> {
 //     const res = await axios({
 //       method:'PUT',
-//       url:`http://localhost:5000/api/order/update/status/${orderId}`,
+//       url:`https://api.aavelance.com/api/order/update/status/${orderId}`,
 //       data:{
 //         status:`${Orderstatus}`
 //       }

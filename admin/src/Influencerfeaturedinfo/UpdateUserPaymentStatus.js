@@ -15,7 +15,7 @@ export default function UpdateUserPaymentStatus(item) {
     const handleChange = async()=> {
       const res = await axios({
         method:'PUT',
-        url:`http://localhost:5000/api/influencer/transaction/money/status/${item?.item?._id}`, headers:{token:accessToken},
+        url:`https://api.aavelance.com/api/influencer/transaction/money/status/${item?.item?._id}`, headers:{token:accessToken},
         data:{
           status:`${Status}`
         }

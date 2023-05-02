@@ -21,7 +21,7 @@ export default function Sellerfeaturedinfo() {
   useEffect(() => {
     const income = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/main/get/userOrder/${id}`, {
+        const res = await axios.get(`https://api.aavelance.com/api/main/get/userOrder/${id}`, {
           headers: {
             token: accessToken
           }
@@ -38,7 +38,7 @@ export default function Sellerfeaturedinfo() {
   useEffect(() => {
     const Products = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/main/seller/product/by/${id}`, {
+        const res = await axios.get(`https://api.aavelance.com/api/main/seller/product/by/${id}`, {
           headers: {
             token: accessToken
           }
@@ -56,7 +56,7 @@ export default function Sellerfeaturedinfo() {
   useEffect(() => {
     const pendingProducts = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/main/get/pending/userOrders/${id}`, {
+        const res = await axios.get(`https://api.aavelance.com/api/main/get/pending/userOrders/${id}`, {
           headers: {
             token: accessToken
           }
@@ -75,7 +75,7 @@ export default function Sellerfeaturedinfo() {
   useEffect(() => {
     const ReturnProducts = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/main/get/return/userOrders/${id}`, {
+        const res = await axios.get(`https://api.aavelance.com/api/main/get/return/userOrders/${id}`, {
           headers: {
             token: accessToken
           }
@@ -92,7 +92,7 @@ export default function Sellerfeaturedinfo() {
   useEffect(() => {
     const BankAccount = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/main/accountdetail/${id}`, {
+        const res = await axios.get(`https://api.aavelance.com/api/main/accountdetail/${id}`, {
           headers: {
             token: accessToken
           }
@@ -111,7 +111,7 @@ export default function Sellerfeaturedinfo() {
   useEffect(() => {
     const getOrder = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/transfer/get/main/transaction/${id}`, {
+        const res = await axios.get(`https://api.aavelance.com/api/transfer/get/main/transaction/${id}`, {
           headers: {
             token: accessToken
           }

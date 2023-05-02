@@ -11,7 +11,7 @@ export default function PendingTransactionInfluencerList() {
   useEffect(() => {
     const getOrder = async()=>{
       try {
-        const res = await axios.get(`http://localhost:5000/api/influencer/transaction/transaction/for/mainAdmin`, {
+        const res = await axios.get(`https://api.aavelance.com/api/influencer/transaction/transaction/for/mainAdmin`, {
           headers:{
             token: accessToken
           }

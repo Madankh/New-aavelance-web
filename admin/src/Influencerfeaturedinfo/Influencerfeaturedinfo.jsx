@@ -13,7 +13,7 @@ export default function Influencerfeaturedinfo() {
   useEffect(() => {
     const income = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/main/get/affid/userOrder/${id}`, {
+        const res = await axios.get(`https://api.aavelance.com/api/main/get/affid/userOrder/${id}`, {
           headers: {
             token: accessToken
           }
@@ -30,7 +30,7 @@ export default function Influencerfeaturedinfo() {
   useEffect(() => {
     const bankDetails = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/main/influencer/accountdetail/${id}`, {
+        const res = await axios.get(`https://api.aavelance.com/api/main/influencer/accountdetail/${id}`, {
           headers: {
             token: accessToken
           }
@@ -46,7 +46,7 @@ export default function Influencerfeaturedinfo() {
   useEffect(() => {
     const getOrder = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/influencer/transaction/get/transaction/${id}`, {
+        const res = await axios.get(`https://api.aavelance.com/api/influencer/transaction/get/transaction/${id}`, {
           headers: {
             token: accessToken
           }

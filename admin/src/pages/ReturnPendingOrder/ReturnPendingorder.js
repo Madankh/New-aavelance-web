@@ -13,7 +13,7 @@ export default function ReturnPendingorders(item) {
           useEffect(() => {
            const sellerdetail = async () => {
              try {
-               const res = await axios.get(`http://localhost:5000/api/main/address/seller/${id}`, {
+               const res = await axios.get(`https://api.aavelance.com/api/main/address/seller/${id}`, {
                  headers: {
                    token: accessToken
                  }
@@ -35,7 +35,7 @@ export default function ReturnPendingorders(item) {
            const handleOrderStatusChangeClick = async()=> {
                     const res = await axios({
                       method:'PUT',
-                      url:`http://localhost:5000/api/main/update/status/${item?.item?._id}`, headers:{token:accessToken},
+                      url:`https://api.aavelance.com/api/main/update/status/${item?.item?._id}`, headers:{token:accessToken},
                       data:{
                         status:`${Orderstatus}`
                       }

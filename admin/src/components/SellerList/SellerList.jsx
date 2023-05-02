@@ -9,7 +9,7 @@ export default function SellerList() {
   useEffect(() => {
     const getOrder = async()=>{
       try {
-        const res = await axios.get(`http://localhost:5000/api/main/seller`, {
+        const res = await axios.get(`https://api.aavelance.com/api/main/seller`, {
           headers:{
             token: accessToken
           }

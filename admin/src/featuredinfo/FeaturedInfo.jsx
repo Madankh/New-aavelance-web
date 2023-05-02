@@ -9,7 +9,7 @@ export default function FeaturedInfo() {
   useEffect(() => {
     const getProduct = async()=>{
       try {
-        const res = await axios.get('http://localhost:5000/api/main/user', {
+        const res = await axios.get('https://api.aavelance.com/api/main/user', {
           headers:{
             token: accessToken
           }
@@ -28,7 +28,7 @@ export default function FeaturedInfo() {
   useEffect(() => {
     const getOrder = async()=>{
       try {
-        const res = await axios.get(`http://localhost:5000/api/main/seller`, {
+        const res = await axios.get(`https://api.aavelance.com/api/main/seller`, {
           headers:{
             token: accessToken
           }

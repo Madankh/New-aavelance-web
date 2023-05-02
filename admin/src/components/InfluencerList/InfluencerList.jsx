@@ -12,7 +12,7 @@ export default function InfluencerList() {
   useEffect(() => {
     const getOrder = async()=>{
       try {
-        const res = await axios.get(`http://localhost:5000/api/main/influencer`, {
+        const res = await axios.get(`https://api.aavelance.com/api/main/influencer`, {
           headers:{
             token: accessToken
           }
