@@ -233,7 +233,7 @@ router.post("/forgetpassword", async (req, res) => {
     content: {
       from: 'contact@aavelance.com',
       subject: 'Successfully Verify email',
-      html:generatePasswordResetTemplate(`http://localhost:3000/seller/reset/password?token=${RandomTxt}&_id=${seller._id}`)
+      html:generatePasswordResetTemplate(`https://www.aavelance.com/seller/reset/password?token=${RandomTxt}&_id=${seller._id}`)
     },
     recipients: [
       {address: seller.email}
