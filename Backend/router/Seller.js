@@ -211,43 +211,43 @@ router.post("/login" ,[
 })
 
 //Forget Password
-// router.post("/forgetpassword", async (req, res) => {
-//   const {email} = req.body;
-//   if(!email){
-//       return res.status(400).json("Please provide a valid email");
-//   };
-//   const seller = await Seller.findOne({email:email});
-//   if(!seller){
-//       return res.status(400).json("User not found!")
-//   };
-//   const token = await SellerResetToken.findOne({seller:seller._id});
-//   if(token) return res.status(200).json("After one hour you can request for another token")
+router.post("/forgetpassword", async (req, res) => {
+  const {email} = req.body;
+  if(!email){
+      return res.status(400).json("Please provide a valid email");
+  };
+  const seller = await Seller.findOne({email:email});
+  if(!seller){
+      return res.status(400).json("User not found!")
+  };
+  const token = await SellerResetToken.findOne({seller:seller._id});
+  if(token) return res.status(200).json("After one hour you can request for another token")
   
 
-//   //Generating Token 
-//   const RandomTxt = crypto.randomBytes(20).toString("hex");
-//   const restToken = new SellerResetToken({seller:seller._id , token:RandomTxt});
-//   console.log(RandomTxt);
-//   await restToken.save();
-//   client.transmissions.send({
-//     content: {
-//       from: 'contact@aavelance.com',
-//       subject: 'Successfully Verify email',
-//       html:generatePasswordResetTemplate(`https://www.aavelance.com/seller/reset/password?token=${RandomTxt}&_id=${seller._id}`)
-//     },
-//     recipients: [
-//       {address: seller.email}
-//     ]
-//   })
-//   .then(data => {
-//     return res.status(200).json("Password reset link is sent to your email")
-//   })
-//   .catch(err => {
-//     return res.json('Whoops! Something went wrong');
-//   });
+  //Generating Token 
+  const RandomTxt = crypto.randomBytes(20).toString("hex");
+  const restToken = new SellerResetToken({seller:seller._id , token:RandomTxt});
+  console.log(RandomTxt);
+  await restToken.save();
+  client.transmissions.send({
+    content: {
+      from: 'contact@aavelance.com',
+      subject: 'Successfully Verify email',
+      html:generatePasswordResetTemplate(`https://www.aavelance.com/seller/reset/password?token=${RandomTxt}&_id=${seller._id}`)
+    },
+    recipients: [
+      {address: seller.email}
+    ]
+  })
+  .then(data => {
+    return res.status(200).json("Password reset link is sent to your email")
+  })
+  .catch(err => {
+    return res.json('Whoops! Something went wrong');
+  });
 
     
-// })
+})
 
 //reset password
 router.put("/reset/password", async (req, res) => {
@@ -325,35 +325,7 @@ router.put("/:id", SellerverifyTokenAndAuthorization , async(req , res)=>{
 })
 
 
-//Forget Password
-router.post("/forgetpassword", async (req, res) => {
-  const {email} = req.body;
-  if(!email){
-      return res.status(400).json("Please provide a valid email");
-  };
-  const seller = await Seller.findOne({email:email});
-  if(!seller){
-      return res.status(400).json("seller not found , Invalid request!")
-  };
-  const token = await SellerResetToken.findOne({seller:seller._id});
-  if(token) return res.status(200).json("After one hour you can request for another token")
-  
 
-  //Generating Token 
-  const RandomTxt = crypto.randomBytes(20).toString("hex");
-  const restToken = new ResetToken({seller:seller._id , token:RandomTxt});
-  console.log(RandomTxt);
-  await restToken.save();
-  transporter.sendMail({
-      from: "contact@aavelance.com",
-      to: seller.email,
-      subject: 'Password Reset ',
-      html: `https://www.aavelance.com/reset/password?token=${RandomTxt}&_id=${seller._id}`
-    })
-
-    res.status(200).json("Password reset link is sent to your email")
-    
-})
 
 
 
@@ -407,39 +379,39 @@ router.put("/reset/password", async (req, res) => {
 
 
 
-// //reset password
-// router.put("/reset/password/:token" , async(req , res)=>{
-//   try {
+//reset password
+router.put("/reset/password/:token" , async(req , res)=>{
+  try {
 
-//     const resetPasswordToken = crypto.createHash("sha256")
-//     .update(req.params.token)
-//     .digest("hex");
-//     const seller = await Seller.findOne({resetPasswordToken, resetPasswordExpire:{$gt:Date.now()},});
-//     console.log(seller);
+    const resetPasswordToken = crypto.createHash("sha256")
+    .update(req.params.token)
+    .digest("hex");
+    const seller = await Seller.findOne({resetPasswordToken, resetPasswordExpire:{$gt:Date.now()},});
+    console.log(seller);
     
-//     if(!seller){
-//         return res.status(400).json("Reset password Token is invalid or has been expired");
-//     }
-//     if(req.body.password !== req.body.comfirmPassword){
-//         return res.status(400).json("password doesn't match");
-//     }
+    if(!seller){
+        return res.status(400).json("Reset password Token is invalid or has been expired");
+    }
+    if(req.body.password !== req.body.comfirmPassword){
+        return res.status(400).json("password doesn't match");
+    }
 
-//     seller.password = req.body.password;
-//     if(seller.password){
-//         const salt = await bcrypt.genSalt(10);
-//         const secPass = await bcrypt.hash(seller.password, salt)
-//         seller.password = secPass;
-//     }
-//     seller.resetPasswordToken = undefined;
-//     seller.resetPasswordExpire = undefined;
+    seller.password = req.body.password;
+    if(seller.password){
+        const salt = await bcrypt.genSalt(10);
+        const secPass = await bcrypt.hash(seller.password, salt)
+        seller.password = secPass;
+    }
+    seller.resetPasswordToken = undefined;
+    seller.resetPasswordExpire = undefined;
 
-//     await seller.save();
-//     res.status(200).json(seller)
+    await seller.save();
+    res.status(200).json(seller)
         
-//   } catch (error) {
-//     return res.status(500).json("Internal error occured")
-//   }
-// })
+  } catch (error) {
+    return res.status(500).json("Internal error occured")
+  }
+})
 
 //Update seller password
 router.put("/update/password/:id", sellerverifyToken, async (req, res) => {
