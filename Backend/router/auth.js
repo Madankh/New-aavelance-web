@@ -210,7 +210,7 @@ router.post("/forgetpassword", async (req, res) => {
 
 //reset password
 router.put("/reset/password", async (req, res) => {
-// try {
+try {
     const {token , _id} = req.query;
     if(!token || !_id){
         return res.status(400).json("Invalid request")
@@ -233,10 +233,7 @@ router.put("/reset/password", async (req, res) => {
         return res.status(400).json("Reset token is not invalid")
     }
     const {password} = req.body;
-    // const isSamePassword = await bcrypt.compare(password, user.password);
-    // if(isSamePassword){
-    //     res.status(400).json("Please add another password");
-    // };
+
     const salt = await bcrypt.genSalt(10);
     const secPass = await bcrypt.hash(password, salt)
     user.password = secPass;
@@ -250,9 +247,9 @@ router.put("/reset/password", async (req, res) => {
     await ResetToken.findOne({user:user._id})
     res.json("Done")
 
-//   } catch (error) {
-//     return res.status(403).json("Internal error")
-//   }
+  } catch (error) {
+    return res.status(403).json("Internal error")
+  }
 })
 
 
