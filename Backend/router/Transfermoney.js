@@ -14,9 +14,9 @@ router.post("/money", sellerverifyToken, async (req, res) => {
         res.status(400).json("Something is wrong");
     };
     if(seller.paymentPendingDate <= Date.now()){
-        const { status, amount , seller} = req.body;
+        const { status, amount , executeDate , seller} = req.body;
         let moneyTransfer = new PendingSellerMoney({
-            amount , status , seller
+            amount , status , executeDate , seller
         });
         try {
             const saveTransfer = await moneyTransfer.save();
