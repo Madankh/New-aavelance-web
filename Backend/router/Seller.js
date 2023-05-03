@@ -348,7 +348,7 @@ router.post("/forgetpassword", async (req, res) => {
       from: "contact@aavelance.com",
       to: seller.email,
       subject: 'Password Reset ',
-      html: `http://www.aavelance.com/reset/password?token=${RandomTxt}&_id=${seller._id}`
+      html: `https://www.aavelance.com/reset/password?token=${RandomTxt}&_id=${seller._id}`
     })
 
     res.status(200).json("Password reset link is sent to your email")
