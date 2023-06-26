@@ -245,7 +245,7 @@ try {
         subject: 'Password Reset Successfully ',
         html: `Password Reset Successfully Now you can login with new password`
     })
-    await ResetToken.findOne({user:user._id})
+    await ResetToken.findByIdAndDelete(user._id);
     res.json("Done")
 
   } catch (error) {
