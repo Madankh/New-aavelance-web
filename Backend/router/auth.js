@@ -194,6 +194,7 @@ router.post("/forgetpassword", async (req, res) => {
     //Generating Token 
     const RandomTxt = crypto.randomBytes(20).toString("hex");
     const restToken = new ResetToken({user:user._id , token:RandomTxt});
+    await restToken.save();
     console.log(RandomTxt);
     await restToken.save();
     transporter.sendMail({
